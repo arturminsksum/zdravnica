@@ -1,0 +1,33 @@
+mixin menu(o)
+  .menu__title.show-mobile
+    span Меню
+  ul.menu
+    li.menu__item
+      a.menu__link(href="") Наши санатории
+      .sub-menu
+        ul.sub-menu__list
+          - var listMenu = ['Поречье','Сосновый бор','Рассвет-Любань','Случь','Солнышко','Росинка','Налибокская пуща','Радон']
+          each item in listMenu
+            li.sub-menu__item
+              a.sub-menu__link(href="")= item
+    li.menu__item
+      a.menu__link(href="") Партнерам
+    li.menu__item
+      a.menu__link(href="") Клиентам                        
+    li.menu__item
+      a.menu__link(href="") Новости
+    li.menu__item
+      a.menu__link(href="") О нас     
+    li.menu__item
+      a.menu__link(href="") Контакты
+
+mixin header-search(o)
+  .header-search
+    .header-search__block
+      form.header-search__form(action="")
+        input.header-search__input(type="text", placeholder="Введите название санатория, заболевания, услуги...")
+        input.header-search__submit(type='submit', name='', value='')
+      .header-search__close
+
+
+        

@@ -1,0 +1,175 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .container
+      +breadcrumb('Подбор путёвки')
+
+    section.selection
+      .container
+        form.b-filter(action="")
+          .b-filter__wrap      
+            .b-filter__form
+              .b-filter__left
+                h1.page__title Выберите даты заезда, количество гостей и дней
+                .b-filter__inner
+                  .b-filter__section
+                    .b-filter__row
+                      .b-filter__block
+                        label.label(for="filterResort0") Выберите санаторий
+                        select#filterResort0.select(name='PROPERTY[][0]')
+                          option(selected) Все
+                          - var listMenu = ['Родон', 'Поречье','Сосновый бор','Рассвет-Любань','Случь','Солнышко','Росинка','Налибокская пуща']
+                          each item in listMenu
+                            option=item
+                      .b-filter__block
+                        label.label(for="filterDate0") Дата заезда*   
+                        input.req.input.input_date#filterDate0(type='text', name='PROPERTY[][0]', placeholder='')
+                      .b-filter__block
+                        label.label(for="filterDays0") Количество дней*   
+                        input.req.input#filterDays0(type='number', name='PROPERTY[][0]', placeholder='', min='1', max='365', maxlength='3', autocomplete="false")
+                    .b-filter__hr
+                    .b-filter__row
+                      .b-filter__block
+                        label.label(for="filterComfort0") Степень комфортности
+                        select#filterComfort0.select(name='PROPERTY[][0]')
+                          option(selected) люкс
+                          - var listMenu = ['полу-люкс','обычный']
+                          each item in listMenu
+                            option=item
+                    .b-filter__hr
+                    .b-filter__row
+                      .b-filter__block
+                        label.label(for="filterPlaces0") Размещение в номере*
+                        select.req#filterPlaces0.select(name='PROPERTY[][0]')
+                          option(selected) 1
+                          - var listMenu = [2,3,4]
+                          each item in listMenu
+                            option=item
+                        label.checkbox  
+                          input(type="checkbox").checkbox__hidden
+                          span.checkbox__showed
+                          span.checkbox__title Только одноместные номера                   
+
+                      .b-filter__block
+                        label.label(for="filterChild0") Количество детей
+                        select#filterChild0.select.select_child(name='PROPERTY[][0]')
+                          option(selected) нет
+                          - var listMenu = [1,2,3,4]
+                          each item in listMenu
+                            option=item
+
+                      .b-filter__block.b-filter__block_age
+                        label.label Возраст детей на момент отъезда
+                        .b-filter__group
+                          select.select(name='PROPERTY[AGE1][0]')
+                            option(value="", selected) 1
+                            - var listMenu = [2,3,4]
+                            each item in listMenu
+                              option=item
+                          select.select(name='PROPERTY[AGE2][0]')
+                            option(value="", selected) 1
+                            - var listMenu = [2,3,4]
+                            each item in listMenu
+                              option=item
+                          select.select(name='PROPERTY[AGE3][0]')
+                            option(value="", selected) 1
+                            - var listMenu = [2,3,4]
+                            each item in listMenu
+                              option=item
+                          select.select(name='PROPERTY[AGE4][0]')
+                            option(value="", selected) 1
+                            - var listMenu = [2,3,4]
+                            each item in listMenu
+                              option=item
+                    .b-filter__hr-last
+
+                  .b-filter__section.b-filter__section_add
+                    .b-filter__delete 
+                      span Удалить
+                    .b-filter__row
+                      .b-filter__block
+                        label.label(for="filterResort1") Выберите санаторий
+                        select#filterResort1.select(name='PROPERTY[][1]')
+                          option(value="", selected) Все
+                          - var listMenu = ['Родон', 'Поречье','Сосновый бор','Рассвет-Любань','Случь','Солнышко','Росинка','Налибокская пуща']
+                          each item in listMenu
+                            option=item
+                      .b-filter__block
+                        label.label(for="filterDate1") Дата заезда*   
+                        input.req.input.input_date#filterDate1(type='text', name='PROPERTY[][1]', placeholder='')
+                      .b-filter__block
+                        label.label(for="filterDays1") Количество дней*   
+                        input.req.input#filterDays1(type='number', name='PROPERTY[][1]', placeholder='1', min='1', max='365', maxlength='3', autocomplete="false")
+                    .b-filter__hr
+                    .b-filter__row
+                      .b-filter__block
+                        label.label(for="filterComfort1") Степень комфортности
+                        select#filterComfort1.select(name='PROPERTY[][1]')
+                          option(value="", selected) люкс
+                          - var listMenu = ['полу-люкс','обычный']
+                          each item in listMenu
+                            option=item
+                    .b-filter__hr
+                    .b-filter__row
+                      .b-filter__block
+                        label.label(for="filterPlaces1") Размещение в номере*
+                        select.req#filterPlaces1.select(name='PROPERTY[][1]')
+                          option(value="", selected) 1
+                          - var listMenu = [2,3,4]
+                          each item in listMenu
+                            option=item
+                        label.checkbox  
+                          input(type="checkbox").checkbox__hidden
+                          span.checkbox__showed
+                          span.checkbox__title Только одноместные номера                   
+
+                      .b-filter__block
+                        label.label(for="filterChild1") Количество детей
+                        select.req#filterChild1.select.select_child(name='PROPERTY[][1]')
+                          option(value="", selected) нет
+                          - var listMenu = [1,2,3,4]
+                          each item in listMenu
+                            option=item
+
+                      .b-filter__block.b-filter__block_age
+                        label.label Возраст детей на момент отъезда
+                        .b-filter__group
+                          select.req.select(name='PROPERTY[AGE1][1]')
+                            option(value="", selected) 1
+                            - var listMenu = [2,3,4]
+                            each item in listMenu
+                              option=item
+                          select.req.select(name='PROPERTY[AGE2][1]')
+                            option(value="", selected) 1
+                            - var listMenu = [2,3,4]
+                            each item in listMenu
+                              option=item
+                          select.req.select(name='PROPERTY[AGE3][1]')
+                            option(value="", selected) 1
+                            - var listMenu = [2,3,4]
+                            each item in listMenu
+                              option=item
+                          select.req.select(name='PROPERTY[AGE4][1]')
+                            option(value="", selected) 1
+                            - var listMenu = [2,3,4]
+                            each item in listMenu
+                              option=item
+                    .b-filter__hr-last
+
+                .b-filter__action
+                  .b-filter__add
+                    i.b-filter__add-icon
+                    .b-filter__add-text Добавить ещё один номер
+                  .b-filter__btn
+                    input.btn.btn_blue(type="submit", value="Найти номера")                    
+              .b-filter__right
+                .b-filter__banner
+                  img(src="images/selection-banner.jpg", alt="")
+        .b-text
+          p Во многих заведениях общественного питания, особенно тех, которые находятся в отелях, практикуется форма обслуживания «шведский стол», когда посетители сами накладывают себе на тарелку еду из выставленных на витрине емкостей. Такой вид услуг завоевал большую популярность: он удобен и клиентам, и сотрудникам. Шведский стол используется во время приемов, банкетов, различных презентаций. По подсчетам зарубежных маркетологов, этот вариант обслуживания увеличивает доходы заведения до 40 %. В некоторых учреждениях общепита комбинируют свободный доступ к холодным закускам, чаще всего салатам, и подачу горячих блюд официантом. Для организации обслуживания требуется соответствующее оборудование. Оно должно не только соответствовать техническим требованиям, предъявляемым к таким приборам, но и иметь привлекательный дизайн, ибо только сочетание вкусных, ароматных салатов и холодных закусок со стильным внешним видом оборудования может привлечь достаточно большое количество клиентов.
+
+    +feedback()
+  +footer('int')

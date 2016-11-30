@@ -1,0 +1,132 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .banner.banner_int
+      .banner__img(style="background-image: url(images/resort-banner.jpg)")
+      .banner__title Случь
+      .banner__filter 
+        span Подобрать путевку
+
+    .container
+      +breadcrumb('Инфрастуктура')
+      h1.page__title Инфрастуктура
+
+    +filter('internal')
+    
+    section.navigation
+      .container
+          .overlay.navigation__overlay
+          .navigation__btn Инфрастуктура
+          ul.navigation__menu
+            li.navigation__item
+              a(href="").navigation__link Медицинский <br>профиль
+            li.navigation__item
+              a(href="").navigation__link Номера и <br>цены
+            li.navigation__item
+              a(href="").navigation__link Досуг
+            li.navigation__item
+              a(href="").navigation__link Медиа
+            li.navigation__item.active
+              .navigation__link Инфрастуктура
+            li.navigation__item
+              a(href="").navigation__link Контакты
+            li.navigation__item.navigation__item_hot
+              a(href="").navigation__link Горящие <br>туры
+            li.navigation__item
+              a(href="").navigation__link Диетическое <br>питание
+    
+    section.structure-info
+      .container
+        .structure-info__wrap
+          .b-text
+            p В санатории созданы необходимые условия для обеспечения непрерывного учебно-воспитательного процесса во время пребывания учащихся в санатории в учебное время: 13 оборудованных учебных кабинетов, оснащенных техническими средствами, наглядными пособиями, дидактическими материалами, методической литературой, необходимыми учебниками.  
+          .structure-info__block
+            .structure-info__title Бассейны, сауны, бани:
+            .structure-info__list
+              .row
+                .six.columns.structure-info__col
+                  - var itemList = ['Баня русская','Бассейн','Сауна ароматическая']
+                  each item in itemList
+                    .item
+                      .item__title=item
+                      .item__info
+                        .item__place
+                          i
+                          span Расположен в главном корпусе сантатория
+                        .item__time
+                          i
+                          span 9 00 - 18 00
+                        .item__req
+                          i
+                          span Обязательная предварительная запись
+
+                .six.columns.structure-info__col
+                  - var itemList = ['Сауна соляная','Сайна финская','Хамам турецкий']
+                  each item in itemList
+                    .item
+                      .item__title=item
+                      .item__info
+                        .item__place
+                          i
+                          span Расположен в главном корпусе сантатория
+                        .item__time
+                          i
+                          span 9 00 - 18 00
+                        .item__req
+                          i
+                          span Обязательная предварительная запись
+
+
+
+          .structure-info__block
+            .structure-info__title ОбЪекты общепита:
+            .structure-info__list
+              .row
+                .six.columns.structure-info__col
+                  - var itemList = ['Бар','Буфет','Кафе','Ресторан','Развлечение, досуг','Кафе']
+                  each item in itemList
+                    .item
+                      .item__title=item
+                      .item__info
+                        .item__place
+                          i
+                          span Расположен в главном корпусе сантатория
+                        .item__time
+                          i
+                          span 9 00 - 18 00
+
+                          
+                .six.columns.structure-info__col
+                  - var itemList = ['Библиотека','Бильярд','Боулинг','Кофейный авттомат','Концертный зал','Комната отдыха']
+                  each item in itemList
+                    .item
+                      .item__title=item
+                      .item__info
+                        .item__place
+                          i
+                          span Расположен в главном корпусе сантатория
+                        .item__time
+                          i
+                          span 9 00 - 18 00
+
+
+
+
+    section.carousel
+      .container
+        .section__title Как мы отдыхаем
+        .carousel__wrap
+          - for (var i = 1; i < 5; i++) 
+            a(href="images/carousel-med-0"+i+".jpg").carousel__item.fancybox
+              img(src="images/carousel-med-0"+i+".jpg", alt="")
+          - for (var i = 1; i < 5; i++) 
+            a(href="images/carousel-med-0"+i+".jpg").carousel__item.fancybox
+              img(src="images/carousel-med-0"+i+".jpg", alt="")
+
+
+
+    +feedback()
+  +footer('int')

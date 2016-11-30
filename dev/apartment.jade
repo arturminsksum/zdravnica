@@ -1,0 +1,98 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .banner.banner_int
+      .banner__img(style="background-image: url(images/resort-banner.jpg)")
+      .banner__title Случь
+      .banner__filter 
+        span Подобрать путевку
+
+    .container
+      +breadcrumb('1 местный тип А')
+      h1.page__title 1 местный тип А
+
+    +filter('internal')    
+  
+    section.apart-info
+      .container
+        .apart-info__wrap
+          .row
+            .eight.columns.apart-info__left
+              .apart-info__images
+                - for (var i = 0; i < 3; i++)
+                  a(href="images/apartament-big.jpg").apart-info__img.fancybox
+                    img(src="images/apartament.jpg", alt="")
+
+
+            .four.columns.apart-info__right
+              .apart-info__info
+                .apart-info__daily
+                  .apart-info__title Цена за сутки проживания
+                  .apart-info__price
+                    i
+                    +tooltip('Цена за сутки проживания 30 руб.')
+                    span 30 руб.
+                .apart-info__descr
+                  .apart-info__title Описание номера:
+                  .resort-info__icons
+                    .resort-info__col
+                      .item
+                        i.icon.icon_wi-fi
+                        span.item__name Wi-Fi
+                      .item
+                        i.icon.icon_fringe
+                        span.item__name Холодильник
+                      .item
+                        i.icon.icon_bath
+                        span.item__name Ванная
+                      .item
+                        i.icon.icon_balcony
+                        span.item__name Балкон
+                      .item
+                        i.icon.icon_closet
+                        span.item__name Шкаф
+                    .resort-info__col
+                      .item
+                        i.icon.icon_bidet
+                        span.item__name Биде
+                      .item
+                        i.icon.icon_sink
+                        span.item__name Умывальник
+                .apart-info__btn
+                  a(href="").btn.btn_green Забронировать
+  
+
+
+
+        .b-text
+          p Отдыхающие проживают 2-4-х местных номерах. В 70% спальных номеров проведен евроремонт. Спальные места расположены преимущественно по блочной системе. Блок включает в себя прихожую со встроенными шкафами, две четырехместные палаты, душевую кабину, санузел. Отдыхающие проживают 2-4-х местных номерах. В 70% спальных номеров проведен евроремонт. Спальные места расположены преимущественно по блочной системе. Блок включает в себя прихожую со встроенными шкафами, две четырехместные палаты, душевую кабину, санузел.
+
+          br
+          p Отдыхающие проживают 2-4-х местных номерах. В 70% спальных номеров проведен евроремонт. Спальные места расположены преимущественно по блочной системе. Блок включает в себя прихожую со встроенными шкафами, две четырехместные палаты, душевую кабину, санузел.
+
+
+
+    section.gallery
+      .container
+        .gallery__title ПОхожие номера:
+        .gallery__row
+          - for (var i = 1; i < 5; i+=2)
+            .gallery__col
+              a(href="").gallery__item
+                .gallery__img
+                  img(src="images/gallery-0"+i+".jpg", alt="")
+                .gallery__type 4 местный тип А 
+                .gallery__price 40 руб. за сутки
+            .gallery__col
+              a(href="").gallery__item
+                .gallery__img
+                  img(src="images/gallery-0"+(i+1)+".jpg", alt="")
+                .gallery__type Номер Люкс
+                .gallery__price 30 руб. за сутки  
+
+
+    +feedback()
+  +footer('int')

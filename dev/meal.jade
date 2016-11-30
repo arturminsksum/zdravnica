@@ -1,0 +1,181 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .banner.banner_int
+      .banner__img(style="background-image: url(images/resort-banner.jpg)")
+      .banner__title Случь
+      .banner__filter 
+        span Подобрать путевку
+
+    .container
+      +breadcrumb('Диетическое питание')
+      h1.page__title Диетическое питание
+
+    +filter('internal')
+    
+    section.navigation
+      .container
+          .overlay.navigation__overlay
+          .navigation__btn Диетическое питание
+          ul.navigation__menu
+            li.navigation__item
+              a(href="").navigation__link Медицинский <br>профиль
+            li.navigation__item
+              a(href="").navigation__link Номера и <br>цены
+            li.navigation__item
+              a(href="").navigation__link Досуг
+            li.navigation__item
+              a(href="").navigation__link Медиа
+            li.navigation__item
+              a(href="").navigation__link Инфрастуктура
+            li.navigation__item
+              a(href="").navigation__link Контакты
+            li.navigation__item.navigation__item_hot
+              a(href="").navigation__link Горящие <br>туры
+            li.navigation__item.active
+              .navigation__link Диетическое <br>питание
+
+    section.meal-menu
+      .container
+        .b-text                 
+          p Диетическое питание, приносит гармонию и радость, ведь потеря лишнего веса, и переход к более комфортной жизни делают каждого счастливым. При правильном питании, наша жизнь стает лучше, ведь «мы то, что мы едим». 
+        
+        .meal-menu__tip 
+          i
+          +tooltip('Перспективное меню')
+          span Перспективное меню
+        .meal-tabs
+          .meal-tabs__pagin
+            - for (var i = 0; i < 14; i++) 
+              .meal-tabs__btn.js-tabs__btn
+                i=i+1
+                span День
+          .meal-tabs__content
+            - for (var j = 0; j < 3; j++)
+              .meal-tabs__item.js-tabs__item
+                .accordion
+                  -var listNature = ['ЗАВТРАК', 'Обед', 'Полдник', 'Ужин', 'Второй ужин']
+                  each item, index in listNature
+                    - var opened = (index === 3 ? 'opened' : '')
+                    - var display = (index === 3 ? 'display:block' : '')
+                    .item(class=opened)
+                      .item__title=item
+                      .item__info(style=display)
+                        .item__close
+                          span Закрыть  
+                        .row.item__row
+                          .six.columns.item__col
+                            .item__list
+                              .item__name Холодные блюда
+                              ul.list
+                                li
+                                  a(href="#cuisine").fancybox
+                                    span Салат «Солнышко» 
+                                    i (Б, П, М, Н)
+                                li
+                                  span Салат из белокочанной капусты с морковь   
+                                  i (Б, П, М, Н)
+                                li 
+                                  span Салат «Костер»  
+                                  i (Б, П, М, Н)
+                            .item__list
+                              .item__name Горячие блюда
+                              ul.list
+                                li
+                                  span Рыба запеченная в сметане с морковью (заказывается с гарниром)
+                                  i (Б, П, М, Н)
+                                li
+                                  span Колбаски по-могилевски (заказывается с гарниром)  
+                                  i (Б, П, М, Н)
+                                li 
+                                  span Запеканка из творога со сметаной  
+                                  i (Б, П, М, Н)
+                                li 
+                                  span Омлет по-крестьянски 
+                                  i (Б, П, М, Н)    
+                          .six.columns.item__col
+                            .item__list
+                              .item__name Гарниры
+                              ul.list
+                                li
+                                  span Каша рисовая рассыпчатая/перец св. 
+                                  i (Б, П, М, Н)
+                                li
+                                  span Картофельное пюре/перец св.    
+                                  i (Б, П, М, Н)
+                                li 
+                                  span Капуста жаренная 
+                                  i (Б, П, М, Н)
+                            .item__list
+                              .item__name Напитки и хлебобулочные изделия
+                              ul.list
+                                li
+                                  span Чай зелёный
+                                li
+                                  span Чай чёрный
+                                li 
+                                  span Кофе
+                                li 
+                                  span Хлеб ржаной
+                                li 
+                                  span Хлеб пшеничный
+
+
+    section.meal-holl.bg-grey
+      .container
+        .meal-holl__title Обеденный зал
+        .b-text
+          p Здоровое питание – это не только хорошее самочувствие, избавление от разных недугов, крепкая нервная система, избавление от лишнего веса но и философия жизни. Здоровый образ жизни не возможен без правильного здорового питания. Мы сами решаем что, когда и сколько нам есть, и если знать и использовать основные правила здорового питания, то мы избавимся от многих недугов, предотвратим развитие болезней и продлим нашу активную жизнь. 
+        .carousel__wrap
+          - for (var i = 1; i < 5; i++) 
+            a(href="images/carousel-hall-0"+i+".jpg").carousel__item.fancybox
+              img(src="images/carousel-hall-0"+i+".jpg", alt="")
+          - for (var i = 1; i < 5; i++) 
+            a(href="images/carousel-hall-0"+i+".jpg").carousel__item.fancybox
+              img(src="images/carousel-hall-0"+i+".jpg", alt="")
+
+
+    section.meal-cuisine
+      .container
+        .meal-cuisine__wrap
+          .meal-cuisine__title Дни национальной кухни: 
+            span проводятся каждую среду
+          .b-text.clearfix  
+            img(src="images/cuisine-img.jpg", alt="", align="left")             
+            p Не все знают, но в традиционной бело русской кухне есть блюдо, отдаленно напоминающее украинский борщ. Правда, в нем нет помидоров, и подается он в охлажденном виде, да и называется свекольник, т. к. главным компонентом состава выступает свекла, причем прямо с ботвой. Рецептом именно такого холодного свекольника с ботвой мы хотим сегодня поделиться с вами.
+            p Особенно хорош этот суп летом, т. к. отлично освежает в жару. Но, в принципе, белорусский холодный свекольник вкусен в любое время года.
+
+
+    
+    section.meal-salad.bg-grey
+      .container
+        .meal-salad__wrap
+          .meal-salad__title Салат бар:
+          .b-text
+            p Во многих заведениях общественного питания, особенно тех, которые находятся в отелях, практикуется форма обслуживания «шведский стол», когда посетители сами накладывают себе на тарелку еду из выставленных на витрине емкостей. Такой вид услуг завоевал большую популярность: он удобен и клиентам, и сотрудникам. Шведский стол используется во время приемов, банкетов, различных презентаций. По подсчетам зарубежных маркетологов, этот вариант обслуживания увеличивает доходы заведения до 40 %. В некоторых учреждениях общепита комбинируют свободный доступ к холодным закускам, чаще всего салатам, и подачу горячих блюд официантом. Для организации обслуживания требуется соответствующее оборудование. Оно должно не только соответствовать техническим требованиям, предъявляемым к таким приборам, но и иметь привлекательный дизайн, ибо только сочетание вкусных, ароматных салатов и холодных закусок со стильным внешним видом оборудования может привлечь достаточно большое количество клиентов. 
+        .carousel__wrap
+          - for (var i = 1; i < 5; i++) 
+            a(href="images/carousel-hall-0"+i+".jpg").carousel__item.fancybox
+              img(src="images/carousel-hall-0"+i+".jpg", alt="")
+          - for (var i = 1; i < 5; i++) 
+            a(href="images/carousel-hall-0"+i+".jpg").carousel__item.fancybox
+              img(src="images/carousel-hall-0"+i+".jpg", alt="")
+
+    +feedback()
+  +footer('int')
+
+  #cuisine.popup.popup_cuisine
+    .b-text.clearfix
+      img(src="images/carousel-hall-03.jpg", alt="", align="left")
+      p Помидо, салат, лук, масло
+      p
+        strong Белки: 5,8
+        br
+        strong Жиры: 0,8
+        br
+        strong Углеводы: 120 
+        br
+        strong Ккал: 240

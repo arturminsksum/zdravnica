@@ -1,0 +1,93 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .container
+      +breadcrumb('404')
+      h1.page__title Ошибка 404
+
+    section.error-page
+      .container
+        .error-page__wrap
+          .error-page__img
+            img(src="images/error-page.png", alt="")
+          .error-page__text
+            p К сожалению, данная страница не найдена!
+            p Данная страница не существует или проверьте правильность написания  ссылки!
+          .error-page__btn
+            a(href="").btn.btn_green Перейти на главную
+
+    section.feedback
+      .container
+        .feedback__wrap
+            .feedback__text
+              span Вы можете связаться с нашими менеджером для подбора 
+              br
+              span индивидуального предложения
+            .feedback__btn
+              a(href="#order").btn.btn_invert.js-order Отправить заявку
+
+  +footer('int')
+
+  #order.popup.popup_order
+    .popup__title Отправить заявку
+    .popup__close
+    .popup__form     
+      form(action="").form          
+        .b-filter__row
+          .b-filter__block
+            label.label(for="filterResort") Выберите санаторий
+            select#filterResort.select(name='PROPERTY[][]')
+              option(selected) Все
+              - var listMenu = ['Родон', 'Поречье','Сосновый бор','Рассвет-Любань','Случь','Солнышко','Росинка','Налибокская пуща']
+              each item in listMenu
+                option=item
+          .b-filter__block
+            label.label(for="filterDate") Дата заезда*   
+            input.req.input.input_date#filterDate(type='text', name='PROPERTY[][]', placeholder='')
+          .b-filter__block
+            label.label(for="filterDays") Количество дней*   
+            input.req.input#filterDays(type='number', name='PROPERTY[][]', placeholder='', min='1', max='365', maxlength='3', autocomplete="false")
+        .b-filter__row
+          .b-filter__block
+            label.label(for="filterComfort") Степень комфортности
+            select#filterComfort.select(name='PROPERTY[][]')
+              option(selected) люкс
+              - var listMenu = ['полу-люкс','обычный']
+              each item in listMenu
+                option=item              
+          .b-filter__block
+            label.label(for="filterPlaces") Размещение в номере*
+            select.req#filterPlaces.select(name='PROPERTY[][]')
+              option(selected) 1
+              - var listMenu = [2,3,4]
+              each item in listMenu
+                option=item
+            label.checkbox  
+              input(type="checkbox").checkbox__hidden
+              span.checkbox__showed
+              span.checkbox__title Только одноместные номера                   
+
+          .b-filter__block
+            label.label(for="filterChild") Количество детей
+            select#filterChild.select.select_child(name='PROPERTY[][]')
+              option(selected) нет
+              - var listMenu = [1,2,3,4]
+              each item in listMenu
+                option=item  
+        .popup_order__title Ваши контактные данные
+        .b-filter__row
+          .b-filter__block
+            label.label(for="filterName") Имя
+            input#filterName.input(type='text', name='form[]', placeholder='Василий',autocomplete='email')
+          .b-filter__block
+            label.label(for="filterPhone") Телефон
+            input#filterPhone.input.req(type='text', name='form[]', placeholder='+375295750215',autocomplete='tel')                      
+          .b-filter__block
+            label.label(for="filterEmail") E-mail
+            input#filterEmail.input.req.email(type='email', name='form[]', placeholder='romateo@list.ru',autocomplete='email')
+        .b-filter__hr
+        .popup_order__btn
+          input.btn.btn_green(type='submit', value="Отправить")

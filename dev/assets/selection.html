@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0,  width=device-width"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <title>Zdravnica</title>
+    <link rel="stylesheet" href="css/style.css"/><!--[if lt IE 9]>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"> </script><![endif]-->
+  </head>
+  <body>
+    <div class="inner">
+      <div class="content">
+        <div class="overlay overlay_menu"></div>
+        <div class="overlay overlay_search"></div>
+        <div class="overlay overlay_phones"></div>
+        <div class="header-phones__close show-mobile"></div>
+        <div class="header-menu__close show-mobile"> </div>
+        <header class="header header_resort">
+          <div class="header-top">
+            <div class="container">
+              <div class="header-top__wrap">           
+                <div class="header-top__left">
+                  <div class="header-phones">
+                    <div class="header-phones__title">Контакты</div>
+                    <div class="header-phones__wrap"><i class="header-phones__icon"></i><a href="tel:+375 (17) 298-54-00" class="header-phones__number">+375 (17) 298-54-00</a><a href="tel:+375 (17) 200-40-53" class="header-phones__number">+375 (17) 200-40-53</a></div>
+                  </div>
+                </div>
+                <div class="header-top__right"> 
+                  <div class="header-country">
+                    <div class="header-country__title">Ваше гражданство: </div>
+                    <div class="header-country__value"> 
+                      <div class="header-country__img"><img src="images/header-rus.png" alt="rus"/></div>
+                      <div class="header-country__icon"></div>
+                      <div class="header-country__select">
+                        <div class="header-country__list"><a href="" class="header-country__option"><img src="images/header-bel.png" alt="bel"/></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a href="#login" class="header-sign">
+                    <div class="header-sign__icon"></div>
+                    <div class="header-sign__title">Вход </div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-bottom">
+            <div class="container">
+              <div class="header-bottom__wrap">
+                <div class="toggle"><span class="toggle__first"></span><span class="toggle__second"></span><span class="toggle__third"> </span></div><a href="" class="header-logo"><img src="images/header-logo.png" alt="белагроздравница"/></a>
+                <div class="header-phones__mobile show-mobile"></div><a href="#login" class="header-sign__mobile show-mobile"><i></i></a>
+                <div class="header-menu">
+                  <div class="menu__title show-mobile"><span>Меню</span></div>
+                  <ul class="menu">
+                    <li class="menu__item"><a href="" class="menu__link">Наши санатории</a>
+                      <div class="sub-menu">
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Поречье</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Сосновый бор</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Рассвет-Любань</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Случь</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Солнышко</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Росинка</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Налибокская пуща</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Радон</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="menu__item"><a href="" class="menu__link">Партнерам</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Клиентам                        </a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Новости</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">О нас     </a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+                  </ul>
+                  <div class="header__hot"><a href="" class="btn btn_blue btn_hot">Горячие путёвки</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div id="login" class="popup popup_login">
+          <div class="popup__title">Вход в  Личный кабинет</div>
+          <div class="popup__close"></div>
+          <div class="popup__form">       
+            <div class="popup__text">В Личном Кабинете доступна вся информация по брони путевок, включая онлайн оплату      </div>
+            <form action="" class="form">         
+              <div class="form__block">
+                <label for="email_login" class="label">E-mail</label>
+                <input id="email_login" type="email" name="form[]" placeholder="romateo@list.ru" autocomplete="email" class="input req email"/>
+              </div>
+              <div class="form__block">
+                <label for="email_login" class="label">Пароль</label>
+                <input id="email_login" type="password" name="form[]" autocomplete="false" class="input req"/>
+              </div>
+              <div class="form__btn"><a href="" class="btn btn_invert">Регистрация</a>
+                <input type="submit" value="Войти" class="btn btn_blue"/>
+              </div>
+              <div class="form__lost"> <a href="">Забыли пароль</a></div>
+            </form>
+          </div>
+        </div>
+        <main>
+          <div class="container">
+            <div class="breadcrumb">
+              <ol>
+                <li><a href="#">Главная</a></li>
+                <li class="active">Подбор путёвки</li>
+              </ol>
+            </div>
+          </div>
+          <section class="selection">
+            <div class="container">
+              <form action="" class="b-filter">
+                <div class="b-filter__wrap">     
+                  <div class="b-filter__form">
+                    <div class="b-filter__left">
+                      <h1 class="page__title">Выберите даты заезда, количество гостей и дней</h1>
+                      <div class="b-filter__inner">
+                        <div class="b-filter__section">
+                          <div class="b-filter__row">
+                            <div class="b-filter__block">
+                              <label for="filterResort0" class="label">Выберите санаторий</label>
+                              <select id="filterResort0" name="PROPERTY[][0]" class="select">
+                                <option selected>Все</option>
+                                <option>Родон</option>
+                                <option>Поречье</option>
+                                <option>Сосновый бор</option>
+                                <option>Рассвет-Любань</option>
+                                <option>Случь</option>
+                                <option>Солнышко</option>
+                                <option>Росинка</option>
+                                <option>Налибокская пуща</option>
+                              </select>
+                            </div>
+                            <div class="b-filter__block">
+                              <label for="filterDate0" class="label">Дата заезда*   </label>
+                              <input id="filterDate0" type="text" name="PROPERTY[][0]" placeholder="" class="req input input_date">
+                            </div>
+                            <div class="b-filter__block">
+                              <label for="filterDays0" class="label">Количество дней*   </label>
+                              <input id="filterDays0" type="number" name="PROPERTY[][0]" placeholder="" min="1" max="365" maxlength="3" autocomplete="false" class="req input">
+                            </div>
+                          </div>
+                          <div class="b-filter__hr"></div>
+                          <div class="b-filter__row">
+                            <div class="b-filter__block">
+                              <label for="filterComfort0" class="label">Степень комфортности</label>
+                              <select id="filterComfort0" name="PROPERTY[][0]" class="select">
+                                <option selected>люкс</option>
+                                <option>полу-люкс</option>
+                                <option>обычный</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="b-filter__hr"></div>
+                          <div class="b-filter__row">
+                            <div class="b-filter__block">
+                              <label for="filterPlaces0" class="label">Размещение в номере*</label>
+                              <select id="filterPlaces0" name="PROPERTY[][0]" class="req select">
+                                <option selected>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                              </select>
+                              <label class="checkbox"> 
+                                <input type="checkbox" class="checkbox__hidden"><span class="checkbox__showed"></span><span class="checkbox__title">Только одноместные номера                   </span>
+                              </label>
+                            </div>
+                            <div class="b-filter__block">
+                              <label for="filterChild0" class="label">Количество детей</label>
+                              <select id="filterChild0" name="PROPERTY[][0]" class="select select_child">
+                                <option selected>нет</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                              </select>
+                            </div>
+                            <div class="b-filter__block b-filter__block_age">
+                              <label class="label">Возраст детей на момент отъезда</label>
+                              <div class="b-filter__group">
+                                <select name="PROPERTY[AGE1][0]" class="select">
+                                  <option value="" selected>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                </select>
+                                <select name="PROPERTY[AGE2][0]" class="select">
+                                  <option value="" selected>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                </select>
+                                <select name="PROPERTY[AGE3][0]" class="select">
+                                  <option value="" selected>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                </select>
+                                <select name="PROPERTY[AGE4][0]" class="select">
+                                  <option value="" selected>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="b-filter__hr-last"></div>
+                        </div>
+                        <div class="b-filter__section b-filter__section_add">
+                          <div class="b-filter__delete"> <span>Удалить</span></div>
+                          <div class="b-filter__row">
+                            <div class="b-filter__block">
+                              <label for="filterResort1" class="label">Выберите санаторий</label>
+                              <select id="filterResort1" name="PROPERTY[][1]" class="select">
+                                <option value="" selected>Все</option>
+                                <option>Родон</option>
+                                <option>Поречье</option>
+                                <option>Сосновый бор</option>
+                                <option>Рассвет-Любань</option>
+                                <option>Случь</option>
+                                <option>Солнышко</option>
+                                <option>Росинка</option>
+                                <option>Налибокская пуща</option>
+                              </select>
+                            </div>
+                            <div class="b-filter__block">
+                              <label for="filterDate1" class="label">Дата заезда*   </label>
+                              <input id="filterDate1" type="text" name="PROPERTY[][1]" placeholder="" class="req input input_date">
+                            </div>
+                            <div class="b-filter__block">
+                              <label for="filterDays1" class="label">Количество дней*   </label>
+                              <input id="filterDays1" type="number" name="PROPERTY[][1]" placeholder="1" min="1" max="365" maxlength="3" autocomplete="false" class="req input">
+                            </div>
+                          </div>
+                          <div class="b-filter__hr"></div>
+                          <div class="b-filter__row">
+                            <div class="b-filter__block">
+                              <label for="filterComfort1" class="label">Степень комфортности</label>
+                              <select id="filterComfort1" name="PROPERTY[][1]" class="select">
+                                <option value="" selected>люкс</option>
+                                <option>полу-люкс</option>
+                                <option>обычный</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="b-filter__hr"></div>
+                          <div class="b-filter__row">
+                            <div class="b-filter__block">
+                              <label for="filterPlaces1" class="label">Размещение в номере*</label>
+                              <select id="filterPlaces1" name="PROPERTY[][1]" class="req select">
+                                <option value="" selected>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                              </select>
+                              <label class="checkbox"> 
+                                <input type="checkbox" class="checkbox__hidden"><span class="checkbox__showed"></span><span class="checkbox__title">Только одноместные номера                   </span>
+                              </label>
+                            </div>
+                            <div class="b-filter__block">
+                              <label for="filterChild1" class="label">Количество детей</label>
+                              <select id="filterChild1" name="PROPERTY[][1]" class="req select select_child">
+                                <option value="" selected>нет</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                              </select>
+                            </div>
+                            <div class="b-filter__block b-filter__block_age">
+                              <label class="label">Возраст детей на момент отъезда</label>
+                              <div class="b-filter__group">
+                                <select name="PROPERTY[AGE1][1]" class="req select">
+                                  <option value="" selected>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                </select>
+                                <select name="PROPERTY[AGE2][1]" class="req select">
+                                  <option value="" selected>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                </select>
+                                <select name="PROPERTY[AGE3][1]" class="req select">
+                                  <option value="" selected>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                </select>
+                                <select name="PROPERTY[AGE4][1]" class="req select">
+                                  <option value="" selected>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="b-filter__hr-last"></div>
+                        </div>
+                      </div>
+                      <div class="b-filter__action">
+                        <div class="b-filter__add"><i class="b-filter__add-icon"></i>
+                          <div class="b-filter__add-text">Добавить ещё один номер</div>
+                        </div>
+                        <div class="b-filter__btn">
+                          <input type="submit" value="Найти номера" class="btn btn_blue">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-filter__right">
+                      <div class="b-filter__banner"><img src="images/selection-banner.jpg" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div class="b-text">
+                <p>Во многих заведениях общественного питания, особенно тех, которые находятся в отелях, практикуется форма обслуживания «шведский стол», когда посетители сами накладывают себе на тарелку еду из выставленных на витрине емкостей. Такой вид услуг завоевал большую популярность: он удобен и клиентам, и сотрудникам. Шведский стол используется во время приемов, банкетов, различных презентаций. По подсчетам зарубежных маркетологов, этот вариант обслуживания увеличивает доходы заведения до 40 %. В некоторых учреждениях общепита комбинируют свободный доступ к холодным закускам, чаще всего салатам, и подачу горячих блюд официантом. Для организации обслуживания требуется соответствующее оборудование. Оно должно не только соответствовать техническим требованиям, предъявляемым к таким приборам, но и иметь привлекательный дизайн, ибо только сочетание вкусных, ароматных салатов и холодных закусок со стильным внешним видом оборудования может привлечь достаточно большое количество клиентов.</p>
+              </div>
+            </div>
+          </section>
+          <section class="feedback">
+            <div class="container">
+              <div class="feedback__wrap"><a href="" class="feedback__link"><span>Обратная связь</span></a>
+                <div class="feedback__btn"><a href="" class="btn btn_invert">Забронировать</a></div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="footer footer_int">
+          <div class="container">
+            <div class="footer__wrap">
+              <div class="row">
+                <div class="column column_first">
+                  <div class="footer__logo"><img src="images/footer-logo.png" alt="Белагроздравница"/></div>
+                  <div class="footer__slogan"><span>
+                       
+                      “Здоровья вам и<br/>вашим детям!”</span></div>
+                  <div class="footer__copyright">ОАО Белагроздравница" 2016 ©</div>
+                </div>
+                <div class="column column_second">
+                  <div class="footer__list footer__list_resort">
+                    <div class="footer__title">Санатории</div>
+                    <ul>
+                      <li><a href="">Поречье</a></li>
+                      <li><a href="">Сосновый бор</a></li>
+                      <li><a href="">Рассвет-Любань</a></li>
+                      <li><a href="">Случь</a></li>
+                      <li><a href="">Солнышко</a></li>
+                      <li><a href="">Росинка</a></li>
+                      <li><a href="">Налибокская пуща</a></li>
+                      <li><a href="">Радон</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="column column_third">
+                  <div class="footer__list footer__list_partner">
+                    <div class="footer__title">Партнерам</div>
+                    <ul>
+                      <li><a href="">Турагентствам</a></li>
+                      <li><a href="">Юридическим лицам</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer__list footer__list_client">
+                    <div class="footer__title">Клиентам</div>
+                    <ul>
+                      <li><a href="">Способы оплаты</a></li>
+                      <li><a href="">Курортный сбор</a></li>
+                      <li><a href="">Возврат денежных средств</a></li>
+                      <li><a href="">Часто задаваемые вопросы</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="column column_forth">
+                  <div class="footer__contacts">
+                    <div class="footer__title">Контакты</div>
+                    <div class="footer__adress">Республика Беларусь, <br/>220007, г. Минск, ул. Фабрициуса, 7 а</div>
+                    <div class="footer__phones"><a href="tel:+375 (17) 298-54-00" class="footer__number">+375 (17) 298-54-00,  </a><a href="tel:+375 (17) 200-40-53" class="footer__number">+375 (17) 200-40-53</a></div><a href="mailto:info@agrozdrav.by" class="footer__email">info@agrozdrav.by</a>
+                    <div class="footer__license">
+                       
+                      Лицензии на медицинскую или <br/>фармацевтическую деятельность <br/>№ 02040/241 от 31.07.2013
+                    </div>
+                    <div class="footer__social"><a href=""><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='14' viewBox='0 0 16 12'%3E%3Cpath fill='%23ffffff' d='M15.559,1.24a6.6,6.6,0,0,1-2.086.8A3.283,3.283,0,0,0,7.795,4.282a3.306,3.306,0,0,0,.085.748A9.319,9.319,0,0,1,1.115,1.6,3.287,3.287,0,0,0,2.131,5.982,3.28,3.28,0,0,1,.644,5.57V5.611A3.286,3.286,0,0,0,3.276,8.83a3.274,3.274,0,0,1-1.483.056,3.288,3.288,0,0,0,3.066,2.28,6.587,6.587,0,0,1-4.076,1.4A6.906,6.906,0,0,1,0,12.525,9.3,9.3,0,0,0,5.032,14,9.276,9.276,0,0,0,14.37,4.66L14.36,4.235A6.6,6.6,0,0,0,16,2.538a6.564,6.564,0,0,1-1.885.517A3.3,3.3,0,0,0,15.559,1.24Z' transform='translate%280 -1%29'/%3E%3C/svg%3E" alt="tw"/></a><a href=""><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='18' viewBox='0 0 41 90'%3E%3Cpath fill='%23ffffff' d='M10.078,17.431V29.822H1V44.974h9.078V90H28.727V44.975H41.24s1.172-7.265,1.74-15.209H28.8V19.406c0-1.548,2.033-3.631,4.043-3.631H43V0H29.186C9.617,0,10.078,15.167,10.078,17.431Z' transform='translate%28-1%29'/%3E%3C/svg%3E" alt="fb"/></a><a href=""><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 66 66'%3E%3Cpath fill='%23ffffff' d='M8.438,0H57.29c4.64,0,8.435,3.797,8.435,8.437v48.851c0,4.639-3.795,8.435-8.435,8.435H8.438 C3.795,65.722,0,61.926,0,57.288V8.437C0,3.797,3.795,0,8.438,0z M47.757,7.09c-1.679,0-3.051,1.377-3.051,3.058v7.31 c0,1.683,1.372,3.056,3.051,3.056h7.67c1.679,0,3.055-1.373,3.055-3.056v-7.31c0-1.681-1.376-3.058-3.055-3.058H47.757z M58.292,27.792h-5.781c0.549,1.792,0.847,3.679,0.847,5.645c0,10.926-9.151,19.792-20.434,19.792 c-11.28,0-20.432-8.865-20.432-19.792c0-1.965,0.302-3.853,0.846-5.645H7.307v27.766c0,1.437,1.172,2.607,2.609,2.607h45.769 c1.438,0,2.607-1.17,2.607-2.607V27.792z M32.924,19.93c-7.286,0-13.198,5.725-13.198,12.79c0,7.063,5.912,12.791,13.198,12.791 c7.291,0,13.203-5.728,13.203-12.791C46.127,25.655,40.215,19.93,32.924,19.93z'/%3E%3C/svg%3E" alt="inst"/></a><a href=""><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 155.75 89'%3E%3Cpath fill='%23ffffff' d='M155.912,80.49a10.724,10.724,0,0,0-.531-1.018q-4.071-7.336-15.561-18.008l-0.162-.163-0.081-.079L139.5,61.14h-0.082q-5.214-4.972-6.6-6.683a6.274,6.274,0,0,1-1.143-6.6q0.978-2.525,7.333-10.671,3.342-4.318,5.3-6.925,14.1-18.739,12.222-23.953l-0.485-.813a4.765,4.765,0,0,0-2.525-1.344,12.815,12.815,0,0,0-5.216-.2l-23.463.163a3.045,3.045,0,0,0-1.63.041l-1.06.245-0.408.2-0.324.245a3.618,3.618,0,0,0-.9.854,5.591,5.591,0,0,0-.812,1.426,133.019,133.019,0,0,1-8.719,18.331q-3.015,5.052-5.541,8.759a42.249,42.249,0,0,1-4.235,5.458,29.681,29.681,0,0,1-3.1,2.811,2.984,2.984,0,0,1-2.117.9c-0.489-.109-0.95-0.218-1.387-0.326a5.422,5.422,0,0,1-1.832-2,8.947,8.947,0,0,1-.937-3.178q-0.243-1.915-.285-3.3t0.041-3.911q0.085-2.526.082-3.422,0-3.1.121-6.721T92,14.782q0.082-2.118.081-4.481a18.829,18.829,0,0,0-.285-3.707,12.676,12.676,0,0,0-.853-2.607,4.39,4.39,0,0,0-1.67-1.956,9.416,9.416,0,0,0-2.73-1.1,54.207,54.207,0,0,0-11-1.059Q60.388-.29,56.069,1.827a10.97,10.97,0,0,0-3.1,2.444q-1.467,1.792-.408,1.955,4.889,0.732,6.925,3.5l0.489,0.978a15.561,15.561,0,0,1,1.141,3.748,37.808,37.808,0,0,1,.733,5.947,63.438,63.438,0,0,1,0,10.184q-0.408,4.238-.774,6.6a13.211,13.211,0,0,1-1.1,3.829A16.2,16.2,0,0,1,59,42.807a1.4,1.4,0,0,1-.407.407,6.089,6.089,0,0,1-2.2.408,5.165,5.165,0,0,1-2.77-1.141,19.538,19.538,0,0,1-3.381-3.137,41.859,41.859,0,0,1-3.952-5.581q-2.2-3.585-4.562-8.473l-1.3-2.363q-1.222-2.281-3.34-6.64T33.338,7.854a5.372,5.372,0,0,0-1.955-2.607L30.976,5a5.569,5.569,0,0,0-1.3-.692,8.69,8.69,0,0,0-1.874-.53L5.475,3.943q-3.422,0-4.644,1.548L0.5,5.98a2.629,2.629,0,0,0-.245,1.3,6.492,6.492,0,0,0,.489,2.2Q5.637,20.972,11.38,31.644t9.98,17.189Q25.6,55.352,30,61.136t5.825,7.414q1.427,1.632,2.241,2.444L40.1,72.95a48.272,48.272,0,0,0,5.744,4.685,97.961,97.961,0,0,0,8.392,5.379A45.54,45.54,0,0,0,64.95,87.329a36.992,36.992,0,0,0,11.894,1.346h9.37a6.489,6.489,0,0,0,4.318-1.793l0.324-.408a5.415,5.415,0,0,0,.61-1.506,8.284,8.284,0,0,0,.285-2.24,26.86,26.86,0,0,1,.528-6.314,16.583,16.583,0,0,1,1.387-4.235,10.4,10.4,0,0,1,1.751-2.4A7.006,7.006,0,0,1,96.806,68.6a5.019,5.019,0,0,1,.65-0.285q1.956-.653,4.6,1.263a27.036,27.036,0,0,1,4.971,4.726q2.322,2.813,5.58,6.314a38.364,38.364,0,0,0,5.7,5.214l1.629,0.978a19.847,19.847,0,0,0,4.238,1.793,9.122,9.122,0,0,0,4.562.407l20.856-.325a9.454,9.454,0,0,0,4.807-1.02,4.036,4.036,0,0,0,2.037-2.24,6.315,6.315,0,0,0,.041-2.772A10.219,10.219,0,0,0,155.912,80.49Z' transform='translate%28-0.25%29'/%3E%3C/svg%3E" alt="vk"/></a><a href=""><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='16' viewBox='0 0 58 52'%3E%3Cpath fill='%23ffffff' d='M16.133,20.979h3.56v-8.704L23.836,0h-3.62l-2.201,8.386h-0.224L15.481,0h-3.587l4.239,12.667V20.979z M38.045,21.202c0.592,0,1.202-0.165,1.833-0.493c0.634-0.328,1.241-0.812,1.818-1.439v1.709h3.166V5.502h-3.166v11.747 c-0.293,0.34-0.619,0.616-0.972,0.834c-0.356,0.217-0.653,0.327-0.885,0.327c-0.296,0-0.513-0.084-0.642-0.249 c-0.133-0.163-0.205-0.427-0.205-0.795V5.502h-3.157v12.935c0,0.922,0.186,1.612,0.555,2.073 C36.762,20.971,37.309,21.202,38.045,21.202z M28.656,21.369c1.438,0,2.564-0.378,3.388-1.131c0.816-0.755,1.227-1.79,1.227-3.114 V9.129c0-1.18-0.418-2.145-1.248-2.893c-0.84-0.75-1.913-1.125-3.223-1.125c-1.434,0-2.58,0.356-3.431,1.066 c-0.854,0.709-1.278,1.663-1.278,2.864v8.021c0,1.315,0.417,2.362,1.244,3.14C26.166,20.979,27.274,21.369,28.656,21.369z M27.347,8.925c0-0.338,0.121-0.611,0.36-0.82c0.243-0.208,0.554-0.311,0.941-0.311c0.417,0,0.755,0.102,1.013,0.311 c0.259,0.209,0.388,0.482,0.388,0.82v8.431c0,0.413-0.126,0.739-0.38,0.979c-0.254,0.235-0.593,0.354-1.021,0.354 c-0.418,0-0.74-0.115-0.965-0.349c-0.224-0.233-0.337-0.56-0.337-0.984V8.925z M34.024,35.703c-0.201,0-0.402,0.042-0.596,0.137 c-0.197,0.089-0.388,0.233-0.581,0.429v8.753c0.228,0.228,0.452,0.396,0.668,0.495c0.216,0.101,0.44,0.151,0.676,0.151 c0.345,0,0.596-0.099,0.759-0.297c0.16-0.197,0.243-0.517,0.243-0.968v-7.255c0-0.476-0.095-0.836-0.296-1.081 C34.692,35.823,34.4,35.703,34.024,35.703z M50.243,24.529H7.049C3.17,24.529,0,27.701,0,31.576v13.201 c0,3.874,3.17,7.044,7.049,7.044h43.194c3.879,0,7.049-3.17,7.049-7.044V31.576C57.292,27.701,54.122,24.529,50.243,24.529z M18.643,31.416h-3.275v16.276h-3.165V31.416H8.927v-2.767h9.717V31.416z M27.898,47.692h-2.808v-1.544 c-0.523,0.573-1.059,1.004-1.625,1.302c-0.558,0.302-1.101,0.447-1.628,0.447c-0.652,0-1.138-0.207-1.469-0.626 c-0.325-0.421-0.492-1.043-0.492-1.882V33.641h2.808v10.778c0,0.331,0.06,0.572,0.175,0.719c0.121,0.151,0.312,0.226,0.576,0.226 c0.201,0,0.468-0.099,0.782-0.298c0.318-0.195,0.607-0.448,0.873-0.751V33.641h2.808V47.692z M38.089,44.788 c0,0.994-0.22,1.759-0.66,2.29c-0.44,0.529-1.078,0.793-1.909,0.793c-0.554,0-1.044-0.099-1.469-0.306 c-0.433-0.202-0.835-0.52-1.203-0.95v1.077h-2.839V28.649h2.839v6.13c0.38-0.423,0.782-0.755,1.203-0.976 c0.429-0.222,0.862-0.331,1.298-0.331c0.888,0,1.567,0.299,2.034,0.895c0.471,0.6,0.706,1.475,0.706,2.624V44.788z M47.829,41.002 h-5.371v2.65c0,0.739,0.087,1.252,0.272,1.538c0.187,0.287,0.505,0.427,0.953,0.427c0.467,0,0.79-0.121,0.976-0.366 c0.182-0.24,0.281-0.773,0.281-1.599v-0.642h2.889v0.721c0,1.44-0.35,2.527-1.06,3.258c-0.698,0.727-1.75,1.087-3.151,1.087 c-1.26,0-2.25-0.386-2.972-1.157c-0.722-0.771-1.089-1.835-1.089-3.188V37.42c0-1.214,0.402-2.21,1.195-2.979 c0.797-0.767,1.818-1.149,3.074-1.149c1.287,0,2.278,0.356,2.969,1.068c0.691,0.709,1.033,1.73,1.033,3.06V41.002z M43.71,35.752 c-0.447,0-0.767,0.126-0.965,0.386c-0.197,0.248-0.287,0.674-0.287,1.26v1.419h2.482v-1.419c0-0.586-0.104-1.012-0.297-1.26 C44.454,35.878,44.136,35.752,43.71,35.752z'/%3E%3C/svg%3E" alt="youtube"/></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__dev"><a href="" class="footer__dev-text">Создание сайта</a><a href="" class="footer__dev-logo"><img src="images/imedia.png" alt="imediasolutions"/></a></div>
+            </div>
+          </div>
+        </footer>
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/vendor/wow.min.js"></script>
+        <script src="js/vendor/jquery.fancybox.pack.js"></script>
+        <script src="js/vendor/slick.min.js"></script>
+        <script src="js/vendor/jquery.easydropdown.min.js"></script>
+        <script src="js/vendor/pickmeup.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEjVx5mvRceyLV8vxCe_CbkYC3Rl_TND4"></script>
+        <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
+        <script src="js/vendor/masonry.pkgd.min.js">     </script>
+        <script src="js/main.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

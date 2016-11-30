@@ -1,0 +1,463 @@
+.meal-menu {
+  padding-top: 0;
+
+  .b-text {
+  }
+
+  &__tip {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    color: #83ba31;
+    font-weight: bold;
+    font-style: italic;
+    padding-left: 40px;
+    margin-bottom: 50px;
+
+    i {
+      position: absolute;
+      .bg-svg(@tooltip-green, 17px, 17px, 15px, 3px);
+      cursor: pointer;
+    }
+
+    span {
+      border-bottom: 1px dotted @bright-green;
+    }
+
+  }
+
+}
+
+.meal-tabs {
+  margin-right: 3px;
+  margin-left: 3px;
+
+  &__pagin {
+    font-size: 0;
+  }
+
+  &__btn {
+    margin-left: -1px;
+    margin-top: -1px;
+    .dibt;
+    width: 82px;
+    height: 85px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: @border-color;
+    cursor: pointer;
+    .trans;
+
+    i {
+      display: block;
+      margin-top: 25px;
+      font-size: 24px;
+      line-height: 0.75;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    span {
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    &:hover,
+    &.active {
+      border-color: @bright-green;
+      background-color: @bright-green;
+      color: #fff;
+    }
+
+    &.active {
+      cursor: inherit;
+    }
+
+  }
+
+  &__content {
+    .item {
+      border-color: #dbdbdb;
+
+      &__title {
+        font-size: 18px;
+        padding: 15px 20px;
+        text-transform: uppercase;
+        color: #888888;
+        text-align: center;
+        .trans;
+
+        &:after {
+          position: relative;
+          display: inline-block;
+          top: 4px;
+          right: -10px;
+        }
+
+        &:hover {
+          color: #000;
+
+          &:after {
+            background-image: @arrow-down-black;
+          }
+
+        }
+
+      }
+
+      &.opened {
+        position: relative;
+        z-index: 1;
+        border-color: #bbb;
+        border-top-color: #dbdbdb;
+
+        .item__title {
+          color: #000;
+          background-color: #fff;
+
+          &:after {
+            background-image: @arrow-up-black;
+          }
+
+        }
+
+      }
+
+      &__info {
+        border-style: solid;
+        border-color: #bbb;
+        border-width: 1px;
+        border-bottom-width: 0;
+        padding: 50px 0 0 0;
+        font-size: 14px;
+      }
+
+      &__close {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px 15px;
+        float: none;
+
+        &:after {
+          width: 16px;
+          height: 16px;
+          background-size: cover;
+        }
+
+      }
+
+      &__row {
+      }
+
+      &__col {
+      }
+
+      &__list {
+        padding: 0 20px;
+        width: 50%;
+      }
+
+      &__name {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .list {
+        padding-left: 20px;
+
+        li {
+          margin-bottom: 30px;
+
+          span {
+          }
+
+          i {
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.meal-holl {
+  &__title {
+    font-size: 24px;
+    color: #959595;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 40px;
+  }
+
+}
+
+.meal-cuisine {
+  &__wrap {
+    position: relative;
+    padding: 80px 70px 20px 70px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background-image: url(../images/cuisine-tape-top.jpg);
+      background-repeat: repeat-x;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background-image: url(../images/cuisine-tape-top.jpg);
+      background-repeat: repeat-x;
+      background-size: contain;
+    }
+
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    color: @green;
+    margin-bottom: 40px;
+
+    span {
+      color: #000;
+    }
+
+  }
+
+}
+
+.meal-salad {
+  &__wrap {
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    color: @green;
+    margin-bottom: 40px;
+  }
+
+}
+
+@media (max-width:1199px) {
+  .meal-menu {
+    padding-top: 0;
+
+    .b-text {
+    }
+
+    &__tip {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  .meal-tabs {
+    margin-right: 0;
+    margin-left: 0;
+
+    &__pagin {
+    }
+
+    &__btn {
+    }
+
+    &__content {
+      .item {
+        &__col {
+          flex-wrap: wrap;
+        }
+
+        &__list {
+          width: 100%;
+        }
+
+        &__name {
+          margin-bottom: 15px;
+        }
+
+        .list {
+          li {
+            margin-bottom: 10px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .meal-holl {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  .meal-cuisine {
+    &__wrap {
+      padding: 80px 30px 20px 30px;
+    }
+
+    &__title {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  .meal-salad {
+    &__title {
+      margin-bottom: 30px;
+    }
+
+  }
+
+}
+
+@media (max-width:767px) {
+
+.meal-tabs {
+
+  &__pagin {
+  margin-right: -3px;
+  margin-left: -2px;
+  }
+
+  &__btn {
+    width: 60px;
+    height: 60px;
+
+    i {
+      margin-top: 10px;
+
+    }
+
+    span {
+      font-size: 14px;
+      font-style: italic;
+    }
+
+    &:hover,
+    &.active {
+      border-color: @bright-green;
+      background-color: @bright-green;
+      color: #fff;
+    }
+
+    &.active {
+      cursor: inherit;
+    }
+
+  }
+
+  &__content {
+    .item {
+        
+      &__close {
+        top: inherit;
+
+
+        &:after {
+          width: 10px;
+          height: 10px;
+          margin-top: 1px;
+        }
+
+      }
+
+      &__info {
+        padding: 20px 0;
+      }
+
+      &__row {
+      }
+
+      &__col {
+      }
+
+      &__list {
+
+      }
+
+      &__name {
+
+      }
+
+      .list {
+
+
+        li {
+
+          span {
+          }
+
+          i {
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+
+  .meal-holl {
+    &__title {
+      margin-bottom: 20px;
+    }
+
+  }
+
+  .meal-cuisine {
+    &__wrap {
+      padding: 80px 0 20px 0;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+    }
+
+  }
+
+  .meal-salad {
+    &__title {
+      margin-bottom: 20px;
+    }
+
+  }
+
+}
+
+@media (max-width:479px) {
+}

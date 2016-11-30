@@ -1,0 +1,109 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .container
+      +breadcrumb('Результат поиска')
+      h1.page__title По заданным параметрам найдены <span class="page__title_green">0</span> предложения:
+
+    section.search-param
+      .container
+        .search-param__wrap
+          - for (var i = 0; i < 1; i++) 
+            .search-param__block
+              .search-param__list
+                .item
+                  .item__name Дата заезда
+                  .item__value.item__value_date 25.06.2016 - 28.06.2016
+                .item
+                  .item__name Взрослые
+                  .item__value 3 человекa                
+                .item
+                  .item__name Дети
+                  .item__value 1 ребёнок
+              .search-param__change
+                .btn.btn_grey Изменить поиск
+
+    section.search-noresult
+      .container
+        .search-noresult__wrap
+          .search-noresult__text
+            p К сожалению, не найдено ни одной путевки!
+            p Вы можете связаться с нашими менеджером для подбора индивидуального предложения!
+          .search-noresult__btn
+            a(href="#order").btn.btn_green.js-order Отправить заявку
+
+    section.feedback
+      .container
+        .feedback__wrap
+            .feedback__text
+              span Вы можете связаться с нашими менеджером для подбора 
+              br
+              span индивидуального предложения
+            .feedback__btn
+              a(href="#order").btn.btn_invert.js-order Отправить заявку
+
+  +footer('int')
+
+  #order.popup.popup_order
+    .popup__title Отправить заявку
+    .popup__close
+    .popup__form     
+      form(action="").form          
+        .b-filter__row
+          .b-filter__block
+            label.label(for="filterResort") Выберите санаторий
+            select#filterResort.select(name='PROPERTY[][]')
+              option(selected) Все
+              - var listMenu = ['Родон', 'Поречье','Сосновый бор','Рассвет-Любань','Случь','Солнышко','Росинка','Налибокская пуща']
+              each item in listMenu
+                option=item
+          .b-filter__block
+            label.label(for="filterDate") Дата заезда*   
+            input.req.input.input_date#filterDate(type='text', name='PROPERTY[][]', placeholder='')
+          .b-filter__block
+            label.label(for="filterDays") Количество дней*   
+            input.req.input#filterDays(type='number', name='PROPERTY[][]', placeholder='', min='1', max='365', maxlength='3', autocomplete="false")
+        .b-filter__row
+          .b-filter__block
+            label.label(for="filterComfort") Степень комфортности
+            select#filterComfort.select(name='PROPERTY[][]')
+              option(selected) люкс
+              - var listMenu = ['полу-люкс','обычный']
+              each item in listMenu
+                option=item              
+          .b-filter__block
+            label.label(for="filterPlaces") Размещение в номере*
+            select.req#filterPlaces.select(name='PROPERTY[][]')
+              option(selected) 1
+              - var listMenu = [2,3,4]
+              each item in listMenu
+                option=item
+            label.checkbox  
+              input(type="checkbox").checkbox__hidden
+              span.checkbox__showed
+              span.checkbox__title Только одноместные номера                   
+
+          .b-filter__block
+            label.label(for="filterChild") Количество детей
+            select#filterChild.select.select_child(name='PROPERTY[][]')
+              option(selected) нет
+              - var listMenu = [1,2,3,4]
+              each item in listMenu
+                option=item  
+        .popup_order__title Ваши контактные данные
+        .b-filter__row
+          .b-filter__block
+            label.label(for="filterName") Имя
+            input#filterName.input(type='text', name='form[]', placeholder='Василий',autocomplete='email')
+          .b-filter__block
+            label.label(for="filterPhone") Телефон
+            input#filterPhone.input.req(type='text', name='form[]', placeholder='+375295750215',autocomplete='tel')                      
+          .b-filter__block
+            label.label(for="filterEmail") E-mail
+            input#filterEmail.input.req.email(type='email', name='form[]', placeholder='romateo@list.ru',autocomplete='email')
+        .b-filter__hr
+        .popup_order__btn
+          input.btn.btn_green(type='submit', value="Отправить")

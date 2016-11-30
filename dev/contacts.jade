@@ -1,0 +1,160 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .banner.banner_int
+      .banner__img(style="background-image: url(images/resort-banner.jpg)")
+      .banner__title Случь
+      .banner__filter 
+        span Подобрать путевку
+
+    .container
+      +breadcrumb('Инфрастуктура')
+      h1.page__title Инфрастуктура
+
+    +filter('internal')
+    
+    section.navigation
+      .container
+          .overlay.navigation__overlay
+          .navigation__btn Контакты
+          ul.navigation__menu
+            li.navigation__item
+              a(href="").navigation__link Медицинский <br>профиль
+            li.navigation__item
+              a(href="").navigation__link Номера и <br>цены
+            li.navigation__item
+              a(href="").navigation__link Досуг
+            li.navigation__item
+              a(href="").navigation__link Медиа
+            li.navigation__item
+              a(href="").navigation__link Инфрастуктура
+            li.navigation__item.active
+              .navigation__link Контакты
+            li.navigation__item.navigation__item_hot
+              a(href="").navigation__link Горящие <br>туры
+            li.navigation__item
+              a(href="").navigation__link Диетическое <br>питание
+    
+    section.contacts-info
+      .container
+        .contacts__title руководство санатория:
+        .contacts-info__wrap
+          .row
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-01.jpg", alt="")
+                .item__post Директор
+                .item__name Марачковский Михаил Владимирович
+                .item__phone 
+                  a(href="tel:+375 (17) 956-67-44") +375 (17) 956-67-44
+                .item__phone
+                  a(href="tel:+375 (29) 392-93-49") +375 (29) 392-93-49
+                .item__phone
+                  a(href="tel:+375 (17) 957-01-34") +375 (17) 957-01-34 (факс) 
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-02.jpg", alt="")
+                .item__post Секретарь приемной руководителя
+                .item__name Шапель Ирина Владимировна
+                .item__phone 
+                  a(href="tel:+375 (17) 957-01-34") +375 (17) 957-01-34 (тел/факс)
+                .item__phone
+                  a(href="tel:+375 (44) 588-06-26") +375 (44) 588-06-26
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-03.jpg", alt="")
+                .item__post Заместитель директора <br>(по медицинской работе и питанию)
+                .item__name Попов Владимир Григорьевич
+                .item__phone 
+                  a(href="tel:+375 (17) 957-04-16") +375 (17) 957-04-16
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-04.jpg", alt="")
+                .item__post Главный экономист
+                .item__name Сильчук Наталья Александровна
+                .item__phone 
+                  a(href="tel:+375 (17) 957-01-52") +375 (17) 957-01-52
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-05.jpg", alt="")
+                .item__post Заведующая отделом <br>(культурно-массовой  и воспитательной работы)
+                .item__name Соловей Валентина Петровна
+                .item__phone 
+                  a(href="tel:+375 (29) 645-02-36") +375 (29) 645-02-36
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-06.jpg", alt="")
+                .item__post Главный бухгалтер
+                .item__name Ханина Лариса Владимировна
+                .item__phone 
+                  a(href="tel:+375 (17) 957-01-50") +375 (17) 957-01-50
+                .item__phone
+                  a(href="tel:+375 (44) 784-38-63") +375 (44) 784-38-63
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-07.jpg", alt="")
+                .item__post Заведующий пищеблоком
+                .item__name Замараева Лидия Григорьевна
+                .item__phone 
+                  a(href="tel:+375 (17) 957-01-49") +375 (17) 957-01-49
+                .item__phone
+                  a(href="tel:+375 (29) 393-39-52") +375 (29) 393-39-52
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-08.jpg", alt="")
+                .item__post Главная медсестра
+                .item__name Прокопеня Тамара Александровна
+                .item__phone 
+                  a(href="tel:+375 (17) 957-01-48") +375 (17) 957-01-48
+                .item__phone
+                  a(href="tel:+375 (44) 588-06-29") +375 (44) 588-06-29
+
+
+    section.resort-road
+      .container
+        .resort-road__wrap
+          .contacts__title Случь на карте:
+          .row
+            .six.columns.resort-road__left
+              #mapResort.resort-road__map
+            .six.columns.resort-road__right
+              .resort-road__info
+                .resort-road__title Как добраться
+                .resort-road__list 
+                  .item
+                    .item__name Ближайший аэропорт:
+                    .item__text в г. Минске, в 120 км
+                  .item
+                    .item__name Ближайший железнодорожный вокзал:
+                    .item__text в г.Слуцке, в 12 км
+                  .item
+                    .item__name Ближайший автовокзал:
+                    .item__text в г.Слуцке, в 12 км
+                  .item
+                    .item__name Путь следования:
+                    .item__text Минск- Слуцк- санаторий “Случь”, Осиповичи – Слуцк - санаторий “Случь”
+                  .item
+                    .item__name Проезд собственным транспортом от ближайшего самого большого населенного пункта:
+                    .item__text г.Слуцк – д.Новодворцы - д. Кирово – санаторий “Случь”
+
+
+    +feedback()
+  +footer('int')

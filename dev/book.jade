@@ -1,0 +1,18 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .container
+      +breadcrumb('Бронирование')
+      h1.page__title Благодарим Вас за бронирование!
+
+    section
+      .container
+        .b-text
+          p После подтверждения менеджера Вам будет доступна оплата онлайн в  
+            a(href="") Личном кабинете 
+            
+    +feedback()
+  +footer('int')

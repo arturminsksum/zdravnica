@@ -1,0 +1,88 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .banner.banner_int
+      .banner__img(style="background-image: url(images/resort-banner.jpg)")
+      .banner__title Случь
+      .banner__filter 
+        span Подобрать путевку
+
+    .container
+      +breadcrumb('Горящие туры')
+      h1.page__title Горящие туры
+
+    +filter('internal')
+    
+    section.navigation
+      .container
+          .overlay.navigation__overlay
+          .navigation__btn Горящие туры
+          ul.navigation__menu
+            li.navigation__item
+              a(href="").navigation__link Медицинский <br>профиль
+            li.navigation__item
+              a(href="").navigation__link Номера и <br>цены
+            li.navigation__item
+              a(href="").navigation__link Досуг
+            li.navigation__item
+              a(href="").navigation__link Медиа
+            li.navigation__item
+              a(href="").navigation__link Инфрастуктура
+            li.navigation__item
+              a(href="").navigation__link Контакты
+            li.navigation__item.navigation__item_hot.active
+              .navigation__link Горящие <br>туры
+            li.navigation__item
+              a(href="").navigation__link Диетическое <br>питание
+
+    section.hot-list
+      .container
+        .main-hot__wrap
+          .row
+            - var hotList = ['4 местный тип А','1 местный повышенной комфортности','2 местный тип А']
+            each hot in hotList
+              .column
+                .tour
+                  .tour__img
+                    img(src="images/tour-01.jpg", alt="")
+                  .tour__top
+                    .tour__type=hot
+                    .tour__sanatorium Санаторий "Радон"
+                  .tour__bottom
+                    .tour__list
+                      ul
+                        -var listIcons = ['Болезни системы кровообращения', 'Болезни костно-мышечной системы и соединительной ткани', 'Болезни органов пищеварения', 'Болезни органов дыхания', 'Болезни нервной системы']
+                        each icon in listIcons
+                          li=icon
+
+                    .tour__icons
+                        i.icon.icon_wi-fi
+                        i.icon.icon_air
+                        i.icon.icon_double-bed
+                        i.icon.icon_single-bed
+                        i.icon.icon_safety
+                        i.icon.icon_tv
+                        i.icon.icon_phone
+                        i.icon.icon_more                    
+                    .tour__info
+                      .tour__info-icon
+                      +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
+
+                      .tour__info-price 210 руб. за 5 ночей
+                      .tour__info-tax + 3% курортный сбор 20.000
+                    .tour__action
+                      .tour__counter
+                        
+                        
+                        .tour__counter-minus &#10134;
+                        .tour__counter-num 1
+                        .tour__counter-plus &#10133;
+                      .tour__btn
+                        a(href="").btn.btn_green Забронировать
+
+
+    +feedback()
+  +footer('int')

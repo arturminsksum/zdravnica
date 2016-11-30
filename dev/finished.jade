@@ -1,0 +1,56 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .container
+      +breadcrumb('Завершенные заказы')
+      h1.page__title Личный кабинет    
+
+      aside.personal-side
+        .overlay.personal-side__overlay
+        .personal-side__btn Завершенные заказы
+        ul.personal-side__menu
+          -var sideList = ['Мои заказы','ЛИчные Данные','Завершённые заказы','Подписка на рассылку']
+          each side,index in sideList
+            if index===2
+              li.personal-side__item
+                span.personal-side__link=side
+            else
+              li.personal-side__item
+                a(href="").personal-side__link=side              
+
+      .personal-content
+
+        section.personal-orders
+            .personal-orders__title.hide-tablet Завершенные заказы
+          
+            .basket-list__wrap
+              - for (var i = 0; i < 3; i++) 
+                .tour__item.tour__item_finished
+                  .tour__head
+                    .tour__status
+                      i
+                      span Заказ завершён                  
+                    .tour__number
+                      span № 2014589 
+                      | от 10.05.2016
+                  .tour.clearfix
+                    .tour__left
+                      img(src="images/basket-img-01.jpg", alt="")
+                    .tour__right 
+                      .tour__type 4 местный тип А
+                      .tour__sanatorium Санаторий "Радон"
+                      .tour__block     
+                        .tour__price
+                          .tour__info-price 210 руб. за 5 ночей
+                          .tour__info-tax + 3% курортный сбор 20.000
+                      .tour__tooltip
+                        .tour__info-icon
+                        +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
+                        .tour__text Cтоимость путевки формируется из стоимости брони места в санатории и курортного сбора. Сбор можно оплатить онлайн или наличными деньгами/банковской картой непосредственно перед заселением.   
+
+
+    +feedback()
+  +footer('int')

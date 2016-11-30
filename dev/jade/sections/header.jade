@@ -1,0 +1,75 @@
+mixin header(page,search)
+    - var page = (typeof page === 'undefined') ? '' : "header_" + page
+    .overlay.overlay_menu
+    .overlay.overlay_search
+    .overlay.overlay_phones
+    .header-phones__close.show-mobile
+    .header-menu__close.show-mobile 
+    header.header(class=page)
+      .header-top
+        .container
+          .header-top__wrap            
+            .header-top__left
+              .header-phones
+                .header-phones__title Контакты
+                .header-phones__wrap
+                  i.header-phones__icon
+                  a(href="tel:+375 (17) 298-54-00").header-phones__number +375 (17) 298-54-00
+                  a(href="tel:+375 (17) 200-40-53").header-phones__number +375 (17) 200-40-53
+            .header-top__right 
+              .header-country
+                .header-country__title Ваше гражданство: 
+                .header-country__value 
+                  .header-country__img
+                    img(src="images/header-rus.png", alt="rus")
+                  .header-country__icon
+                  .header-country__select
+                    .header-country__list
+                      a(href="").header-country__option
+                        img(src="images/header-bel.png", alt="bel")
+                      //- a(href="").header-country__option
+                      //-   img(src="images/header-rus.png", alt="rus")
+                    
+              a(href="#login").header-sign
+                .header-sign__icon
+                .header-sign__title Вход 
+
+      .header-bottom
+        .container
+                 
+          .header-bottom__wrap
+            +toggle()
+            unless search=="no"
+              .header-search__mobile.show-mobile
+            a(href="").header-logo
+              img(src="images/header-logo.png", alt="белагроздравница")
+            .header-phones__mobile.show-mobile
+            a(href="#login").header-sign__mobile.show-mobile
+              i
+  
+            .header-menu
+              +menu()
+              .header__hot
+                a.btn.btn_blue.btn_hot(href="") Горячие путёвки
+      unless search=="no"      
+        +header-search()   
+
+
+
+    #login.popup.popup_login
+      .popup__title Вход в  Личный кабинет
+      .popup__close
+      .popup__form        
+        .popup__text В Личном Кабинете доступна вся информация по брони путевок, включая онлайн оплату      
+        form(action="").form          
+          .form__block
+            label.label(for="email_login") E-mail
+            input#email_login.input.req.email(type='email', name='form[]', placeholder='romateo@list.ru',autocomplete='email')
+          .form__block
+            label.label(for="email_login") Пароль
+            input#email_login.input.req(type='password', name='form[]',autocomplete='false')              
+          .form__btn
+            a(href="").btn.btn_invert Регистрация
+            input.btn.btn_blue(type='submit', value="Войти")
+          .form__lost 
+            a(href="") Забыли пароль

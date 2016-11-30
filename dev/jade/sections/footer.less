@@ -1,0 +1,386 @@
+/*=== begin footer style ===*/
+.footer {
+  padding: 50px 0;
+    line-height: 1.2;
+
+  &_main {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(88, 115, 35, 0.9);
+  }
+  &_int {
+    background-color: @green;
+  }
+
+  &__wrap {
+    position: relative;
+
+    .column {
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 23%;
+
+      &_first {
+        align-content: space-between;
+        border-right-width: 1px;
+        border-style: solid;
+        border-color: rgba(255, 255, 255, 0.2);
+      }
+
+      &_second {
+      }
+
+      &_third {
+        justify-content: flex-start;
+      }
+
+      &_forth {
+        justify-content: flex-start;
+      }
+
+    }
+
+    .row {
+      height: 410px;
+    }
+
+  }
+
+  &__logo {
+    img {
+      .img;
+    }
+  }
+
+  &__slogan {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.25;
+    text-align: center;
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  &__copyright {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+  }
+
+  &__list {
+    &_resort {
+    }
+
+    &_partner {
+    }
+
+    &_client {
+    }
+
+    ul {
+      li {
+        a {
+          display: inline-block;
+          font-size: 15px;
+          color: rgb(231, 239, 216);
+          margin-bottom: 10px;
+
+          &:hover {
+            color: #97d23f;
+            text-decoration: underline;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  &__title {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__adress {
+    font-size: 15px;
+    color: rgb(231, 239, 216);
+    margin-bottom: 30px;
+  }
+
+  &__phones {
+    margin-bottom: 30px;
+  }
+
+  &__number {
+    display: inline-block;
+    line-height: 1.333;
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__email {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: rgb(227, 233, 53);
+    text-decoration: underline;
+  }
+
+  &__license {
+    margin-bottom: 30px;
+    font-size: 15px;
+    color: rgb(231, 239, 216);
+  }
+
+  &__social {
+    white-space: nowrap;
+    a {
+      .dibt;
+      margin-right: 5px;
+      width: 32px;
+      height: 32px;
+      border-width: 1px;
+      border-color: rgba(255, 255, 255, 0.3);
+      border-style: solid;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+  }
+
+  &__dev {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+
+    &-text {
+      .dibt;
+      font-size: 14px;
+      color: rgb(255, 255, 255);
+      margin-right: 10px;
+      margin-top: 8px;
+    }
+
+    &-logo {
+      .dibt;
+      img {
+        .img;
+      }
+    }
+
+  }
+
+}
+
+@media (max-width:1199px) {
+  .footer {
+    padding: 30px 0;
+
+    &__wrap {
+      padding-bottom: 50px;
+
+
+      .row {
+        height: auto;
+      }
+
+    }
+
+    &__logo {
+      padding: 0 10px;
+
+    }
+
+  }
+
+}
+
+@media (max-width:767px) {
+.footer {
+  padding-top: 0;
+
+  &_main {
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: @green;
+  }
+
+  &__wrap {
+      padding-bottom: 20px;
+
+    .row {
+      height: auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .column {
+
+      max-width: inherit;
+      width: 100%;
+
+      &_first {
+        order:1;
+        border-right-width: 0;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        padding: 30px 0;
+
+      }
+
+      &_second {
+      }
+
+      &_third {
+
+      }
+
+      &_forth {
+
+      }
+
+    }
+
+
+
+  }
+
+  &__logo {
+    padding: 0;
+    .dibt;
+    width: 49%;
+
+  }
+
+  &__slogan {
+    .dibt;
+    width: 49%;
+    text-align: right;
+    font-size: 14px;
+      margin-top: 7px;
+    span {
+      text-align: center;
+    }
+  }
+
+  &__copyright {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  &__list {
+    border-bottom: 1px solid rgba(255, 255, 255,0.3);
+
+    .footer__title {
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 35px;
+        width: 10px;
+        height: 10px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-image: @arrow-down-white;
+        left: inherit;
+        right: 15px;
+      }
+
+      &.active {
+        &:after {
+          background-image: @arrow-up-white;
+        }
+      }      
+    }
+
+
+    &_resort {
+    }
+
+    &_partner {
+    }
+
+    &_client {
+    }
+
+    ul {
+      display: none;
+      padding-left: 30px;
+
+    }
+
+  }
+
+  &__title {
+    position: relative;
+    font-size: 16px;
+    margin-bottom: 0;
+    padding: 30px 15px;
+  }
+
+  &__contacts {
+    padding-left: 15px;
+    margin-bottom: 30px;
+    .footer__title {
+      margin-left: -15px;
+    }
+  }
+
+  &__adress {
+    margin-bottom: 20px;
+  }
+
+  &__phones {
+    margin-bottom: 20px;
+  }
+
+  &__number{
+      display: block;
+  }
+
+  &__email {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__license {
+    margin-bottom: 20px;
+
+  }
+
+  &__dev {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+
+    &-text {
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    &-logo {
+      height: 20px;
+    }
+
+  }
+
+}
+}
+
+/*=== end footer style ===*/

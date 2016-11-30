@@ -1,0 +1,107 @@
+include menu
+include feedback
+
+mixin filter(page)
+  - var page = (typeof page === 'undefined') ? '' : "b-filter_" + page
+  section.b-filter(class=page)
+    .container
+      .b-filter__title Подобрать путёвку
+      .b-filter__wrap
+        form.b-filter__form(action="")
+          .b-filter__left
+            .b-filter__block
+              label.label(for="filterResort") Выберите санаторий
+              select#filterResort.select
+                option(selected) Все
+                - var listMenu = ['Радон','Поречье','Сосновый бор','Рассвет-Любань','Случь','Солнышко','Росинка','Налибокская пуща']
+                each item in listMenu
+                  option=item
+            .b-filter__block
+              label.label(for="filterComfort") Степень комфортности
+              select#filterComfort.select
+                option(selected) люкс
+                - var listMenu = ['полу-люкс','обычный']
+                each item in listMenu
+                  option=item
+            .b-filter__block
+              label.label(for="filterDays") Количество дней*   
+              input.req.input#filterDays(type='number', name='form[]', placeholder='', min='1', max='365', maxlength='3', autocomplete="false")
+            .b-filter__block
+              label.label(for="filterPlaces") Количество мест*
+              select.req#filterPlaces.select
+                option(selected) 1
+                - var listMenu = [2,3,4]
+                each item in listMenu
+                  option=item
+            .b-filter__block
+              label.label(for="filterDate") Дата заезда*   
+              input.req.input.input_date#filterDate(type='text', name='form[]', placeholder='')
+            .b-filter__block
+              label.label(for="filterCountry") Выберите гражданство
+              select#filterCountry.select
+                option(selected) Беларусь
+                - var listMenu = ['Россия']
+                each item in listMenu
+                  option=item                             
+          .b-filter__right
+            input.btn.btn_blue(type="submit", value="Подобрать путёвку")
+        .b-filter__bottom
+          a.b-filter__more(href="") Расширенный поиск
+        .b-filter__close 
+          .b-filter__close-btn  Закрыть
+
+mixin main-hot(o)
+  section.main-hot
+    .container
+      .section__title Горящие путёвки
+      .main-hot__wrap
+        .row
+          - var hotList = ['4 местный тип А','1 местный повышенной комфортности','2 местный тип А']
+          each hot in hotList
+            .column
+              .tour
+                .tour__img
+                  img(src="images/tour-01.jpg", alt="")
+                .tour__top
+                  .tour__type=hot
+                  .tour__sanatorium Санаторий "Радон"
+                .tour__bottom
+                  .tour__list
+                    ul
+                      -var listIcons = ['Болезни системы кровообращения', 'Болезни костно-мышечной системы и соединительной ткани', 'Болезни органов пищеварения', 'Болезни органов дыхания', 'Болезни нервной системы']
+                      each icon in listIcons
+                        li=icon
+
+                  .tour__icons
+                      i.icon.icon_wi-fi
+                      i.icon.icon_air
+                      i.icon.icon_double-bed
+                      i.icon.icon_single-bed
+                      i.icon.icon_safety
+                      i.icon.icon_tv
+                      i.icon.icon_phone
+                      i.icon.icon_more                    
+                  .tour__info
+                    .tour__info-icon
+                    +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
+
+                    .tour__info-price 210 руб. за 5 ночей
+                    .tour__info-tax + 3% курортный сбор 20.000
+                  .tour__action
+                    .tour__counter
+                      
+                      
+                      .tour__counter-minus &#10134;
+                      .tour__counter-num 1
+                      .tour__counter-plus &#10133;
+                    .tour__btn
+                      a(href="").btn.btn_green Забронировать
+      .main-hot__more
+        a(href="").btn 
+          span.hide-mobile Посмотреть другие специальные предложения
+          span.show-mobile Другие предложения
+
+mixin tooltip(text)
+  .tooltip
+    .tooltip__arrow
+    .tooltip__inner=text

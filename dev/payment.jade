@@ -1,0 +1,72 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .container
+      +breadcrumb('Способ оплаты')
+      h1.page__title Способ оплаты
+
+    section.p-payment
+      .container
+        .p-payment__wrap
+          .p-payment__title Выберите желаемый способ оплаты
+          .p-payment__list
+            .row
+              .four.columns
+                .p-payment__item
+                  .p-payment__btn
+                    input#cart.p-payment__input(type="radio", name="payment")
+                    label.p-payment__label(for="cart") Пластиковая карта         
+                  .p-payment__text
+                    p Оплатить заказ банковской картой можно как при получении заказа в нашем офисе, так и сразу после оформления заказа, в интернете. Выбирая данный способ оплаты, Вы не платите никаких комиссий! 
+                  .p-payment__more.show-mobile
+                    .p-payment__more-btn
+                      span Смотреть подробнее
+                  .p-payment__close
+                    .g-close 
+                      span Закрыть
+
+              .four.columns
+                .p-payment__item
+                  .p-payment__btn
+                    input#erip.p-payment__input(type="radio", name="payment")
+                    label.p-payment__label(for="erip") ЕРИП                       
+                  .p-payment__text
+                    ul
+                      li Заходим в банкинг
+                      li Выбираем вкладку «Система “Расчет”».интерфейс ЕРИП
+                      li Выбираем из списка нужную услугу. 
+                      li Выбираем регион: город Минск.
+                      li Доступно к оплате услуги: туризм и отдых. Выбираем «Санатории».
+                      li В новом окне вводим номер (без кода).
+
+                  .p-payment__more.show-mobile
+                    .p-payment__more-btn
+                      span Смотреть подробнее
+                  .p-payment__close
+                    .g-close 
+                      span Закрыть
+
+              .four.columns
+                .p-payment__item
+                  .p-payment__btn
+                    input#bank.p-payment__input(type="radio", name="payment")
+                    label.p-payment__label(for="bank") Посредством банка
+                  .p-payment__text
+                    p Используя международную систему электронных расчетов WebMoney, Вы можете мгновенно совершить онлайн-оплату своего заказа на нашем сайте. Чтобы сделать это, выберите данный способ оплаты при оформлении заказа. Выбирая данный способ оплаты, Вы не платите никаких дополнительных комиссий, кроме стандартной комиссии системы!
+                  .p-payment__more.show-mobile
+                    .p-payment__more-btn
+                      span Смотреть подробнее
+                  .p-payment__close
+                    .g-close 
+                      span Закрыть
+
+
+        .p-payment__next
+          input.btn.btn_green(type="submit", value="Далее")
+
+
+    +feedback()
+  +footer('int')

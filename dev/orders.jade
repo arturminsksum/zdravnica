@@ -1,0 +1,151 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .container
+      +breadcrumb('Мои заказы')
+      h1.page__title Личный кабинет    
+
+      aside.personal-side
+        .overlay.personal-side__overlay
+        .personal-side__btn Мои заказы
+        ul.personal-side__menu
+          -var sideList = ['Мои заказы','ЛИчные Данные','Завершённые заказы','Подписка на рассылку']
+          each side,index in sideList
+            if index===0
+              li.personal-side__item
+                span.personal-side__link=side
+            else
+              li.personal-side__item
+                a(href="").personal-side__link=side              
+
+      .personal-content
+
+        section.personal-orders
+            .personal-orders__title.hide-tablet Мои заказы
+            .personal-orders__top
+              .personal-orders__discount
+                .button
+                  .button__discount - 3%
+                  .button__text ПЕРСОНАЛЬНАЯ СКИДКА
+              .personal-orders__hello Здравствуй, Роман
+
+            .b-text
+              p В санатории созданы необходимые условия для обеспечения непрерывного учебно-воспитательного процесса во время пребывания учащихся в санатории в учебное время: 13 оборудованных учебных кабинетов, оснащенных техническими средствами, наглядными пособиями, дидактическими материалами, методической литературой, необходимыми учебниками.             
+            .basket-list__wrap
+              .tour__item.tour__item_paid
+                .tour__head
+                  .tour__status
+                    i
+                    span Оплачено                  
+                  .tour__number
+                    span № 2014589 
+                    | от 10.05.2016
+                  a(href="").tour__download Скачать договор
+                  a(href="").tour__download Скачать счёт-фактуру
+
+                .tour__change
+                  .button.button_delete
+                    .button__icon 
+                    .button__text ЗАПРОС НА АННУЛИРОВАНИЕ ЗАКАЗА                  
+
+                .tour.clearfix
+                  .tour__left
+                    img(src="images/basket-img-01.jpg", alt="")
+                  .tour__right 
+                    .tour__type 4 местный тип А
+                    .tour__sanatorium Санаторий "Радон"
+                    .tour__block     
+                      .tour__price
+                        .tour__info-price 210 руб. за 5 ночей
+                        .tour__info-tax + 3% курортный сбор 20.000
+                      .tour__action
+                        .tour__counter-text 1 путёвка
+                    .tour__tooltip
+                      .tour__info-icon
+                      +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
+                      .tour__text Cтоимость путевки формируется из стоимости брони места в санатории и курортного сбора. Сбор можно оплатить онлайн или наличными деньгами/банковской картой непосредственно перед заселением.   
+
+              .tour__item.tour__item_wait
+                .tour__head
+                  .tour__status
+                    i
+                    span Ожидается оплата                  
+                  .tour__number
+                    span № 2014589 
+                    | от 10.05.2016
+                  a(href="").tour__download Скачать договор
+                  a(href="").tour__download Скачать счёт-фактуру
+
+                .tour__change
+                  .button.button_online
+                    .button__icon 
+                    .button__text Оплатить заказ онлайн 
+
+                  .button.button_change
+                    .button__icon 
+                    .button__text ИЗМЕНИИТЬ ЗАКАЗ                   
+                  .button.button_origin
+                    .button__icon 
+                    .button__text ЗАПРОСИТЬ ОРИГИИНАЛЫ ДОКУМЕНТЫ                 
+                  .button.button_delete
+                    .button__icon 
+                    .button__text АННУЛИРОВАТЬ ЗАКАЗ 
+                .tour.clearfix
+                  .tour__left
+                    img(src="images/basket-img-01.jpg", alt="")
+                  .tour__right 
+                    .tour__type 4 местный тип А
+                    .tour__sanatorium Санаторий "Радон"
+                    .tour__block     
+                      .tour__price
+                        .tour__info-price 210 руб. за 5 ночей
+                        .tour__info-tax + 3% курортный сбор 20.000
+                      .tour__action
+                        .tour__counter-text 1 путёвка
+                    .tour__tooltip
+                      .tour__info-icon
+                      +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
+                      .tour__text Cтоимость путевки формируется из стоимости брони места в санатории и курортного сбора. Сбор можно оплатить онлайн или наличными деньгами/банковской картой непосредственно перед заселением.   
+
+            .personal-orders__title Мои заЯвки
+            .basket-list__wrap
+              .tour__item.tour__item_process
+                .tour__head
+                  .tour__status
+                    i
+                    span Заявка обрабатывается                  
+                  .tour__number
+                    span Заявка 
+                    | от 10.05.2016
+
+                .tour__change
+                  .button.button_delete
+                    .button__icon 
+                    .button__text ОТМЕНИТЬ ЗАЯВКУ               
+
+                .tour.clearfix
+                  .tour__left
+                    img(src="images/basket-img-01.jpg", alt="")
+                  .tour__right 
+                    .tour__sanatorium Санаторий "Радон"
+                    .tour__type 4 местный тип А
+                    .tour__params
+                      .item
+                        .item__name Количество дней:
+                        .item__value 7 дней
+                      .item
+                        .item__name Зата заезда
+                        .item__value 05.05.2016
+                      .item
+                        .item__name Взрослые
+                        .item__value 2  человека
+                      .item
+                        .item__name Дети
+                        .item__value 1 ребёнок   
+
+
+    +feedback()
+  +footer('int')

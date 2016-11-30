@@ -1,0 +1,100 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .banner.banner_int
+      .banner__img(style="background-image: url(images/resort-banner.jpg)")
+      .banner__title Случь
+      .banner__filter 
+        span Подобрать путевку
+
+    .container
+      +breadcrumb('Номера и цены')
+      h1.page__title Номера и цены
+
+    +filter('internal')
+    
+    section.navigation
+      .container
+          .overlay.navigation__overlay
+          .navigation__btn Номера и цены
+          ul.navigation__menu
+            li.navigation__item
+              a(href="").navigation__link Медицинский <br>профиль
+            li.navigation__item.active
+              .navigation__link Номера и <br>цены
+            li.navigation__item
+              a(href="").navigation__link Досуг
+            li.navigation__item
+              a(href="").navigation__link Медиа
+            li.navigation__item
+              a(href="").navigation__link Инфрастуктура
+            li.navigation__item
+              a(href="").navigation__link Контакты
+            li.navigation__item.navigation__item_hot
+              a(href="").navigation__link Горящие <br>туры
+            li.navigation__item
+              a(href="").navigation__link Диетическое <br>питание
+
+    
+    section.rooms-info
+      .container
+        .b-text
+          p В санаторный комплекс входят 4 двухэтажных спальных корпуса, построенных по типовому проекту. Весь комплекс оборудован холодным и горячим водоснабжением и канализацией. Все корпуса телефонизированы, установлены 5 междугородних телефона-автомата.
+          p Отдыхающие проживают 2-4-х местных номерах. В 70% спальных номеров проведен евроремонт. Спальные места расположены преимущественно по блочной системе. Блок включает в себя прихожую со встроенными шкафами, две четырехместные палаты, душевую кабину, санузел.
+        .rooms-info__frequency
+          .rooms-info__title Периодичность услуг в номере:
+          .rooms-info__list
+            ul.list
+              li 
+                i Смена белья — 
+                strong 1 раз в семь дней
+              li 
+                i Смена полотенец — 
+                strong по мере загрязнения
+
+              li 
+                i Уборка — 
+                strong 2 раз в день
+              li 
+                i В санитарных узлах —  
+                strong 3 раза в день
+
+
+
+    section.gallery
+      .container
+        .gallery__row
+          - for (var i = 1; i < 9; i+=2)
+            .gallery__col
+              a(href="").gallery__item
+                .gallery__img
+                  img(src="images/gallery-0"+i+".jpg", alt="")
+                .gallery__type 4 местный тип А 
+                .gallery__price 40 руб. за сутки
+            .gallery__col
+              a(href="").gallery__item
+                .gallery__img
+                  img(src="images/gallery-0"+(i+1)+".jpg", alt="")
+                .gallery__type Номер Люкс
+                .gallery__price 30 руб. за сутки  
+
+          - for (var i = 1; i < 5; i+=2)
+            .gallery__col
+              a(href="").gallery__item
+                .gallery__img
+                  img(src="images/gallery-0"+i+".jpg", alt="")
+                .gallery__type 4 местный тип А 
+                .gallery__price 40 руб. за сутки
+            .gallery__col
+              a(href="").gallery__item
+                .gallery__img
+                  img(src="images/gallery-0"+(i+1)+".jpg", alt="")
+                .gallery__type Номер Люкс
+                .gallery__price 30 руб. за сутки  
+
+
+    +feedback()
+  +footer('int')

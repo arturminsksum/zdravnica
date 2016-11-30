@@ -1,0 +1,357 @@
+.basket-list {
+  padding-bottom: 0;
+
+  &__wrap {
+    .tour {
+      margin-bottom: 30px;
+      padding: 20px 30px;
+      border-top-width: 1px;
+      box-shadow: none;
+
+      &_hot {
+        border-color: rgb(233, 222, 49);
+      }
+
+      &__hot {
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        border-radius: 50%;
+        background-color: rgb(255, 255, 255);
+        width: 50px;
+        height: 50px;
+        z-index: 1;
+
+        &:before {
+          content: '';
+          position: absolute;
+          .bg-svg(@header-fire, 33px, 50px, 9px);
+          background-size: cover;
+        }
+
+      }
+
+      &__delete {
+        position: absolute;
+        padding-left: 15px;
+        top: 20px;
+        right: 30px;
+        font-size: 12px;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 15px;
+        border-width: 1px;
+        border-color: rgb(219, 219, 219);
+        border-style: solid;
+        width: 98px;
+        height: 30px;
+        line-height: 28px;
+        cursor: pointer;
+        z-index: 1;
+
+        &:before {
+          content: '';
+          position: absolute;
+          .bg-svg(@close-black, 14px, 14px, 10px, 7px);
+        }
+
+      }
+
+      &__left {
+        position: relative;
+        float: left;
+        font-size: 0;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          box-shadow: inset 0px 50px 100px -50px rgba(0, 0, 0, 0.75);
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          box-shadow: inset 0px -50px 100px -50px rgba(0, 0, 0, 0.75);
+        }
+
+        img {
+          .img;
+        }
+
+      }
+
+      &__right {
+        margin-left: 300px;
+      }
+
+      &__type {
+        color: #000;
+        margin-bottom: 0;
+        margin-right: 110px;
+      }
+
+      &__sanatorium {
+        color: #000;
+        margin-bottom: 10px;
+      }
+
+      &__block {
+        margin-bottom: 20px;
+      }
+
+      &__price {
+        .dibm;
+        margin-right: 80px;
+      }
+
+      &__counter-text {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      &__action {
+        .dibm;
+      }
+
+      &__tooltip {
+        .ms-flex;
+        width: 100%;
+        position: relative;
+      }
+
+      &__info-icon {
+        left: 0;
+        top: 0;
+      }
+
+      &__text {
+        padding-left: 30px;
+        font-size: 13px;
+        color: rgb(97, 97, 97);
+        line-height: 1.385;
+        .ms-flex;
+        width: 100%;
+      }
+
+    }
+
+  }
+
+}
+
+.basket-result {
+  &__wrap {
+    background-color: rgb(233, 249, 209);
+    border-top: 1px solid #c8e2a1;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__img {
+    img {
+      .img;
+    }
+
+  }
+
+  &__info {
+    text-align: right;
+    margin-left: 30px;
+    flex-shrink: 0;
+  }
+
+  &__price {
+    font-size: 18px;
+    font-weight: bold;
+
+    span {
+      margin-left: 30px;
+      margin-right: 40px;
+    }
+
+  }
+
+  &__tax {
+    font-size: 15px;
+
+    span {
+      margin-left: 20px;
+      margin-right: 80px;
+    }
+
+  }
+
+  &__sum {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+
+    span {
+      margin-left: 25px;
+    }
+
+  }
+
+  &__btn {
+  }
+
+}
+
+@media (max-width:1199px) {
+  .basket-list {
+    &__wrap {
+      .tour {
+        width: 100%;
+
+        &__price {
+          // margin-right: 50px;
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+@media (max-width:767px) {
+  .basket-list {
+    &__wrap {
+      .tour {
+        padding: 20px;
+        padding-top: 70px;
+
+        &__hot {
+          top: 80px;
+          left: 30px;
+        }
+
+        &__delete {
+          right: 20px;
+        }
+
+        &__left {
+          display: inline-block;
+          float: none;
+          margin-bottom: 20px;
+        }
+
+        &__right {
+          margin-left: 0;
+        }
+
+        &__type {
+          margin-right: 0;
+        }
+
+        &__sanatorium {
+        }
+
+        &__block {
+          margin-bottom: 20px;
+        }
+
+        &__price {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+
+        &__counter {
+          margin-bottom: 0;
+        }
+
+        &__counter-text {
+        }
+
+        &__action {
+          margin-left: 0;
+        }
+
+        &__tooltip {
+        }
+
+        &__info-icon {
+        }
+
+        &__text {
+        }
+
+      }
+
+    }
+
+  }
+
+  .basket-result {
+    &__wrap {
+      border-top: 0;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    &__img {
+      border-bottom: 1px solid #c8e2a1;
+      padding: 20px 0;
+      margin-bottom: 20px;
+
+      img {
+        .img;
+      }
+
+    }
+
+    &__info {
+      width: 100%;
+      margin-left: 0;
+      flex-shrink: 1;
+      text-align: center;
+    }
+
+    &__price {
+      font-size: 16px;
+
+      span {
+        margin-right: 0;
+      }
+
+    }
+
+    &__tax {
+      font-size: 13px;
+
+      span {
+        margin-right: 0;
+      }
+
+    }
+
+    &__sum {
+      font-size: 24px;
+
+      span {
+      }
+
+    }
+
+    &__btn {
+      .btn {
+        width: 100%;
+      }
+
+    }
+
+  }
+
+}

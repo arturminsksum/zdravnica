@@ -1,0 +1,21 @@
+{
+  "name": "dummy",
+  "description": "default folder structure",
+  "version": "1.0.0",
+  "author": "Artur",
+  "repository": "",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "*",
+    "gulp-cached": "^1.1.1",
+    "gulp-connect-multi": "*",
+    "gulp-cssnano": "*",
+    "gulp-error-notifier": "*",
+    "gulp-jade": "*",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "*",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0"
+  }
+}

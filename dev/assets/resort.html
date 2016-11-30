@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1.0,  width=device-width"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+    <title>Zdravnica</title>
+    <link rel="stylesheet" href="css/style.css"/><!--[if lt IE 9]>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"> </script><![endif]-->
+  </head>
+  <body>
+    <div class="inner">
+      <div class="content">
+        <div class="overlay overlay_menu"></div>
+        <div class="overlay overlay_search"></div>
+        <div class="overlay overlay_phones"></div>
+        <div class="header-phones__close show-mobile"></div>
+        <div class="header-menu__close show-mobile"> </div>
+        <header class="header header_resort">
+          <div class="header-top">
+            <div class="container">
+              <div class="header-top__wrap">           
+                <div class="header-top__left">
+                  <div class="header-phones">
+                    <div class="header-phones__title">Контакты</div>
+                    <div class="header-phones__wrap"><i class="header-phones__icon"></i><a href="tel:+375 (17) 298-54-00" class="header-phones__number">+375 (17) 298-54-00</a><a href="tel:+375 (17) 200-40-53" class="header-phones__number">+375 (17) 200-40-53</a></div>
+                  </div>
+                </div>
+                <div class="header-top__right"> 
+                  <div class="header-country">
+                    <div class="header-country__title">Ваше гражданство: </div>
+                    <div class="header-country__value"> 
+                      <div class="header-country__img"><img src="images/header-rus.png" alt="rus"/></div>
+                      <div class="header-country__icon"></div>
+                      <div class="header-country__select">
+                        <div class="header-country__list"><a href="" class="header-country__option"><img src="images/header-bel.png" alt="bel"/></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div><a href="#login" class="header-sign">
+                    <div class="header-sign__icon"></div>
+                    <div class="header-sign__title">Вход </div></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-bottom">
+            <div class="container">
+              <div class="header-bottom__wrap">
+                <div class="toggle"><span class="toggle__first"></span><span class="toggle__second"></span><span class="toggle__third"> </span></div>
+                <div class="header-search__mobile show-mobile"></div><a href="" class="header-logo"><img src="images/header-logo.png" alt="белагроздравница"/></a>
+                <div class="header-phones__mobile show-mobile"></div><a href="#login" class="header-sign__mobile show-mobile"><i></i></a>
+                <div class="header-menu">
+                  <div class="menu__title show-mobile"><span>Меню</span></div>
+                  <ul class="menu">
+                    <li class="menu__item"><a href="" class="menu__link">Наши санатории</a>
+                      <div class="sub-menu">
+                        <ul class="sub-menu__list">
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Поречье</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Сосновый бор</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Рассвет-Любань</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Случь</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Солнышко</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Росинка</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Налибокская пуща</a></li>
+                          <li class="sub-menu__item"><a href="" class="sub-menu__link">Радон</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="menu__item"><a href="" class="menu__link">Партнерам</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Клиентам                        </a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Новости</a></li>
+                    <li class="menu__item"><a href="" class="menu__link">О нас     </a></li>
+                    <li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+                  </ul>
+                  <div class="header__hot"><a href="" class="btn btn_blue btn_hot">Горячие путёвки</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-search">
+            <div class="header-search__block">
+              <form action="" class="header-search__form">
+                <input type="text" placeholder="Введите название санатория, заболевания, услуги..." class="header-search__input"/>
+                <input type="submit" name="" value="" class="header-search__submit"/>
+              </form>
+              <div class="header-search__close"></div>
+            </div>
+          </div>
+        </header>
+        <div id="login" class="popup popup_login">
+          <div class="popup__title">Вход в  Личный кабинет</div>
+          <div class="popup__close"></div>
+          <div class="popup__form">       
+            <div class="popup__text">В Личном Кабинете доступна вся информация по брони путевок, включая онлайн оплату      </div>
+            <form action="" class="form">         
+              <div class="form__block">
+                <label for="email_login" class="label">E-mail</label>
+                <input id="email_login" type="email" name="form[]" placeholder="romateo@list.ru" autocomplete="email" class="input req email"/>
+              </div>
+              <div class="form__block">
+                <label for="email_login" class="label">Пароль</label>
+                <input id="email_login" type="password" name="form[]" autocomplete="false" class="input req"/>
+              </div>
+              <div class="form__btn"><a href="" class="btn btn_invert">Регистрация</a>
+                <input type="submit" value="Войти" class="btn btn_blue"/>
+              </div>
+              <div class="form__lost"> <a href="">Забыли пароль</a></div>
+            </form>
+          </div>
+        </div>
+        <main>
+          <div class="banner banner_resort">
+            <div style="background-image: url(images/resort-banner.jpg)" class="banner__img"></div>
+            <div class="banner__title">Случь</div>
+            <div class="banner__filter"> <span>Подобрать путевку</span></div>
+          </div>
+          <div class="container">
+            <div class="breadcrumb">
+              <ol>
+                <li><a href="#">Главная</a></li>
+                <li class="active">Cлучь</li>
+              </ol>
+            </div>
+          </div>
+          <section class="b-filter b-filter_internal">
+            <div class="container">
+              <div class="b-filter__title">Подобрать путёвку</div>
+              <div class="b-filter__wrap">
+                <form action="" class="b-filter__form">
+                  <div class="b-filter__left">
+                    <div class="b-filter__block">
+                      <label for="filterResort" class="label">Выберите санаторий</label>
+                      <select id="filterResort" class="select">
+                        <option selected="selected">Все</option>
+                        <option>Радон</option>
+                        <option>Поречье</option>
+                        <option>Сосновый бор</option>
+                        <option>Рассвет-Любань</option>
+                        <option>Случь</option>
+                        <option>Солнышко</option>
+                        <option>Росинка</option>
+                        <option>Налибокская пуща</option>
+                      </select>
+                    </div>
+                    <div class="b-filter__block">
+                      <label for="filterComfort" class="label">Степень комфортности</label>
+                      <select id="filterComfort" class="select">
+                        <option selected="selected">люкс</option>
+                        <option>полу-люкс</option>
+                        <option>обычный</option>
+                      </select>
+                    </div>
+                    <div class="b-filter__block">
+                      <label for="filterDays" class="label">Количество дней*   </label>
+                      <input id="filterDays" type="number" name="form[]" placeholder="" min="1" max="365" maxlength="3" autocomplete="false" class="req input"/>
+                    </div>
+                    <div class="b-filter__block">
+                      <label for="filterPlaces" class="label">Количество мест*</label>
+                      <select id="filterPlaces" class="req select">
+                        <option selected="selected">1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                      </select>
+                    </div>
+                    <div class="b-filter__block">
+                      <label for="filterDate" class="label">Дата заезда*   </label>
+                      <input id="filterDate" type="text" name="form[]" placeholder="" class="req input input_date"/>
+                    </div>
+                    <div class="b-filter__block">
+                      <label for="filterCountry" class="label">Выберите гражданство</label>
+                      <select id="filterCountry" class="select">
+                        <option selected="selected">Беларусь</option>
+                        <option>Россия</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="b-filter__right">
+                    <input type="submit" value="Подобрать путёвку" class="btn btn_blue"/>
+                  </div>
+                </form>
+                <div class="b-filter__bottom"><a href="" class="b-filter__more">Расширенный поиск</a></div>
+                <div class="b-filter__close"> 
+                  <div class="b-filter__close-btn"> Закрыть</div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="navigation">
+            <div class="container">
+              <div class="overlay navigation__overlay"></div>
+              <div class="navigation__btn">Выбрать раздел</div>
+              <ul class="navigation__menu">
+                <li class="navigation__item"><a href="" class="navigation__link">Медицинский <br>профиль</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Номера и <br>цены</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Досуг</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Медиа</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Инфрастуктура</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Контакты</a></li>
+                <li class="navigation__item navigation__item_hot"><a href="" class="navigation__link">Горящие <br>туры</a></li>
+                <li class="navigation__item"><a href="" class="navigation__link">Диетическое <br>питание</a></li>
+              </ul>
+            </div>
+          </section>
+          <section class="resort-feature">
+            <div class="container">
+              <div class="resort-feature__list">
+                <div class="row">
+                  <div class="two columns">
+                    <div class="item">
+                      <div class="item__img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='45' viewBox='0 0 31 23'%3E%3Cg%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='0' y1='11.3442' x2='31' y2='11.3442'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_1_%29' stroke-miterlimit='10' d='M30.5,3.2v9.1c0,0-1.9,0.4-2.3,0.4c-0.4,0.1-1.7,0.5-2.6-0.4 C24.2,10.9,19.2,6,19.2,6S18.4,5.1,17,5.9c-1.3,0.7-3.1,1.6-3.9,2c-1.5,0.8-2.7-0.5-2.7-1.4c0-0.7,0.5-1.2,1.1-1.6 c1.8-1.1,5.6-3.2,7.1-4c1-0.5,1.6-0.6,2.9,0.6c1.6,1.4,3,2.6,3,2.6s0.5,0.4,1.2,0.2C27.6,3.8,30.5,3.2,30.5,3.2z M10.7,18.6 c0.2-0.6,0.2-1.3-0.3-1.8c-0.4-0.4-1-0.5-1.6-0.4c0.2-0.6,0.1-1.2-0.3-1.6c-0.4-0.4-1-0.5-1.6-0.4c0.2-0.6,0.1-1.2-0.3-1.6 c-0.7-0.7-1.8-0.6-2.5,0.1c-0.7,0.7-1.2,2-0.6,2.8c0.7,0.8,1.4,0.3,2,0.2c-0.2,0.6-0.6,1.1,0,1.9c0.6,0.8,1.4,0.3,2,0.2 c-0.2,0.6-0.6,1.2-0.1,1.9c0.6,0.7,1.5,0.3,2.1,0.1c-0.2,0.6-0.8,1.3-0.1,2c0.7,0.8,2.2,0.4,2.9-0.3c0.7-0.7,0.8-1.8,0.2-2.5 C12,18.5,11.3,18.4,10.7,18.6z M24.3,13.9c-5.4-5.4-2.8-2.8-5.7-5.7c0,0-0.9-0.9-2-0.4c-0.8,0.4-1.8,0.8-2.6,1.2 c-0.9,0.4-1.5,0.6-1.8,0.6c-1.7,0-3-1.3-3-3c0-1.1,0.6-2,1.4-2.5c1.2-0.8,3.9-2.3,3.9-2.3s-0.8-1.1-2.7-1.1c-1.8,0-5.7,2.5-5.7,2.5 S5,3.8,3.5,3.2l-3-1v10.4c0,0,0.9,0.2,1.6,0.6c0.2-0.5,0.5-1,0.8-1.3c1.3-1.2,3.4-1.2,4.5,0c0.3,0.4,0.6,0.8,0.7,1.3 c0.5,0.1,0.9,0.4,1.2,0.7c0.3,0.4,0.6,0.8,0.7,1.3c0.5,0.1,0.9,0.4,1.2,0.8c0.4,0.4,0.6,0.9,0.8,1.4c0.5,0.1,0.9,0.4,1.3,0.8 c0.7,0.7,0.9,1.7,0.8,2.6c0,0,0,0,0,0c0,0,0.4,0.5,0.7,0.7c0.5,0.5,1.4,0.5,1.9,0c0.5-0.5,0.5-1.3,0-1.9c0,0-1.9-1.9-1.7-2.1 c0.1-0.1,2.5,2.3,2.5,2.3c0.5,0.5,1.3,0.5,1.9,0c0.5-0.5,0.5-1.3,0-1.9c0,0-0.1-0.1-0.2-0.2c0,0-2.3-2.1-2.1-2.2 c0.2-0.2,3.1,2.5,3.1,2.5c0.5,0.5,1.3,0.5,1.8,0c0.5-0.5,0.5-1.2,0.1-1.8c0,0-2.2-2.3-2-2.5c0.2-0.2,2.3,2,2.3,2.1 c0.5,0.5,1.3,0.5,1.9,0C24.8,15.2,24.8,14.4,24.3,13.9C24.3,13.9,24.3,13.9,24.3,13.9z'/%3E%3C/g%3E%3C/svg%3E%0A" alt=""></div>
+                      <div class="item__text">8 санаториев по  всей РБ</div>
+                    </div>
+                  </div>
+                  <div class="two columns">   
+                    <div class="item">
+                      <div class="item__img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='54' viewBox='0 0 32 28'%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='0' y1='13.8808' x2='31.2003' y2='13.8808'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' fill='none' stroke='url%28%23SVGID_1_%29' stroke-miterlimit='10' d='M19,1.6l3.2,9.6 L24.2,5l2.1,6.3l-1.6-0.7l-0.3,0.4l2.5,2.3l0.7,2L26,14.5l-0.3,0.4l2.6,2.4l0.7,2.2h-3.8v1.9c3.2,1.2,5.4,3.2,5.5,5.9H17.5 c-0.9-2.1-2.2-4.1-4.5-5.5c0.5-0.7,1.2-1.3,2-1.8c1,0,1.9,0,2.9,0v-1.4h-4.4l0.8-2.6l3-2.8l-0.4-0.4L15,13.6l0.8-2.3l3-2.7l-0.4-0.4 l-1.8,0.8L19,1.6L19,1.6z M20,19.5v0.7c1.1,0.2,2.2,0.4,3.3,0.6v-1.3H20L20,19.5z M13.3,27.3c0.2-1.4-0.1-2.9-1-4.5 c-0.7,1.3-1.2,2.8-1.3,4.5H13.3L13.3,27.3z M4.9,27.3H1.1c0-2.2,1.5-3.9,3.8-5.1v-2.9H0.7l0.9-2.6l3.1-2.9l-0.4-0.4l-1.9,0.9 l0.8-2.4l3-2.8L5.8,8.5L3.9,9.3l2.5-7.5l2.9,8.7l0.3,0.8l-1.6-0.8L7.5,11l2.7,2.6l0.9,2.7l-2.1-1l-0.4,0.4l3.3,3.1l0-0.1l0.2,0.5 H7.8V21c1.3-0.4,2.8-0.7,4.3-0.9C8.4,21.6,6.3,24.2,4.9,27.3z'/%3E%3C/svg%3E" alt=""></div>
+                      <div class="item__text">Хорошее местоположение</div>
+                    </div>
+                  </div>
+                  <div class="two columns">   
+                    <div class="item">
+                      <div class="item__img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='51' viewBox='0 0 31 30'%3E%3Cg%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='14.294' y1='19.5175' x2='23.7493' y2='19.5175'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_1_%29' stroke-miterlimit='10' d='M23.1,13.9c-0.3-0.5-0.5-1.1-0.4-1.6l0.2-1.2L22,10.3 c0,0,0,0,0,0c-6.5,5.4-7.3,14.2-7.2,18.5c0,0.2,0.1,0.3,0.3,0.3c0.2,0,0.3-0.1,0.3-0.2C17.2,20,20.6,15.8,23.1,13.9z'/%3E%3ClinearGradient id='SVGID_2_' gradientUnits='userSpaceOnUse' x1='6.9158' y1='18.1459' x2='13.714' y2='18.1459'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_2_%29' stroke-miterlimit='10' d='M10.3,8.1l-2,0.4l-0.8,1.9c0,0,0,0.1,0,0.1 c3.1,4.4,4.7,13.2,5.3,17.7c0,0.1,0.1,0.2,0.2,0.2c0.1,0,0.2-0.1,0.2-0.2C13.3,18.5,11.8,12.1,10.3,8.1C10.3,8,10.3,8,10.3,8.1z'/%3E%3ClinearGradient id='SVGID_3_' gradientUnits='userSpaceOnUse' x1='16.12' y1='25.3457' x2='24.293' y2='25.3457'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_3_%29' stroke-miterlimit='10' d='M23.7,23.7l-0.3-0.4c-0.2-0.3-0.4-0.7-0.4-1 c-2.1,0.6-5.4,2-6.4,5.7c-0.1,0.2,0,0.4,0.2,0.5c0.2,0.1,0.4,0,0.5-0.1c1.1-1.6,3.2-3.8,6.2-4.2c0,0,0,0,0,0L23.7,23.7z'/%3E%3ClinearGradient id='SVGID_4_' gradientUnits='userSpaceOnUse' x1='6.4572' y1='24.1533' x2='12.0066' y2='24.1533'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_4_%29' stroke-miterlimit='10' d='M8.4,19.9c-0.2,0.3-0.5,0.5-0.8,0.7l-0.4,0.2l-0.1,0.5 c0,0.1,0,0.3-0.1,0.4c1.8,2,3.1,4.8,3.9,6.8c0.1,0.1,0.2,0.2,0.3,0.2c0.1,0,0.2-0.2,0.2-0.3C10.8,24.2,9.5,21.6,8.4,19.9z'/%3E%3ClinearGradient id='SVGID_5_' gradientUnits='userSpaceOnUse' x1='22.8303' y1='9.451' x2='31' y2='9.451'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_5_%29' stroke-miterlimit='10' d='M25,10.4l-0.4,2.2c0,0.1,0,0.2,0.1,0.2c0,0,0.1,0,0.1,0 c0,0,0.1,0,0.1,0l2-1l2,1c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0c0.1-0.1,0.1-0.1,0.1-0.2l-0.4-2.2l1.6-1.5c0.1-0.1,0.1-0.2,0.1-0.2 s-0.1-0.1-0.2-0.2l-2.2-0.3l-1-2C27.1,6.1,27,6,26.9,6c-0.1,0-0.2,0.1-0.2,0.1l-1,2l-2.2,0.3c-0.1,0-0.2,0.1-0.2,0.2 c0,0.1,0,0.2,0.1,0.2L25,10.4z'/%3E%3ClinearGradient id='SVGID_6_' gradientUnits='userSpaceOnUse' x1='0' y1='5.1417' x2='10.5136' y2='5.1417'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_6_%29' stroke-miterlimit='10' d='M9.8,6.1C9.9,6.1,10,6.1,10,6c0-0.1,0-0.2-0.1-0.2l-2.3-2 l0.3-3c0-0.1,0-0.2-0.1-0.2c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0L4.9,2.2L2.1,0.9c0,0-0.1,0-0.1,0C2,0.9,1.9,0.9,1.9,1 C1.8,1,1.8,1.1,1.8,1.2l0.7,3l-2,2.3c-0.1,0.1-0.1,0.2,0,0.2c0,0.1,0.1,0.1,0.2,0.1l3,0.2l1.6,2.6c0,0.1,0.1,0.1,0.2,0.1 c0,0,0,0,0,0c0.1,0,0.2-0.1,0.2-0.1l1.1-2.8L9.8,6.1z'/%3E%3ClinearGradient id='SVGID_7_' gradientUnits='userSpaceOnUse' x1='24.4917' y1='23.0378' x2='30.5407' y2='23.0378'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_7_%29' stroke-miterlimit='10' d='M30,22.8c0-0.1-0.1-0.2-0.2-0.2l-1.4-0.5L28,20.7 c0-0.1-0.1-0.1-0.2-0.2c0,0,0,0,0,0c-0.1,0-0.1,0-0.2,0.1l-0.9,1.2l-1.5,0c0,0,0,0,0,0c-0.1,0-0.2,0-0.2,0.1c0,0.1,0,0.2,0,0.2 l0.9,1.2l-0.5,1.4c0,0.1,0,0.2,0.1,0.2c0,0,0.1,0.1,0.2,0.1c0,0,0,0,0.1,0l1.4-0.5l1.2,0.9c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0 c0.1,0,0.1-0.1,0.1-0.2l0-1.5l1.2-0.9C30,22.9,30.1,22.8,30,22.8z'/%3E%3ClinearGradient id='SVGID_8_' gradientUnits='userSpaceOnUse' x1='1.3981' y1='18.6981' x2='7.3157' y2='18.6981'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_8_%29' stroke-miterlimit='10' d='M6.7,18.9c0.1,0,0.1-0.1,0.1-0.2c0-0.1-0.1-0.2-0.1-0.2 l-1.4-0.6l-0.2-1.5c0-0.1-0.1-0.2-0.2-0.2c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2,0.1l-1,1.1l-1.5-0.2c0,0,0,0,0,0c-0.1,0-0.1,0-0.2,0.1 c-0.1,0.1-0.1,0.2,0,0.2l0.7,1.3L2,20.1c0,0.1,0,0.2,0,0.2c0,0.1,0.1,0.1,0.2,0.1c0,0,0,0,0,0l1.5-0.3l1.1,1.1c0,0,0.1,0.1,0.2,0.1 c0,0,0.1,0,0.1,0c0.1,0,0.1-0.1,0.2-0.2l0.2-1.5L6.7,18.9z'/%3E%3ClinearGradient id='SVGID_9_' gradientUnits='userSpaceOnUse' x1='13.5342' y1='10.0885' x2='17.322' y2='10.0885'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_9_%29' stroke-miterlimit='10' d='M16.5,6.3l-0.2-0.4l-0.5-0.1c-0.3-0.1-0.7-0.2-0.9-0.4 c-0.7,2-1.3,5.1-0.7,9.7c0,0.2,0.4,0.2,0.4,0c0.2-2.1,0.7-5.6,2.1-8.3C16.7,6.6,16.6,6.4,16.5,6.3z'/%3E%3ClinearGradient id='SVGID_10_' gradientUnits='userSpaceOnUse' x1='15.6354' y1='3.2081' x2='21.7404' y2='3.2081'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_10_%29' stroke-miterlimit='10' d='M17.2,1l0.2,1.5l-1.1,1c-0.1,0.1-0.1,0.1-0.1,0.2 c0,0.1,0.1,0.2,0.2,0.2l1.5,0.3l0.6,1.4c0,0.1,0.1,0.1,0.2,0.1c0,0,0,0,0,0c0.1,0,0.2,0,0.2-0.1l0.8-1.3L21,4.2 c0.1,0,0.2-0.1,0.2-0.1c0-0.1,0-0.2,0-0.2l-1-1.1l0.4-1.5c0-0.1,0-0.2-0.1-0.2c0,0-0.1-0.1-0.1-0.1c0,0-0.1,0-0.1,0l-1.4,0.6 l-1.3-0.8c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0C17.2,0.8,17.2,0.9,17.2,1z'/%3E%3C/g%3E%3C/svg%3E%0A" alt=""></div>
+                      <div class="item__text">Комфортные, современные номера</div>
+                    </div>
+                  </div>
+                  <div class="two columns">   
+                    <div class="item">
+                      <div class="item__img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='55' viewBox='0 0 31 32'%3E%3Cg%3E%3Cg%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='7.6616' y1='32.1839' x2='22.7505' y2='6.0492'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_1_%29' stroke-miterlimit='10' d='M29.7,10.7c-0.2-0.2-0.7-0.5-1-0.3c0,0,0,0,0,0h0l-5.9,5.1 c0,0-1.2,1.1-2.3,2.1c-2-0.3-4.2-0.4-6.7-0.4v0c-0.1,0-0.2,0-0.2,0c-0.1,0-0.2,0-0.2,0v0c-3.2,0-6.3,0.3-8.6,0.7 c-3,0.6-4.3,1.3-4.3,2.4c0,0.1,0,0.2,0,0.2c-0.2,3.8,3.1,10.8,8.3,10.8c1.9,0,3.4,0,4.6,0c0.2,0,0.3,0,0.5,0c1.3,0,2.8,0,4.6,0 c5.1,0,8.4-7,8.3-10.8c0-0.1,0-0.1,0-0.2c0-1.2-1-1.8-4-2.4c0.5-0.4,2.2-1.7,2.2-1.7l5-4.5l0,0c0,0,0,0,0,0 C30.1,11.5,29.9,10.9,29.7,10.7z M2.2,20.3c1-0.6,4.9-1.5,11.4-1.5c2.1,0,3.8,0.1,5.3,0.2c-0.5,0.3-0.8,0.7-1.3,1 c-1.1,1.1-2.6-0.5-4.6,0.2c-0.7,0.3-1.4,1-1.7,1.5C6.2,21.6,3.1,20.8,2.2,20.3z M25.1,20.3c-0.7,0.4-2.8,1-6.3,1.3 c0-0.1-0.1-0.2-0.1-0.3c0.6-0.8,2.1-1.5,2.9-2C23.7,19.7,24.5,20,25.1,20.3z'/%3E%3ClinearGradient id='SVGID_2_' gradientUnits='userSpaceOnUse' x1='5.4829' y1='15.6636' x2='11.6377' y2='5.003'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_2_%29' stroke-miterlimit='10' d='M7.6,10.3c0.1,0.2,0.2,0.3,0.3,0.5l0.3,0.4 c0.1,0.1,0.1,0.2,0.2,0.3c0.1,0.2,0.2,0.5,0.2,0.8c0.1,0.6,0.1,1.1,0.1,1.7c-0.1,1-0.2,1.8-0.2,1.8s0.5-0.5,1-1.6 c0.1-0.3,0.2-0.6,0.3-0.9c0.1-0.3,0.1-0.7,0.1-1.1c0-0.4,0-0.8-0.2-1.2c-0.1-0.2-0.2-0.4-0.3-0.6c-0.1-0.1-0.1-0.2-0.2-0.3L9.2,10 L9.1,9.9l0,0c0,0,0,0,0,0l0,0l0,0C9,9.8,8.8,9.6,8.8,9.5c0-0.1-0.1-0.2-0.1-0.3C8.6,9,8.5,8.7,8.5,8.4c-0.1-0.6-0.1-1.2,0-1.7 C8.5,5.7,8.6,5,8.6,5S8,5.5,7.6,6.5C7.4,7.1,7.2,7.7,7.2,8.5c0,0.4,0,0.8,0.2,1.2C7.4,9.9,7.5,10.1,7.6,10.3z'/%3E%3ClinearGradient id='SVGID_3_' gradientUnits='userSpaceOnUse' x1='8.6928' y1='12.0464' x2='14.8446' y2='1.3911'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_3_%29' stroke-miterlimit='10' d='M10.8,6.7C11,6.9,11.1,7,11.2,7.2l0.3,0.4 c0.1,0.1,0.1,0.2,0.2,0.3c0.1,0.2,0.2,0.5,0.2,0.8c0.1,0.6,0.1,1.1,0.1,1.7c-0.1,1-0.2,1.8-0.2,1.8s0.5-0.5,1-1.6 c0.1-0.3,0.2-0.6,0.3-0.9c0.1-0.3,0.1-0.7,0.1-1.1c0-0.4,0-0.8-0.2-1.2c-0.1-0.2-0.2-0.4-0.3-0.6c-0.1-0.1-0.1-0.2-0.2-0.3 l-0.1-0.1l-0.1-0.1l0,0c0,0,0,0,0,0l0,0C12.2,6.1,12,6,12,5.9c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.2-0.2-0.5-0.2-0.8 c-0.1-0.6-0.1-1.2,0-1.7c0.1-1,0.2-1.8,0.2-1.8s-0.5,0.5-1,1.6c-0.2,0.5-0.4,1.2-0.4,1.9c0,0.4,0,0.8,0.2,1.2 C10.6,6.3,10.7,6.5,10.8,6.7z'/%3E%3ClinearGradient id='SVGID_4_' gradientUnits='userSpaceOnUse' x1='12.101' y1='6.7109' x2='12.5737' y2='5.8921'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpolygon fill='none' stroke='url%28%23SVGID_4_%29' stroke-miterlimit='10' points='12.3,6.3 12.3,6.3 12.3,6.3 '/%3E%3ClinearGradient id='SVGID_5_' gradientUnits='userSpaceOnUse' x1='12.6588' y1='15.3255' x2='18.813' y2='4.6661'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_5_%29' stroke-miterlimit='10' d='M14.8,10c0.1,0.2,0.2,0.3,0.3,0.5l0.3,0.4 c0.1,0.1,0.1,0.2,0.2,0.3c0.1,0.2,0.2,0.5,0.2,0.8c0.1,0.6,0.1,1.1,0.1,1.7c-0.1,1-0.2,1.8-0.2,1.8s0.5-0.5,1-1.6 c0.1-0.3,0.2-0.6,0.3-0.9c0.1-0.3,0.1-0.7,0.1-1.1c0-0.4,0-0.8-0.2-1.2c-0.1-0.2-0.6-1.1-0.6-1.1l0,0c0,0,0,0,0,0l0,0 C16.2,9.4,16,9.3,16,9.2c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.2-0.2-0.5-0.2-0.8c-0.1-0.6-0.1-1.2-0.1-1.7c0.1-1,0.2-1.8,0.2-1.8 s-0.5,0.5-1,1.6c-0.2,0.5-0.4,1.2-0.4,1.9c0,0.4,0,0.8,0.2,1.2C14.6,9.5,14.7,9.8,14.8,10z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A" alt=""></div>
+                      <div class="item__text">Качественное обслуживание</div>
+                    </div>
+                  </div>
+                  <div class="two columns">                
+                    <div class="item">
+                      <div class="item__img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='58' viewBox='0 0 31 30'%3E%3Cg%3E%3Cg%3E%3Cg%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='4.8704' y1='8.4699' x2='10.0839' y2='8.4699'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Ccircle fill='none' stroke='url%28%23SVGID_1_%29' stroke-miterlimit='10' cx='7.5' cy='8.5' r='2.1'/%3E%3ClinearGradient id='SVGID_2_' gradientUnits='userSpaceOnUse' x1='13.0803' y1='22.3061' x2='18.2937' y2='22.3061'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Ccircle fill='none' stroke='url%28%23SVGID_2_%29' stroke-miterlimit='10' cx='15.7' cy='22.3' r='2.1'/%3E%3ClinearGradient id='SVGID_3_' gradientUnits='userSpaceOnUse' x1='0' y1='17.4337' x2='16.7324' y2='17.4337'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_3_%29' stroke-miterlimit='10' d='M10.1,18.7v-5.5c0.1-0.1-0.3,0.2,5.7-3.7 c0.4-0.3,0.5-0.8,0.3-1.3c-0.3-0.4-0.8-0.5-1.3-0.3l-5.3,3.4c-0.7,0-2.5,0-3.1,0L2.1,6.2C1.8,5.8,1.2,5.8,0.8,6.1 C0.4,6.4,0.4,7,0.7,7.4l4.6,5.5V19l-2.6,8.6c-0.2,0.6,0.2,1.2,0.7,1.4c0.6,0.2,1.2-0.2,1.4-0.7l2.4-8h1.3l2.1,2.5v3.8 c0,0.6,0.5,1.1,1.1,1.1s1.1-0.5,1.1-1.1v-4.2c0-0.3-0.1-0.5-0.3-0.7L10.1,18.7z'/%3E%3ClinearGradient id='SVGID_4_' gradientUnits='userSpaceOnUse' x1='20.04' y1='2.2762' x2='24.5925' y2='2.2762'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Ccircle fill='none' stroke='url%28%23SVGID_4_%29' stroke-miterlimit='10' cx='22.3' cy='2.3' r='1.8'/%3E%3ClinearGradient id='SVGID_5_' gradientUnits='userSpaceOnUse' x1='14.4169' y1='10.5417' x2='31' y2='10.5417'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_5_%29' stroke-miterlimit='10' d='M30.4,1.9c-0.2-0.4-0.7-0.5-1.1-0.3l-5.2,3.2 c-0.3,0-2.6,0-2.8,0L16,2.5c-0.4-0.2-0.8,0-1,0.4c-0.2,0.4,0,0.8,0.4,1l5.2,2.2v5l-2.2,7.3c-0.1,0.5,0.1,1,0.6,1.2 c0.5,0.1,1-0.1,1.2-0.6l2.1-6.8h0.7l0.7,6.6c0.1,0.5,0.5,0.9,1,0.8c0.5-0.1,0.9-0.5,0.8-1c-0.8-7.9-0.7-7.4-0.8-7.5V6.3 c0.1,0-0.3,0.2,5.5-3.4C30.5,2.7,30.6,2.2,30.4,1.9z'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A" alt=""></div>
+                      <div class="item__text">Восстановление и реабилитация</div>
+                    </div>
+                  </div>
+                  <div class="two columns">   
+                    <div class="item">
+                      <div class="item__img"><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='55' height='44' viewBox='0 0 31 25'%3E%3Cg%3E%3Cg%3E%3ClinearGradient id='SVGID_1_' gradientUnits='userSpaceOnUse' x1='0' y1='12.2238' x2='31' y2='12.2238'%3E%3Cstop offset='0' style='stop-color:%234D8ACB'/%3E%3Cstop offset='1' style='stop-color:%234DB9C9'/%3E%3C/linearGradient%3E%3Cpath fill='none' stroke='url%28%23SVGID_1_%29' stroke-miterlimit='10' d='M28.4,7.6c-0.1-0.9-0.1-2.5,0.7-3c0,0,0,0,0,0 c0.7-0.2,1.2-0.5,0.8-1L19.7,0.5L3.1,2.8c0,0-1.9,0.3-1.7,3.2c0.1,1.6,0.6,2.4,1,2.8L1.1,9.2c-0.4,0.4,0.1,0.7,0.8,1c0,0,0,0,0,0 c0.8,0.5,0.8,2.1,0.7,3c-3,0.9-1.9,1.1-1.9,1.1l0.7,0.2c-0.5,0.4-0.9,1.2-0.8,2.8c0.2,2.9,1.7,3.1,1.7,3.1l10.8,3.5l16.3-4 c0,0,1.1-0.3-1.9-1.1c-0.1-0.9-0.1-2.5,0.7-3c0,0,0,0,0,0c0.7-0.2,1.2-0.5,0.8-1l-0.7-0.2c0.5-0.3,1.2-1,1.3-3 c0.1-1.3-0.3-2.1-0.7-2.6l1.4-0.3C30.3,8.7,31.4,8.4,28.4,7.6z M14.7,7.5L17.4,7l9.3-1.9l1.4-0.3c-0.4,0.8-0.4,1.9-0.4,2.6 c0,0.2,0,0.3,0.1,0.4l-1.5,0.4l-11.7,2.9L14.7,7.5z M2.9,10.4l1.4,0.3l8.9,1.8l0.8,0.2l0,0l0,0l2.3,0.5l0.1,3.6l-12-3l-1.2-0.3 c0-0.1,0-0.3,0.1-0.4C3.3,12.3,3.3,11.2,2.9,10.4z M2.4,5.9c0-0.8,0.1-1.3,0.4-1.6C2.9,4.1,3.1,4,3.3,4c0.1,0,0.1,0,0.1,0l7.1,2.3 l3.6,1.2L14,11.1L4,8.3L3.5,8.2c0,0,0,0-0.1,0C3.4,8.2,2.4,8.1,2.4,5.9z M13.1,22.4L2.6,19.4c0,0,0,0-0.1,0c0,0-1-0.1-1.1-2.3 c0-0.8,0.1-1.3,0.4-1.6c0.2-0.2,0.4-0.2,0.5-0.2c0.1,0,0.1,0,0.1,0c0,0,0,0,0,0l10.7,3.5L13.1,22.4z M26.8,18.7 c0,0.2,0,0.3,0.1,0.4l-13.2,3.3l0.1-3.6l2.8-0.6l0.4,0.1l1.6-0.5l7.2-1.5l1.4-0.3C26.8,16.8,26.8,17.9,26.8,18.7z M27.6,13.8 C27.6,13.8,27.5,13.8,27.6,13.8l-1.1,0.3L17,16.7l-0.1-3.6l3.1-1l7.5-2.5c0,0,0.4-0.1,0.7,0.2c0.3,0.3,0.4,0.9,0.4,1.6 C28.6,13.7,27.6,13.8,27.6,13.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E " alt=""></div>
+                      <div class="item__text">Отдых для детей и взрослых</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="resort-about">
+            <div class="container">
+              <div class="resort-about__wrap">
+                <div class="row">
+                  <div class="six columns resort-about__left">
+                    <div class="resort-about__list">
+                      <div class="item">
+                        <div class="item__title">Тип здравницы:</div>
+                        <div class="item__text">детский санаторий.<br>санаторно-курортное лечение.</div>
+                      </div>
+                      <div class="item">
+                        <div class="item__title">Основной вид деятельности:</div>
+                        <div class="item__text">Опыт по оказанию санаторно-курортных услуг с 1982 года</div>
+                      </div>
+                      <div class="item">
+                        <div class="item__title">Направленность</div>
+                        <div class="item__text">лечение детей школьного возраста (6-18 лет)</div>
+                      </div>
+                      <div class="item">
+                        <div class="item__title">Площадь земельного участка (га):</div>
+                        <div class="item__text">26,7</div>
+                      </div>
+                      <div class="item">
+                        <div class="item__title">Вместимость (койко-мест):</div>
+                        <div class="item__text">460</div>
+                      </div>
+                      <div class="item">
+                        <div class="item__title">Период функционирования:</div>
+                        <div class="item__text">круглогодично</div>
+                      </div>
+                      <div class="item">
+                        <div class="item__title">Длительность лечения или отдыха по стандартной путевке (дней):</div>
+                        <div class="item__text">24, 21.</div>
+                      </div>
+                      <div class="item">
+                        <div class="item__title">Оплаченные услуги, входящие в стоимость стандартной путевки:</div>
+                        <div class="item__text">проживание, шестиразовое  питание, обследование и лечение основного и сопутствующих заболеваний, педагогический процесс, культурно-массовая работа. </div>
+                      </div>
+                      <div class="item">
+                        <div class="item__title">Необходимые документы для заезда в санаторий:</div>
+                        <div class="item__text">санаторно-курортная карта, справка об отсутствии контакта с инфекционными больными, информация о прививках, справка дерматолога.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="six columns resort-about__right">
+                    <div class="resort-about__news">
+                      <div class="row">
+                        <div class="six columns">
+                          <div class="news"><a href="" class="news__img"><img src="images/news-01.jpg" alt="">
+                              <time datetime="12.06.2016" class="news__date">
+                                <div class="news__date-dd">12</div>
+                                <div class="news__date-mm">Июл.</div>
+                                <div class="news__date-yy">2016                    </div>
+                              </time></a><a href="" class="news__title">Бесплатное посещение СПА-комплекса в санатории "Поречье"!</a>
+                            <div class="news__text">Рады Вам сообщить, что при приобретении путевок в санаторий «Поречье» продолжительностью от 12 дней со... </div>
+                          </div>
+                        </div>
+                        <div class="six columns">
+                          <div class="news"><a href="" class="news__img"><img src="images/news-02.jpg" alt="">
+                              <time datetime="12.06.2016" class="news__date">
+                                <div class="news__date-dd">27</div>
+                                <div class="news__date-mm">Авг.</div>
+                                <div class="news__date-yy">2016                    </div>
+                              </time></a><a href="" class="news__title">Путёвки для детей в санаторий “Радон”</a>
+                            <div class="news__text">Рады Вам сообщить, что при приобретении путевок в санаторий «Поречье» продолжительностью от 12 дней со... </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="resort-about__news-min">
+                      <div class="news-min">
+                        <time datetime="12.06.2016" class="news-min__date">12 Июля, 2016</time><a href="" class="news-min__link">Лечение заболеваний желудочно-кишечного тракта!</a>
+                      </div>
+                      <div class="news-min">
+                        <time datetime="12.06.2016" class="news-min__date">12 Июля, 2016</time><a href="" class="news-min__link">АКЦИЯ! Многоразовое бесплатное посещение СПА-комплекса в санатории "Поречье"!</a>
+                      </div>
+                      <div class="news-min">
+                        <time datetime="12.06.2016" class="news-min__date">12 Июля, 2016</time><a href="" class="news-min__link">АКЦИЯ! Бесплатное посещение СПА-комплекса в санатории "Поречье"!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="resort-info bg-grey">
+            <div class="container">
+              <div class="resort-info__wrap">
+                <div class="row">
+                  <div class="six columns resort-info__left">
+                    <div class="resort-info__medicine">
+                      <div class="resort-info__title">Медицинский профиль</div>
+                      <div class="resort-info__list"> 
+                        <ul class="list">
+                          <li>Болезни системы кровообращения</li>
+                          <li>Болезни костно-мышечной системы и соединительной ткани</li>
+                          <li>Болезни органов пищеварения</li>
+                          <li>Болезни органов дыхания</li>
+                          <li>Болезни нервной системы</li>
+                        </ul>
+                      </div>
+                      <div class="resort-info__btn"><a href="" class="btn btn_invert">Подробнее</a></div>
+                    </div>
+                  </div>
+                  <div class="six columns resort-info__right">
+                    <div class="resort-info__services">
+                      <div class="resort-info__title">Дополнительные услуги</div>
+                      <div class="resort-info__icons">
+                        <div class="resort-info__col">
+                          <div class="item"><i class="icon icon_wi-fi"></i><span class="item__name">Wi-Fi</span></div>
+                          <div class="item"><i class="icon icon_fringe"></i><span class="item__name">Холодильник</span></div>
+                          <div class="item"><i class="icon icon_bath"></i><span class="item__name">Ванная</span></div>
+                          <div class="item"><i class="icon icon_balcony"></i><span class="item__name">Балкон</span></div>
+                          <div class="item"><i class="icon icon_closet"></i><span class="item__name">Шкаф</span></div>
+                        </div>
+                        <div class="resort-info__col">
+                          <div class="item"><i class="icon icon_bidet"></i><span class="item__name">Биде</span></div>
+                          <div class="item"><i class="icon icon_sink"></i><span class="item__name">Умывальник</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="main-hot">
+            <div class="container">
+              <div class="section__title">Горящие путёвки</div>
+              <div class="main-hot__wrap">
+                <div class="row">
+                  <div class="column">
+                    <div class="tour">
+                      <div class="tour__img"><img src="images/tour-01.jpg" alt=""/></div>
+                      <div class="tour__top">
+                        <div class="tour__type">4 местный тип А</div>
+                        <div class="tour__sanatorium">Санаторий "Радон"</div>
+                      </div>
+                      <div class="tour__bottom">
+                        <div class="tour__list">
+                          <ul>
+                            <li>Болезни системы кровообращения</li>
+                            <li>Болезни костно-мышечной системы и соединительной ткани</li>
+                            <li>Болезни органов пищеварения</li>
+                            <li>Болезни органов дыхания</li>
+                            <li>Болезни нервной системы</li>
+                          </ul>
+                        </div>
+                        <div class="tour__icons"><i class="icon icon_wi-fi"></i><i class="icon icon_air"></i><i class="icon icon_double-bed"></i><i class="icon icon_single-bed"></i><i class="icon icon_safety"></i><i class="icon icon_tv"></i><i class="icon icon_phone"></i><i class="icon icon_more">                   </i></div>
+                        <div class="tour__info">
+                          <div class="tour__info-icon"></div>
+                          <div class="tooltip">
+                            <div class="tooltip__arrow"></div>
+                            <div class="tooltip__inner">210 руб. за 5 ночей + 3% курортный сбор 20.000</div>
+                          </div>
+                          <div class="tour__info-price">210 руб. за 5 ночей</div>
+                          <div class="tour__info-tax">+ 3% курортный сбор 20.000</div>
+                        </div>
+                        <div class="tour__action">
+                          <div class="tour__counter">
+                            <div class="tour__counter-minus">&#10134;</div>
+                            <div class="tour__counter-num">1</div>
+                            <div class="tour__counter-plus">&#10133;</div>
+                          </div>
+                          <div class="tour__btn"><a href="" class="btn btn_green">Забронировать</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="tour">
+                      <div class="tour__img"><img src="images/tour-01.jpg" alt=""/></div>
+                      <div class="tour__top">
+                        <div class="tour__type">1 местный повышенной комфортности</div>
+                        <div class="tour__sanatorium">Санаторий "Радон"</div>
+                      </div>
+                      <div class="tour__bottom">
+                        <div class="tour__list">
+                          <ul>
+                            <li>Болезни системы кровообращения</li>
+                            <li>Болезни костно-мышечной системы и соединительной ткани</li>
+                            <li>Болезни органов пищеварения</li>
+                            <li>Болезни органов дыхания</li>
+                            <li>Болезни нервной системы</li>
+                          </ul>
+                        </div>
+                        <div class="tour__icons"><i class="icon icon_wi-fi"></i><i class="icon icon_air"></i><i class="icon icon_double-bed"></i><i class="icon icon_single-bed"></i><i class="icon icon_safety"></i><i class="icon icon_tv"></i><i class="icon icon_phone"></i><i class="icon icon_more">                   </i></div>
+                        <div class="tour__info">
+                          <div class="tour__info-icon"></div>
+                          <div class="tooltip">
+                            <div class="tooltip__arrow"></div>
+                            <div class="tooltip__inner">210 руб. за 5 ночей + 3% курортный сбор 20.000</div>
+                          </div>
+                          <div class="tour__info-price">210 руб. за 5 ночей</div>
+                          <div class="tour__info-tax">+ 3% курортный сбор 20.000</div>
+                        </div>
+                        <div class="tour__action">
+                          <div class="tour__counter">
+                            <div class="tour__counter-minus">&#10134;</div>
+                            <div class="tour__counter-num">1</div>
+                            <div class="tour__counter-plus">&#10133;</div>
+                          </div>
+                          <div class="tour__btn"><a href="" class="btn btn_green">Забронировать</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="column">
+                    <div class="tour">
+                      <div class="tour__img"><img src="images/tour-01.jpg" alt=""/></div>
+                      <div class="tour__top">
+                        <div class="tour__type">2 местный тип А</div>
+                        <div class="tour__sanatorium">Санаторий "Радон"</div>
+                      </div>
+                      <div class="tour__bottom">
+                        <div class="tour__list">
+                          <ul>
+                            <li>Болезни системы кровообращения</li>
+                            <li>Болезни костно-мышечной системы и соединительной ткани</li>
+                            <li>Болезни органов пищеварения</li>
+                            <li>Болезни органов дыхания</li>
+                            <li>Болезни нервной системы</li>
+                          </ul>
+                        </div>
+                        <div class="tour__icons"><i class="icon icon_wi-fi"></i><i class="icon icon_air"></i><i class="icon icon_double-bed"></i><i class="icon icon_single-bed"></i><i class="icon icon_safety"></i><i class="icon icon_tv"></i><i class="icon icon_phone"></i><i class="icon icon_more">                   </i></div>
+                        <div class="tour__info">
+                          <div class="tour__info-icon"></div>
+                          <div class="tooltip">
+                            <div class="tooltip__arrow"></div>
+                            <div class="tooltip__inner">210 руб. за 5 ночей + 3% курортный сбор 20.000</div>
+                          </div>
+                          <div class="tour__info-price">210 руб. за 5 ночей</div>
+                          <div class="tour__info-tax">+ 3% курортный сбор 20.000</div>
+                        </div>
+                        <div class="tour__action">
+                          <div class="tour__counter">
+                            <div class="tour__counter-minus">&#10134;</div>
+                            <div class="tour__counter-num">1</div>
+                            <div class="tour__counter-plus">&#10133;</div>
+                          </div>
+                          <div class="tour__btn"><a href="" class="btn btn_green">Забронировать</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-hot__more"><a href="" class="btn"> <span class="hide-mobile">Посмотреть другие специальные предложения</span><span class="show-mobile">Другие предложения</span></a></div>
+            </div>
+          </section>
+          <section class="resort-room">
+            <div class="container">
+              <div class="section__title">Номера санатория</div>
+            </div>
+            <div class="resort-room__wrap">
+              <div class="container"> 
+                <div class="resort-room__list">
+                  <div class="resort-room__item">
+                    <div class="row">
+                      <div class="six columns">
+                        <div class="resort-room__images">
+                          <div class="resort-room__img"><img src="images/resort-room-01.jpg" alt=""></div>
+                          <div class="resort-room__img"><img src="images/resort-room-01.jpg" alt=""></div>
+                          <div class="resort-room__img"><img src="images/resort-room-01.jpg" alt=""></div>
+                        </div>
+                      </div>
+                      <div class="six columns">
+                        <div class="resort-room__info"><a href="" class="resort-room__type">1 местный тип А</a>
+                          <div class="resort-room__resort">Санаторий "Случь"</div>
+                          <div class="resort-room__text">Описание конкретного типа номеров в санатории. Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в санатории. Описание конкретного типа Описание конкретного типа номеров в санатории. Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в санатории. Описание конкретного типа номеров в манатории. Описание конкретного типа номеров в манатории.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resort-room__item">
+                    <div class="row">
+                      <div class="six columns">
+                        <div class="resort-room__images">
+                          <div class="resort-room__img"><img src="images/resort-room-01.jpg" alt=""></div>
+                          <div class="resort-room__img"><img src="images/resort-room-01.jpg" alt=""></div>
+                          <div class="resort-room__img"><img src="images/resort-room-01.jpg" alt=""></div>
+                        </div>
+                      </div>
+                      <div class="six columns">
+                        <div class="resort-room__info"><a href="" class="resort-room__type">2 местный тип А</a>
+                          <div class="resort-room__resort">Санаторий "Случь"</div>
+                          <div class="resort-room__text">Описание конкретного типа номеров в санатории. Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в санатории. Описание конкретного типа Описание конкретного типа номеров в санатории. Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в санатории. Описание конкретного типа номеров в манатории. Описание конкретного типа номеров в манатории.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="resort-room__item">
+                    <div class="row">
+                      <div class="six columns">
+                        <div class="resort-room__images">
+                          <div class="resort-room__img"><img src="images/resort-room-01.jpg" alt=""></div>
+                          <div class="resort-room__img"><img src="images/resort-room-01.jpg" alt=""></div>
+                          <div class="resort-room__img"><img src="images/resort-room-01.jpg" alt=""></div>
+                        </div>
+                      </div>
+                      <div class="six columns">
+                        <div class="resort-room__info"><a href="" class="resort-room__type">4 местный тип А</a>
+                          <div class="resort-room__resort">Санаторий "Случь"</div>
+                          <div class="resort-room__text">Описание конкретного типа номеров в санатории. Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в санатории. Описание конкретного типа Описание конкретного типа номеров в санатории. Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в манатории.Описание конкретного типа номеров в санатории. Описание конкретного типа номеров в манатории. Описание конкретного типа номеров в манатории.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="resort-road">
+            <div class="container">
+              <div class="resort-road__wrap">
+                <div class="row">
+                  <div class="six columns resort-road__left">
+                    <div id="mapResort" class="resort-road__map"></div>
+                  </div>
+                  <div class="six columns resort-road__right">
+                    <div class="resort-road__info">
+                      <div class="resort-road__title">Как добраться</div>
+                      <div class="resort-road__list"> 
+                        <div class="item">
+                          <div class="item__name">Ближайший аэропорт:</div>
+                          <div class="item__text">в г. Минске, в 120 км</div>
+                        </div>
+                        <div class="item">
+                          <div class="item__name">Ближайший железнодорожный вокзал:</div>
+                          <div class="item__text">в г.Слуцке, в 12 км</div>
+                        </div>
+                        <div class="item">
+                          <div class="item__name">Ближайший автовокзал:</div>
+                          <div class="item__text">в г.Слуцке, в 12 км</div>
+                        </div>
+                        <div class="item">
+                          <div class="item__name">Путь следования:</div>
+                          <div class="item__text">Минск- Слуцк- санаторий “Случь”, Осиповичи – Слуцк - санаторий “Случь”</div>
+                        </div>
+                        <div class="item">
+                          <div class="item__name">Проезд собственным транспортом от ближайшего самого большого населенного пункта:</div>
+                          <div class="item__text">г.Слуцк – д.Новодворцы - д. Кирово – санаторий “Случь”</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="feedback">
+            <div class="container">
+              <div class="feedback__wrap"><a href="" class="feedback__link"><span>Обратная связь</span></a>
+                <div class="feedback__btn"><a href="" class="btn btn_invert">Забронировать</a></div>
+              </div>
+            </div>
+          </section>
+        </main>
+        <footer class="footer footer_int">
+          <div class="container">
+            <div class="footer__wrap">
+              <div class="row">
+                <div class="column column_first">
+                  <div class="footer__logo"><img src="images/footer-logo.png" alt="Белагроздравница"/></div>
+                  <div class="footer__slogan"><span>
+                       
+                      “Здоровья вам и<br/>вашим детям!”</span></div>
+                  <div class="footer__copyright">ОАО Белагроздравница" 2016 ©</div>
+                </div>
+                <div class="column column_second">
+                  <div class="footer__list footer__list_resort">
+                    <div class="footer__title">Санатории</div>
+                    <ul>
+                      <li><a href="">Поречье</a></li>
+                      <li><a href="">Сосновый бор</a></li>
+                      <li><a href="">Рассвет-Любань</a></li>
+                      <li><a href="">Случь</a></li>
+                      <li><a href="">Солнышко</a></li>
+                      <li><a href="">Росинка</a></li>
+                      <li><a href="">Налибокская пуща</a></li>
+                      <li><a href="">Радон</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="column column_third">
+                  <div class="footer__list footer__list_partner">
+                    <div class="footer__title">Партнерам</div>
+                    <ul>
+                      <li><a href="">Турагентствам</a></li>
+                      <li><a href="">Юридическим лицам</a></li>
+                    </ul>
+                  </div>
+                  <div class="footer__list footer__list_client">
+                    <div class="footer__title">Клиентам</div>
+                    <ul>
+                      <li><a href="">Способы оплаты</a></li>
+                      <li><a href="">Курортный сбор</a></li>
+                      <li><a href="">Возврат денежных средств</a></li>
+                      <li><a href="">Часто задаваемые вопросы</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="column column_forth">
+                  <div class="footer__contacts">
+                    <div class="footer__title">Контакты</div>
+                    <div class="footer__adress">Республика Беларусь, <br/>220007, г. Минск, ул. Фабрициуса, 7 а</div>
+                    <div class="footer__phones"><a href="tel:+375 (17) 298-54-00" class="footer__number">+375 (17) 298-54-00,  </a><a href="tel:+375 (17) 200-40-53" class="footer__number">+375 (17) 200-40-53</a></div><a href="mailto:info@agrozdrav.by" class="footer__email">info@agrozdrav.by</a>
+                    <div class="footer__license">
+                       
+                      Лицензии на медицинскую или <br/>фармацевтическую деятельность <br/>№ 02040/241 от 31.07.2013
+                    </div>
+                    <div class="footer__social"><a href=""><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='14' viewBox='0 0 16 12'%3E%3Cpath fill='%23ffffff' d='M15.559,1.24a6.6,6.6,0,0,1-2.086.8A3.283,3.283,0,0,0,7.795,4.282a3.306,3.306,0,0,0,.085.748A9.319,9.319,0,0,1,1.115,1.6,3.287,3.287,0,0,0,2.131,5.982,3.28,3.28,0,0,1,.644,5.57V5.611A3.286,3.286,0,0,0,3.276,8.83a3.274,3.274,0,0,1-1.483.056,3.288,3.288,0,0,0,3.066,2.28,6.587,6.587,0,0,1-4.076,1.4A6.906,6.906,0,0,1,0,12.525,9.3,9.3,0,0,0,5.032,14,9.276,9.276,0,0,0,14.37,4.66L14.36,4.235A6.6,6.6,0,0,0,16,2.538a6.564,6.564,0,0,1-1.885.517A3.3,3.3,0,0,0,15.559,1.24Z' transform='translate%280 -1%29'/%3E%3C/svg%3E" alt="tw"/></a><a href=""><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='18' viewBox='0 0 41 90'%3E%3Cpath fill='%23ffffff' d='M10.078,17.431V29.822H1V44.974h9.078V90H28.727V44.975H41.24s1.172-7.265,1.74-15.209H28.8V19.406c0-1.548,2.033-3.631,4.043-3.631H43V0H29.186C9.617,0,10.078,15.167,10.078,17.431Z' transform='translate%28-1%29'/%3E%3C/svg%3E" alt="fb"/></a><a href=""><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 66 66'%3E%3Cpath fill='%23ffffff' d='M8.438,0H57.29c4.64,0,8.435,3.797,8.435,8.437v48.851c0,4.639-3.795,8.435-8.435,8.435H8.438 C3.795,65.722,0,61.926,0,57.288V8.437C0,3.797,3.795,0,8.438,0z M47.757,7.09c-1.679,0-3.051,1.377-3.051,3.058v7.31 c0,1.683,1.372,3.056,3.051,3.056h7.67c1.679,0,3.055-1.373,3.055-3.056v-7.31c0-1.681-1.376-3.058-3.055-3.058H47.757z M58.292,27.792h-5.781c0.549,1.792,0.847,3.679,0.847,5.645c0,10.926-9.151,19.792-20.434,19.792 c-11.28,0-20.432-8.865-20.432-19.792c0-1.965,0.302-3.853,0.846-5.645H7.307v27.766c0,1.437,1.172,2.607,2.609,2.607h45.769 c1.438,0,2.607-1.17,2.607-2.607V27.792z M32.924,19.93c-7.286,0-13.198,5.725-13.198,12.79c0,7.063,5.912,12.791,13.198,12.791 c7.291,0,13.203-5.728,13.203-12.791C46.127,25.655,40.215,19.93,32.924,19.93z'/%3E%3C/svg%3E" alt="inst"/></a><a href=""><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 155.75 89'%3E%3Cpath fill='%23ffffff' d='M155.912,80.49a10.724,10.724,0,0,0-.531-1.018q-4.071-7.336-15.561-18.008l-0.162-.163-0.081-.079L139.5,61.14h-0.082q-5.214-4.972-6.6-6.683a6.274,6.274,0,0,1-1.143-6.6q0.978-2.525,7.333-10.671,3.342-4.318,5.3-6.925,14.1-18.739,12.222-23.953l-0.485-.813a4.765,4.765,0,0,0-2.525-1.344,12.815,12.815,0,0,0-5.216-.2l-23.463.163a3.045,3.045,0,0,0-1.63.041l-1.06.245-0.408.2-0.324.245a3.618,3.618,0,0,0-.9.854,5.591,5.591,0,0,0-.812,1.426,133.019,133.019,0,0,1-8.719,18.331q-3.015,5.052-5.541,8.759a42.249,42.249,0,0,1-4.235,5.458,29.681,29.681,0,0,1-3.1,2.811,2.984,2.984,0,0,1-2.117.9c-0.489-.109-0.95-0.218-1.387-0.326a5.422,5.422,0,0,1-1.832-2,8.947,8.947,0,0,1-.937-3.178q-0.243-1.915-.285-3.3t0.041-3.911q0.085-2.526.082-3.422,0-3.1.121-6.721T92,14.782q0.082-2.118.081-4.481a18.829,18.829,0,0,0-.285-3.707,12.676,12.676,0,0,0-.853-2.607,4.39,4.39,0,0,0-1.67-1.956,9.416,9.416,0,0,0-2.73-1.1,54.207,54.207,0,0,0-11-1.059Q60.388-.29,56.069,1.827a10.97,10.97,0,0,0-3.1,2.444q-1.467,1.792-.408,1.955,4.889,0.732,6.925,3.5l0.489,0.978a15.561,15.561,0,0,1,1.141,3.748,37.808,37.808,0,0,1,.733,5.947,63.438,63.438,0,0,1,0,10.184q-0.408,4.238-.774,6.6a13.211,13.211,0,0,1-1.1,3.829A16.2,16.2,0,0,1,59,42.807a1.4,1.4,0,0,1-.407.407,6.089,6.089,0,0,1-2.2.408,5.165,5.165,0,0,1-2.77-1.141,19.538,19.538,0,0,1-3.381-3.137,41.859,41.859,0,0,1-3.952-5.581q-2.2-3.585-4.562-8.473l-1.3-2.363q-1.222-2.281-3.34-6.64T33.338,7.854a5.372,5.372,0,0,0-1.955-2.607L30.976,5a5.569,5.569,0,0,0-1.3-.692,8.69,8.69,0,0,0-1.874-.53L5.475,3.943q-3.422,0-4.644,1.548L0.5,5.98a2.629,2.629,0,0,0-.245,1.3,6.492,6.492,0,0,0,.489,2.2Q5.637,20.972,11.38,31.644t9.98,17.189Q25.6,55.352,30,61.136t5.825,7.414q1.427,1.632,2.241,2.444L40.1,72.95a48.272,48.272,0,0,0,5.744,4.685,97.961,97.961,0,0,0,8.392,5.379A45.54,45.54,0,0,0,64.95,87.329a36.992,36.992,0,0,0,11.894,1.346h9.37a6.489,6.489,0,0,0,4.318-1.793l0.324-.408a5.415,5.415,0,0,0,.61-1.506,8.284,8.284,0,0,0,.285-2.24,26.86,26.86,0,0,1,.528-6.314,16.583,16.583,0,0,1,1.387-4.235,10.4,10.4,0,0,1,1.751-2.4A7.006,7.006,0,0,1,96.806,68.6a5.019,5.019,0,0,1,.65-0.285q1.956-.653,4.6,1.263a27.036,27.036,0,0,1,4.971,4.726q2.322,2.813,5.58,6.314a38.364,38.364,0,0,0,5.7,5.214l1.629,0.978a19.847,19.847,0,0,0,4.238,1.793,9.122,9.122,0,0,0,4.562.407l20.856-.325a9.454,9.454,0,0,0,4.807-1.02,4.036,4.036,0,0,0,2.037-2.24,6.315,6.315,0,0,0,.041-2.772A10.219,10.219,0,0,0,155.912,80.49Z' transform='translate%28-0.25%29'/%3E%3C/svg%3E" alt="vk"/></a><a href=""><img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='16' viewBox='0 0 58 52'%3E%3Cpath fill='%23ffffff' d='M16.133,20.979h3.56v-8.704L23.836,0h-3.62l-2.201,8.386h-0.224L15.481,0h-3.587l4.239,12.667V20.979z M38.045,21.202c0.592,0,1.202-0.165,1.833-0.493c0.634-0.328,1.241-0.812,1.818-1.439v1.709h3.166V5.502h-3.166v11.747 c-0.293,0.34-0.619,0.616-0.972,0.834c-0.356,0.217-0.653,0.327-0.885,0.327c-0.296,0-0.513-0.084-0.642-0.249 c-0.133-0.163-0.205-0.427-0.205-0.795V5.502h-3.157v12.935c0,0.922,0.186,1.612,0.555,2.073 C36.762,20.971,37.309,21.202,38.045,21.202z M28.656,21.369c1.438,0,2.564-0.378,3.388-1.131c0.816-0.755,1.227-1.79,1.227-3.114 V9.129c0-1.18-0.418-2.145-1.248-2.893c-0.84-0.75-1.913-1.125-3.223-1.125c-1.434,0-2.58,0.356-3.431,1.066 c-0.854,0.709-1.278,1.663-1.278,2.864v8.021c0,1.315,0.417,2.362,1.244,3.14C26.166,20.979,27.274,21.369,28.656,21.369z M27.347,8.925c0-0.338,0.121-0.611,0.36-0.82c0.243-0.208,0.554-0.311,0.941-0.311c0.417,0,0.755,0.102,1.013,0.311 c0.259,0.209,0.388,0.482,0.388,0.82v8.431c0,0.413-0.126,0.739-0.38,0.979c-0.254,0.235-0.593,0.354-1.021,0.354 c-0.418,0-0.74-0.115-0.965-0.349c-0.224-0.233-0.337-0.56-0.337-0.984V8.925z M34.024,35.703c-0.201,0-0.402,0.042-0.596,0.137 c-0.197,0.089-0.388,0.233-0.581,0.429v8.753c0.228,0.228,0.452,0.396,0.668,0.495c0.216,0.101,0.44,0.151,0.676,0.151 c0.345,0,0.596-0.099,0.759-0.297c0.16-0.197,0.243-0.517,0.243-0.968v-7.255c0-0.476-0.095-0.836-0.296-1.081 C34.692,35.823,34.4,35.703,34.024,35.703z M50.243,24.529H7.049C3.17,24.529,0,27.701,0,31.576v13.201 c0,3.874,3.17,7.044,7.049,7.044h43.194c3.879,0,7.049-3.17,7.049-7.044V31.576C57.292,27.701,54.122,24.529,50.243,24.529z M18.643,31.416h-3.275v16.276h-3.165V31.416H8.927v-2.767h9.717V31.416z M27.898,47.692h-2.808v-1.544 c-0.523,0.573-1.059,1.004-1.625,1.302c-0.558,0.302-1.101,0.447-1.628,0.447c-0.652,0-1.138-0.207-1.469-0.626 c-0.325-0.421-0.492-1.043-0.492-1.882V33.641h2.808v10.778c0,0.331,0.06,0.572,0.175,0.719c0.121,0.151,0.312,0.226,0.576,0.226 c0.201,0,0.468-0.099,0.782-0.298c0.318-0.195,0.607-0.448,0.873-0.751V33.641h2.808V47.692z M38.089,44.788 c0,0.994-0.22,1.759-0.66,2.29c-0.44,0.529-1.078,0.793-1.909,0.793c-0.554,0-1.044-0.099-1.469-0.306 c-0.433-0.202-0.835-0.52-1.203-0.95v1.077h-2.839V28.649h2.839v6.13c0.38-0.423,0.782-0.755,1.203-0.976 c0.429-0.222,0.862-0.331,1.298-0.331c0.888,0,1.567,0.299,2.034,0.895c0.471,0.6,0.706,1.475,0.706,2.624V44.788z M47.829,41.002 h-5.371v2.65c0,0.739,0.087,1.252,0.272,1.538c0.187,0.287,0.505,0.427,0.953,0.427c0.467,0,0.79-0.121,0.976-0.366 c0.182-0.24,0.281-0.773,0.281-1.599v-0.642h2.889v0.721c0,1.44-0.35,2.527-1.06,3.258c-0.698,0.727-1.75,1.087-3.151,1.087 c-1.26,0-2.25-0.386-2.972-1.157c-0.722-0.771-1.089-1.835-1.089-3.188V37.42c0-1.214,0.402-2.21,1.195-2.979 c0.797-0.767,1.818-1.149,3.074-1.149c1.287,0,2.278,0.356,2.969,1.068c0.691,0.709,1.033,1.73,1.033,3.06V41.002z M43.71,35.752 c-0.447,0-0.767,0.126-0.965,0.386c-0.197,0.248-0.287,0.674-0.287,1.26v1.419h2.482v-1.419c0-0.586-0.104-1.012-0.297-1.26 C44.454,35.878,44.136,35.752,43.71,35.752z'/%3E%3C/svg%3E" alt="youtube"/></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__dev"><a href="" class="footer__dev-text">Создание сайта</a><a href="" class="footer__dev-logo"><img src="images/imedia.png" alt="imediasolutions"/></a></div>
+            </div>
+          </div>
+        </footer>
+        <script src="js/vendor/jquery-1.10.2.min.js"></script>
+        <script src="js/vendor/wow.min.js"></script>
+        <script src="js/vendor/jquery.fancybox.pack.js"></script>
+        <script src="js/vendor/slick.min.js"></script>
+        <script src="js/vendor/jquery.easydropdown.min.js"></script>
+        <script src="js/vendor/pickmeup.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEjVx5mvRceyLV8vxCe_CbkYC3Rl_TND4"></script>
+        <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
+        <script src="js/vendor/masonry.pkgd.min.js">     </script>
+        <script src="js/main.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

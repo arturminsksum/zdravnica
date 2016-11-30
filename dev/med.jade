@@ -1,0 +1,143 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .banner.banner_int
+      .banner__img(style="background-image: url(images/resort-banner.jpg)")
+      .banner__title Случь
+      .banner__filter 
+        span Подобрать путевку
+
+    .container
+      +breadcrumb('Медицинский профиль')
+      h1.page__title Медицинский профиль
+
+    +filter('internal')
+    
+    section.navigation
+      .container
+          .overlay.navigation__overlay
+          .navigation__btn Медицинский профиль
+          ul.navigation__menu
+            li.navigation__item.active
+              .navigation__link Медицинский <br>профиль
+            li.navigation__item
+              a(href="").navigation__link Номера и <br>цены
+            li.navigation__item
+              a(href="").navigation__link Досуг
+            li.navigation__item
+              a(href="").navigation__link Медиа
+            li.navigation__item
+              a(href="").navigation__link Инфрастуктура
+            li.navigation__item
+              a(href="").navigation__link Контакты
+            li.navigation__item.navigation__item_hot
+              a(href="").navigation__link Горящие <br>туры
+            li.navigation__item
+              a(href="").navigation__link Диетическое <br>питание
+
+    
+    section.med-indicators
+      .container
+        .med-indicators__wrap
+          .row
+            .eight.columns.med-indicators__left
+              .med-indicators__title Показания направления на лечение:
+              .accordion
+                -var listDisease= ['Болезни системы кровообращения', 'Болезни костно-мышечной системы и соединительной ткани', 'Болезни системы кровообращения']
+                each item in listDisease 
+                  .item
+                    .item__title=item
+                    .item__info
+                      .item__close
+                        span Закрыть                      
+                      a(href="").item__tip
+                        i
+                        +tooltip('Перечень медицинских услуг  входящих в стоимость путевки по дням')
+                        span Перечень медицинских услуг  входящих в стоимость путевки по дням
+
+                      .item__list
+                        .item__disease Заболевания:
+                        ul.list
+                          -var listIndicators = ['Ревматическая лихорадка без упоминания о вовлечении сердца;', 'Ревматическая лихорадка с вовлечением сердца;', 'Ревматические болезни митрального клапана;', 'Ревматические болезни аортального клапана;', 'Сочетанное поражение митрального и аортального клапанов;','Врожденные аномалии сердечных камер и соединений;','Врожденные аномалии сердечной перегородки;','Врожденные аномалии легочного и трехстворчатого']
+                          each item in listIndicators
+                            li=item
+                      .item__list
+                        .item__contr Противопоказания:
+                        ul.list.list_red
+                          -var listContr = ['Ревматизм с активностью процесса II и III степени', 'Недостаточность кровообращения IIб и III стадии', 'Мерцательная аритмия, пароксизмальная тахикардия с частыми приступами', 'Полная атрио-вентрикулярная блокада при частоте сердечных сокращений менее 50 в 1  мин., наличие приступов Морганьи- Эдемса- Стокса', 'Вторичная артериальная гипертензия невыясненного происхождения']
+                          each item in listContr
+                            li=item
+
+
+
+                .item.opened
+                  .item__title Болезни органов дыхания
+                  .item__info(style="display:block")
+                    .item__close
+                      span Закрыть                    
+                    a(href="").item__tip
+                      i
+                      +tooltip('Перечень медицинских услуг  входящих в стоимость путевки по дням')
+                      span Перечень медицинских услуг  входящих в стоимость путевки по дням
+
+                    .item__list
+                      .item__disease Заболевания:
+                      ul.list
+                        -var listIndicators = ['Ревматическая лихорадка без упоминания о вовлечении сердца;', 'Ревматическая лихорадка с вовлечением сердца;', 'Ревматические болезни митрального клапана;', 'Ревматические болезни аортального клапана;', 'Сочетанное поражение митрального и аортального клапанов;','Врожденные аномалии сердечных камер и соединений;','Врожденные аномалии сердечной перегородки;','Врожденные аномалии легочного и трехстворчатого']
+                        each item in listIndicators
+                          li=item
+                    .item__list
+                      .item__contr Противопоказания:
+                      ul.list.list_red
+                        -var listContr = ['Ревматизм с активностью процесса II и III степени', 'Недостаточность кровообращения IIб и III стадии', 'Мерцательная аритмия, пароксизмальная тахикардия с частыми приступами', 'Полная атрио-вентрикулярная блокада при частоте сердечных сокращений менее 50 в 1  мин., наличие приступов Морганьи- Эдемса- Стокса', 'Вторичная артериальная гипертензия невыясненного происхождения']
+                        each item in listContr
+                          li=item
+
+            .four.columns.med-indicators__right
+              .med-indicators__license
+                .license
+                  .license__title Лицензии
+                  .license__wrap
+                    - for (var i = 0; i < 3; i++)
+                      a(href="images/license.jpg").license__item.fancybox
+                        img(src="images/license.jpg", alt="license")
+              .med-indicators__more Дополнительные медецинские услуги
+              .med-indicators__list
+                ul.list
+                  -var listMore = ['Гидромассаж', 'Восстановительные процедуры', 'Лечебное обёртывание', 'Водная терапия', 'Ультразвуковые исселдования','Массаж']
+                  each item in listMore
+                    li=item                 
+
+    section.med-nature
+      .container
+        .med-nature__wrap
+          .row
+            .eight.columns
+              .med-nature__title Природные факторы:
+              .med-nature__text Человек часть природы это факт. В остальном сначало надо понять что такое польза природе. Вообще то все определения в результате сводятся к пользе человека. В принципе это не плохо. Ведь человек часть природы и если плохо человеку то достаточно велика вероятность что ничего хорошего и природе (и наоборот) Но в глобальном смысле человек оказывается настолько мелочью по сравнению с природой (Вселенной) что ей человек и все его деяния просто пофигу как и вся Земля в целом. 
+              .accordion
+                -var listNature = ['Лечебные озёра поблизости', 'Хвойные и смешанные леса', 'Территория удалена от автомобильных дорог']
+                each item in listNature
+                  .item
+                    .item__title=item
+                    .item__info
+                      .item__close
+                        span Закрыть  
+                      .b-text                 
+                        p Человек часть природы это факт. В остальном сначало надо понять что такое польза природе. Вообще то все определения в результате сводятся к пользе человека. В принципе это не плохо. Ведь человек часть природы и если плохо человеку то достаточно велика вероятность что ничего хорошего и природе (и наоборот) Но в глобальном смысле человек оказывается настолько мелочью по сравнению с природой (Вселенной) что ей человек и все его деяния просто пофигу как и вся Земля в целом.              
+
+    section.carousel.bg-grey
+      .container
+        .carousel__wrap
+          - for (var i = 1; i < 5; i++) 
+            a(href="images/carousel-med-0"+i+".jpg").carousel__item.fancybox
+              img(src="images/carousel-med-0"+i+".jpg", alt="")
+          - for (var i = 1; i < 5; i++) 
+            a(href="images/carousel-med-0"+i+".jpg").carousel__item.fancybox
+              img(src="images/carousel-med-0"+i+".jpg", alt="")
+
+    +feedback()
+  +footer('int')

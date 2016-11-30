@@ -1,0 +1,12 @@
+include jade/jade
+
+doctype
+html
+  +head()
+  body
+    .inner
+      .content
+        //- +header()
+        block content
+        //- +footer()
+        +scripts()

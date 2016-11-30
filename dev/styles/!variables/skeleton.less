@@ -1,0 +1,658 @@
+// Variables
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Breakpoints
+@bp-larger-than-mobile: 320px;
+@bp-larger-than-phablet: 480px;
+@bp-larger-than-tablet: 768px;
+@bp-larger-than-desktop: 1200px;
+@bp-larger-than-desktophd: 1366px;
+// Colors
+@light-grey: #e1e1e1;
+@grey: rgb(149, 149, 149);
+@font-color: #000;
+@green: #587323;
+@bright-green: #83ba31;
+@red: #ff0000;
+@border-color: #bbb;
+@link-color: #1eaedb;
+
+
+// Typography
+@font-family: "DINPro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+// Grid Variables
+@container-width: 1170px;
+@container-width-larger-than-mobile: 90%;
+@container-width-larger-than-tablet: 100%;
+@total-columns: 12;
+@column-width: 100 / @total-columns;
+// calculates individual column width based off of # of columns
+@column-margin: 2%;
+// space between columns
+
+// Misc
+@global-radius: 5px;
+
+/* Base Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* NOTE
+html is set to 62.5% so that all the REM measurements throughout Skeleton
+are based on 10px sizing. So basically 1.5rem = 15px :) */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.5;
+  // font-weight: 300;
+  font-family: @font-family;
+  color: @font-color;
+}
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 4.0rem;
+  line-height: 1.2;
+  letter-spacing: -.1rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+  line-height: 1.25;
+  letter-spacing: -.1rem;
+}
+
+h3 {
+  font-size: 3.0rem;
+  line-height: 1.3;
+  letter-spacing: -.1rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.35;
+  letter-spacing: -.08rem;
+}
+
+h5 {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  letter-spacing: -.05rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+/* Links
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+  color: @font-color;
+
+  &:hover {
+    // color: darken(@link-color, 5%);
+  }
+
+}
+
+// Functions
+//––––––––––––––––––––––––––––––––––––––––––––––––––
+.grid-column-width(@n) {
+  width: @column-width * @n - (@column-margin*(@total-columns - @n)/@total-columns);
+}
+
+.grid-offset-length(@n) {
+  margin-left: @column-width * @n - (@column-margin*(@total-columns - @n)/@total-columns) + @column-margin;
+}
+
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.container {
+  // position: relative;
+  width: 100%;
+  max-width: @container-width;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.column,
+.columns {
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+}
+
+/* For devices larger than 400px */
+@media (min-width:@bp-larger-than-mobile) {
+  .container {
+    // width: @container-width-larger-than-mobile;
+    // padding: 0;
+  }
+
+}
+
+/* For devices larger than 550px */
+@media (min-width:@bp-larger-than-tablet) {
+  // .container {
+    //   max-width: @container-width-larger-than-tablet;
+    //
+  // }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .column,
+  .columns {
+    margin-left: @column-margin;
+    display: flex;
+  }
+
+  .column:first-child,
+  .columns:first-child {
+    margin-left: 0;
+  }
+
+  .one.column,
+  .one.columns {
+    .grid-column-width(1);
+  }
+
+  .two.columns {
+    .grid-column-width(2);
+  }
+
+  .three.columns {
+    .grid-column-width(3);
+  }
+
+  .three.columns:nth-child(4n-3) {
+    margin-left: 0;
+  }
+
+  .four.columns {
+    .grid-column-width(4);
+  }
+
+  .four.columns:nth-child(3n-2) {
+    margin-left: 0;
+  }
+
+  .five.columns {
+    .grid-column-width(5);
+  }
+
+  .six.columns {
+    .grid-column-width(6);
+  }
+
+  .six.columns:nth-child(2n-1) {
+    margin-left: 0;
+  }
+
+  .seven.columns {
+    .grid-column-width(7);
+  }
+
+  .eight.columns {
+    .grid-column-width(8);
+  }
+
+  .nine.columns {
+    .grid-column-width(9);
+  }
+
+  .ten.columns {
+    .grid-column-width(10);
+  }
+
+  .eleven.columns {
+    .grid-column-width(11);
+  }
+
+  .twelve.columns {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .one-third.column {
+    .grid-column-width(4);
+  }
+
+  .two-thirds.column {
+    .grid-column-width(8);
+  }
+
+  .one-half.column {
+    .grid-column-width(6);
+  }
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns {
+    .grid-offset-length(1);
+  }
+
+  .offset-by-two.column,
+  .offset-by-two.columns {
+    .grid-offset-length(2);
+  }
+
+  .offset-by-three.column,
+  .offset-by-three.columns {
+    .grid-offset-length(3);
+  }
+
+  .offset-by-four.column,
+  .offset-by-four.columns {
+    .grid-offset-length(4);
+  }
+
+  .offset-by-five.column,
+  .offset-by-five.columns {
+    .grid-offset-length(5);
+  }
+
+  .offset-by-six.column,
+  .offset-by-six.columns {
+    .grid-offset-length(6);
+  }
+
+  .offset-by-seven.column,
+  .offset-by-seven.columns {
+    .grid-offset-length(7);
+  }
+
+  .offset-by-eight.column,
+  .offset-by-eight.columns {
+    .grid-offset-length(8);
+  }
+
+  .offset-by-nine.column,
+  .offset-by-nine.columns {
+    .grid-offset-length(9);
+  }
+
+  .offset-by-ten.column,
+  .offset-by-ten.columns {
+    .grid-offset-length(10);
+  }
+
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns {
+    .grid-offset-length(11);
+  }
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns {
+    .grid-offset-length(4);
+  }
+
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns {
+    .grid-offset-length(8);
+  }
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.column {
+    .grid-offset-length(6);
+  }
+
+}
+
+/* Clearing
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Self Clearing Goodness */
+
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*=== all style ===*/
+* {
+  box-sizing: border-box;
+
+  &::selection {
+    background:;
+  }
+
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+textarea,
+button,
+input {
+  // appearance: none;
+  border: 0;
+  border-radius: 0;
+  font-family: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+body {
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.inner {
+  overflow-x: hidden;
+}
+
+.content {
+  position: relative;
+}
+
+[type="submit"] {
+  cursor: pointer;
+}
+
+.video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Buttons
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.btn {
+  display: inline-block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  width: 200px;
+  height: 50px;
+  line-height: 50px;
+  text-decoration: none;
+  white-space: nowrap;
+  background-color: transparent;
+  border-radius: @global-radius;
+  cursor: pointer;
+  transition: all 0.3s;
+  user-select: none;
+
+  &:hover {
+  }
+
+  &:focus {
+  }
+
+  &_green {
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    background-color: @bright-green;
+
+    &:hover {
+      background-color: #6c9b25;
+    }
+
+    &:focus {
+      background-color: #6c9b25;
+    }
+
+  }
+
+
+  &_blue {
+    background: #4d8acb;
+    background: linear-gradient(to right, #4d8acb 0%, #4d9aca 33%, #4dacca 66%, #4dbac9 100%);
+
+    &:hover {
+    }
+
+    &:focus {
+    }
+
+  }
+
+  &_invert {
+    border-width: 1px;
+    border-color: #abaaaa;
+    border-style: solid;
+    font-size: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    line-height: 48px;
+  }
+
+  &_grey {
+    border-width: 1px;
+    border-color: rgb(196, 196, 196);
+    border-style: solid;
+    font-size: 15px;
+    color: #2a2a2a;
+    font-weight: bold;
+    line-height: 48px;    
+  }
+}
+
+.img() {
+  display: inline-block;
+  max-width: 100%;
+  width: auto;
+  max-height: 100%;
+  height: auto;
+}
+
+.overlay {
+  display: none;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9;
+}
+
+section {
+  padding: 50px 0;
+}
+
+.section__title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+
+.page__title {
+  margin-top: 10px;
+    font-size: 32px;
+  line-height: 1.2;
+  text-transform: none;
+  font-weight: 900;
+  margin-bottom: 0;
+  &_green {
+    color: @bright-green;
+    text-decoration: underline;
+  }
+}
+
+.list {
+  padding-left: 40px;
+  margin-bottom: 20px;
+
+
+
+    li {
+      font-size: 14px;
+      margin-bottom: 5px;
+      list-style-image: @list-item-green;
+    }
+
+  &_red {
+    li {
+      list-style-image: @list-item-red;
+    }
+  }
+
+}
+
+.err-text {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 12px;
+  color: #ff5151;
+}
+
+.b-text {
+  padding-bottom: 30px;
+
+  a {
+    color: #4d8acb;
+    text-decoration: underline;
+  }
+
+  p {
+    text-align: justify;
+    margin-bottom: 20px;
+    .ms-flex;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  img {
+    .img;
+  }
+
+
+  img[align="left"] {
+    display: block;
+    float: left;
+    margin: 0 30px 20px 0;
+  }
+
+  img[align="right"] {
+    display: block;
+    float: right;
+    margin: 0 0 20px 30px;
+  } 
+
+
+}
+
+.pickmeup {
+  margin-left: 4px;
+}
+
+@media (max-width:1199px) {
+  section {
+    padding: 30px 0;
+  }
+
+  .section__title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .page__title {
+      font-size: 28px;
+  }
+
+  .pickmeup {
+    margin-left: 2px;
+  }
+
+}
+
+@media (max-width:767px) {
+.page__title {
+    font-size: 24px;
+}
+
+.b-text {
+
+  p {
+
+  }
+
+  img {
+
+  }
+
+
+  img[align="left"],
+  img[align="right"] {
+      max-width: inherit;
+      float: none;      
+      margin: 0 0 20px 0;
+  }
+
+
+}
+
+  .pickmeup {
+    margin-left: 5px;
+  }
+
+}
+

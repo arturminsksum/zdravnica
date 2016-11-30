@@ -1,0 +1,284 @@
+.main-hot {
+  &__wrap {
+    margin-bottom: 50px;
+
+    .column {
+      width: 364px;
+    }
+
+  }
+
+  &__more {
+    text-align: center;
+
+    .btn {
+      border-width: 1px;
+      border-color: rgb(171, 170, 170);
+      border-style: solid;
+      width: auto;
+      padding: 0 50px;
+      height: 48px;
+      line-height: 48px;
+      font-size: 16px;
+      color: rgb(42, 42, 42);
+      font-weight: normal;
+      background-color: transparent;
+    }
+
+  }
+
+}
+
+.tour {
+  position: relative;
+  width: 100%;
+  border-width: 1px;
+  border-color: rgb(208, 208, 208);
+  border-style: solid;
+  border-top-width: 0;
+  background-color: #fff;
+
+  &:hover {
+    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  &__img {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    font-size: 0;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-shadow: inset 0px 200px 200px -100px rgba(0, 0, 0, 0.75);
+    }
+
+    img {
+      .img;
+      width: 100%;
+    }
+
+  }
+
+  &__top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px 25px;
+  }
+
+  &__type {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  &__sanatorium {
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+  }
+
+  &__bottom {
+    padding: 20px 20px 20px 40px;
+  }
+
+  &__list {
+    margin-bottom: 20px;
+
+    ul {
+    }
+
+    li {
+      font-size: 14px;
+      margin-bottom: 5px;
+      list-style-image: @list-item-green;
+    }
+
+  }
+
+  &__icons {
+    position: relative;
+    padding-right: 21px;
+    border-color: rgb(219, 219, 219);
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    margin-bottom: 20px;
+    height: 56px;
+    overflow: hidden;
+
+    .icon {
+      margin: 15px 0;
+      margin-right: 19px;
+    }
+
+  }
+
+  &__info {
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: -40px;
+    padding-left: 40px;
+
+    &-icon {
+      display: block;
+      position: absolute;
+      .bg-svg(@tooltip-grey, 17px, 17px, 15px, 5px);
+      cursor: pointer;
+    }
+
+    &-price {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    &-tax {
+      font-size: 15px;
+    }
+
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__counter {
+    div {
+      .dibt;
+      text-align: center;
+      width: 30px;
+      height: 30px;
+      line-height: 28px;
+      user-select: none;
+    }
+
+    &-plus {
+      border-width: 1px;
+      border-color: #dcdcdc;
+      border-style: solid;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    &-num {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    &-minus {
+      border-width: 1px;
+      border-color: #dcdcdc;
+      border-style: solid;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+  }
+
+  &__btn {
+    .btn {
+      width: 140px;
+      height: 32px;
+      line-height: 32px;
+    }
+
+  }
+
+  &__people {
+    padding-top: 10px;
+    border-color: #dbdbdb;
+    border-style: solid;
+    border-top-width: 1px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+}
+
+.hot-list {
+  padding: 0;
+}
+
+@media (max-width:1199px) {
+  .main-hot {
+    &__wrap {
+      margin-bottom: 30px;
+      padding-bottom: 50px;
+
+      .row {
+        margin: 0 -10px;
+      }
+
+      .column {
+        padding: 0px 8px;
+        margin-left: 0;
+        text-align: center;
+      }
+
+    }
+
+    &__more {
+      text-align: center;
+
+      .btn {
+        border-width: 1px;
+        border-color: rgb(171, 170, 170);
+        border-style: solid;
+        width: auto;
+        padding: 0 50px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 16px;
+        color: rgb(42, 42, 42);
+        font-weight: normal;
+        background-color: transparent;
+      }
+
+    }
+
+  }
+
+  .tour {
+    display: inline-block;
+    width: 364px;
+    text-align: left;
+  }
+
+}
+
+@media (max-width:767px) {
+  .tour {
+    width: 290px;
+
+    &__action {
+      flex-wrap: wrap;
+      // justify-content: center;
+      margin-left: -20px;
+    }
+
+    &__counter {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    &__btn {
+      width: 100%;
+      text-align: center;
+    }
+
+  }
+
+}
+
+@media (max-width:479px) {
+}

@@ -1,0 +1,102 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .banner.banner_int
+      .banner__img(style="background-image: url(images/resort-banner.jpg)")
+      .banner__title Случь
+      .banner__filter 
+        span Подобрать путевку
+
+    .container
+      +breadcrumb('Медиа')
+      h1.page__title Медиа
+
+    +filter('internal')    
+
+    section.navigation
+      .container
+          .overlay.navigation__overlay
+          .navigation__btn Медиа
+          ul.navigation__menu
+            li.navigation__item
+              a(href="").navigation__link Медицинский <br>профиль
+            li.navigation__item
+              a(href="").navigation__link Номера и <br>цены
+            li.navigation__item
+              a(href="").navigation__link Досуг
+            li.navigation__item.active
+              .navigation__link Медиа
+            li.navigation__item
+              a(href="").navigation__link Инфрастуктура
+            li.navigation__item
+              a(href="").navigation__link Контакты
+            li.navigation__item.navigation__item_hot
+              a(href="").navigation__link Горящие <br>туры
+            li.navigation__item
+              a(href="").navigation__link Диетическое <br>питание
+  
+    section.media-foto
+      .container
+        .section__title Фото
+        .b-tabs
+          .b-tabs__mobile Территория и инфраструктура
+          .b-tabs__pagin
+            -var tabsList = ['Территория и инфраструктура','Лечебная база','Номера','Досуг','Питание']
+            each tab in tabsList
+              .b-tabs__btn=tab
+          .b-tabs__content
+            - for (var j = 0; j < 5; j++)
+              .b-tabs__item
+                .row
+                  .eight.columns.media-foto__left
+                    .media-foto__images
+                      a(href="images/media-foto-full-01.jpg").media-foto__big.fancybox
+                        img(src="images/media-foto-big-01.jpg", alt="")
+                      .media-foto__small
+                        - for (var i = 1; i < 7; i++)
+                          .media-foto__img(data-big="images/media-foto-big-0"+i+".jpg", data-full="images/media-foto-full-0"+i+".jpg")
+                            img(src="images/media-foto-small-0"+i+".jpg", alt="")
+
+                  .four.columns.media-foto__right
+                    .media-foto__info
+                      .media-foto__title Описание:
+                      .b-text
+                        p Благоустройство территории является важнейшим этапом освоения участка, предназначенного для возведения сантаория.
+                        p Оно заключается в проведении целого комплекса мероприятий, направленных не только на придание территории эстетически привлекательного внешнего вида в плане ландшафтного дизайна, но и на приведение участка в соответствие с действующими санитарно-гигиеническими нормами, улучшение его экологии.
+
+
+    section.media-video
+      .container
+        .section__title Видео
+        .media-video__wrap
+          .row
+            .six.columns
+              .media-video__block
+                .video
+                  iframe(src="https://www.youtube.com/embed/x2Vp-hWChaE", frameborder="0", allowfullscreen)
+                .b-text
+                  p Благоустройство территории является важнейшим этапом освоения участка, предназначенного для возведения сантаория. Оно заключается в проведении целого комплекса мероприятий
+
+
+
+            .six.columns
+              .media-video__block
+                .video
+                  iframe(src="https://www.youtube.com/embed/x2Vp-hWChaE", frameborder="0", allowfullscreen)
+                .b-text
+                  p Благоустройство территории является важнейшим этапом освоения участка, предназначенного для возведения сантаория. Оно заключается в проведении целого комплекса мероприятий, направленных не только на придание территории эстетически привлекательного внешнего вида в плане ландшафтного дизайна
+
+    //- section.media-3d
+      .container
+        .section__title 3D Тур
+        .media-3d__wrap
+          iframe(src='http://www.agrozdrav.by/files/virtual/radon/Ulica.html', name='tour', width='100%', height='600', frameborder='0')
+
+
+
+
+    +feedback()
+  +footer('int')

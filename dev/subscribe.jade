@@ -1,0 +1,66 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .container
+      +breadcrumb('Подписка на рассылку')
+      h1.page__title Личный кабинет    
+
+      aside.personal-side
+        .overlay.personal-side__overlay
+        .personal-side__btn Подписка на рассылку
+        ul.personal-side__menu
+          -var sideList = ['Мои заказы','Личные Данные','Завершённые заказы','Подписка на рассылку']
+          each side,index in sideList
+            if index===3
+              li.personal-side__item
+                span.personal-side__link=side
+            else
+              li.personal-side__item
+                a(href="").personal-side__link=side              
+
+      .personal-content
+
+        section.personal-orders
+
+          form.b-filter(action="")
+            .b-filter__wrap      
+              .b-filter__top
+                .b-filter__name.hide-mobile  Подписка на Рассылку
+                .b-text
+                  p В санатории созданы необходимые условия для обеспечения непрерывного учебно-воспитательного процесса во время пребывания учащихся в санатории в учебное время: 13 оборудованных учебных кабинетов, оснащенных техническими средствами, наглядными пособиями, дидактическими материалами, методической литературой, необходимыми учебниками.                            
+              .b-filter__inner
+                .b-filter__section
+                  .b-filter__subtitle Выберите раздел сайта для подписки
+                  .b-filter__row
+                    .b-filter__checkbox
+                      label.checkbox  
+                        input.checkbox__hidden(type="checkbox", name='PROPERTY[][0]')
+                        span.checkbox__showed
+                        span.checkbox__title Новости 
+                    .b-filter__checkbox 
+                      label.checkbox  
+                        input.checkbox__hidden(type="checkbox", name='PROPERTY[][0]', checked="checked")
+                        span.checkbox__showed
+                        span.checkbox__title Горящие туры  
+
+                  .b-filter__subtitle Дополнительные способы информирования
+                  .b-filter__row
+                    .b-filter__checkbox
+                      label.checkbox  
+                        input(type="checkbox", name='PROPERTY[][0]').checkbox__hidden
+                        span.checkbox__showed
+                        span.checkbox__title СМС-рассылка  
+                  .b-filter__subtitle Напишите Ваш E-mail для подписки
+                  .b-filter__row
+                    .b-filter__block.b-filter__block_fifty.b-filter__block_subscr
+                      input.input.req.email(type='email', name='PROPERTY[][0]', placeholder='romateo@list.ru',autocomplete='email')
+                      input.btn.btn_green(type="submit", value="Пописаться")
+                      input.unsubscribe(type="submit", value="Отписаться")
+
+
+
+    +feedback()
+  +footer('int')
