@@ -38,6 +38,33 @@
   border-top-width: 0;
   background-color: #fff;
 
+  &__delete {
+    position: absolute;
+    padding-left: 15px;
+    top: 20px;
+    right: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: rgb(219, 219, 219);
+    border-style: solid;
+    width: 98px;
+    height: 30px;
+    line-height: 28px;
+    cursor: pointer;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      .bg-svg(@close-black, 14px, 14px, 10px, 7px);
+    }
+
+  }
+
+
   &:hover {
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
   }
@@ -104,6 +131,10 @@
 
   }
 
+  &__icons-wrap {
+    position: relative;
+  }
+
   &__icons {
     position: relative;
     padding-right: 21px;
@@ -116,8 +147,8 @@
     overflow: hidden;
 
     .icon {
-      margin: 15px 0;
-      margin-right: 19px;
+      margin-top: 15px;
+      margin-bottom: 15px;
     }
 
   }
@@ -201,6 +232,22 @@
     font-size: 18px;
     font-weight: bold;
   }
+
+  &__dropdown {
+    display: none;
+    padding: 5px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #fff;
+    .b-sh-wh;
+    .icon {
+      margin: 5px;
+    }
+  }
+
 
 }
 

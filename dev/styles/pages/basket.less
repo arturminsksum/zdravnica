@@ -1,5 +1,4 @@
 .basket-list {
-  padding-bottom: 0;
 
   &__wrap {
     .tour {
@@ -31,31 +30,7 @@
 
       }
 
-      &__delete {
-        position: absolute;
-        padding-left: 15px;
-        top: 20px;
-        right: 30px;
-        font-size: 12px;
-        font-weight: bold;
-        text-align: center;
-        border-radius: 15px;
-        border-width: 1px;
-        border-color: rgb(219, 219, 219);
-        border-style: solid;
-        width: 98px;
-        height: 30px;
-        line-height: 28px;
-        cursor: pointer;
-        z-index: 1;
 
-        &:before {
-          content: '';
-          position: absolute;
-          .bg-svg(@close-black, 14px, 14px, 10px, 7px);
-        }
-
-      }
 
       &__left {
         position: relative;
@@ -69,7 +44,7 @@
           bottom: 0;
           left: 0;
           right: 0;
-          box-shadow: inset 0px 50px 100px -50px rgba(0, 0, 0, 0.75);
+          box-shadow: inset 0px 50px 100px -30px rgba(0, 0, 0, 0.75);
         }
 
         &:after {
@@ -101,6 +76,7 @@
       &__sanatorium {
         color: #000;
         margin-bottom: 10px;
+        margin-right: 110px;
       }
 
       &__block {
@@ -148,6 +124,7 @@
 }
 
 .basket-result {
+  padding-top: 0;
   &__wrap {
     background-color: rgb(233, 249, 209);
     border-top: 1px solid #c8e2a1;

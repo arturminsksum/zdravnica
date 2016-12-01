@@ -58,15 +58,25 @@ block content
                         each icon in listIcons
                           li=icon
 
-                    .tour__icons
-                        i.icon.icon_wi-fi
-                        i.icon.icon_air
-                        i.icon.icon_double-bed
-                        i.icon.icon_single-bed
-                        i.icon.icon_safety
-                        i.icon.icon_tv
-                        i.icon.icon_phone
-                        i.icon.icon_more                    
+                    .tour__icons-wrap
+                      .tour__icons
+                          i.icon.icon_wi-fi
+                          i.icon.icon_air
+                          i.icon.icon_double-bed
+                          i.icon.icon_single-bed
+                          i.icon.icon_safety
+                          i.icon.icon_tv
+                          i.icon.icon_phone
+                          i.icon.icon_more  
+                      .tour__dropdown
+                        - for (var i = 0; i < 3; i++)
+                          i.icon.icon_wi-fi
+                          i.icon.icon_air
+                          i.icon.icon_double-bed
+                          i.icon.icon_single-bed
+                          i.icon.icon_safety
+                          i.icon.icon_tv
+                          i.icon.icon_phone   
                     .tour__info
                       .tour__info-icon
                       +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')

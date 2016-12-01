@@ -38,26 +38,43 @@ block content
       .container
         .search-result__wrap
           .search-result__title Санаторий “Радон”
-          .row
-            - var hotList = ['4 местный тип А','1 местный повышенной комфортности','2 местный тип А']
-            each hot in hotList
-              .column
-                .tour
-                  .tour__img
-                    img(src="images/tour-01.jpg", alt="")
-                  .tour__top
-                    .tour__type=hot
-                    .tour__sanatorium Санаторий "Радон"
-                  a(href="#similar").tour__more
-                    span Еще варианты  
-                  .tour__bottom
-                    .tour__list
-                      ul
-                        -var listIcons = ['Болезни системы кровообращения', 'Болезни костно-мышечной системы и соединительной ткани', 'Болезни органов пищеварения', 'Болезни органов дыхания', 'Болезни нервной системы']
-                        each icon in listIcons
-                          li=icon
-
+          .search-result__desease
+            ul.list          
+              -var listIcons = ['Болезни системы кровообращения', 'Болезни костно-мышечной системы и соединительной ткани', 'Болезни органов пищеварения', 'Болезни органов дыхания', 'Болезни нервной системы' , 'Болезни органов пищеварения']
+              each icon in listIcons
+                li=icon            
+          .basket-list__wrap
+            .tour.clearfix
+              .tour__left
+                img(src="images/basket-img-01.jpg", alt="")
+                .tour__more
+                  span Еще варианты  
+              .tour__right
+                .tour__block  
+                  .tour__type 4 местный тип А
+                  .tour__sanatorium Санаторий "Радон"
+                  .tour__human
+                    .tour__human-adult
+                    .tour__human-adult
+                    .tour__human-child
+                    .tour__human-plus
+                    .tour__human-adult 
+                .tour__block     
+                  .tour__price
+                    .tour__info-price 210 руб. за 5 ночей
+                    .tour__info-tax + 3% курортный сбор 20.000
+                  .tour__action
                     .tour__icons
+                      i.icon.icon_wi-fi
+                      i.icon.icon_air
+                      i.icon.icon_double-bed
+                      i.icon.icon_single-bed
+                      i.icon.icon_safety
+                      i.icon.icon_tv
+                      i.icon.icon_phone
+                      i.icon.icon_more
+                    .tour__dropdown
+                      - for (var i = 0; i < 3; i++)
                         i.icon.icon_wi-fi
                         i.icon.icon_air
                         i.icon.icon_double-bed
@@ -65,41 +82,98 @@ block content
                         i.icon.icon_safety
                         i.icon.icon_tv
                         i.icon.icon_phone
-                        i.icon.icon_more                    
-                    .tour__info
-                      .tour__info-icon
-                      +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
-
-                      .tour__info-price 210 руб. за 5 ночей
-                      .tour__info-tax + 3% курортный сбор 20.000
-                    .tour__people
-                      span 3 взрослых + 1 ребёнок
-
+                .tour__tooltip
+                  .tour__info-icon
+                  +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
+                  .tour__text Cтоимость путевки формируется из стоимости брони места в санатории и курортного сбора. Сбор можно оплатить онлайн или наличными деньгами/банковской картой непосредственно перед заселением.   
+          .search-result__more
+            .search-result__title Еще варианты
+            .search-result__close закрыть
+            .basket-list__wrap
+              - for (var v = 0; v < 3; v++)
+                .tour.clearfix
+                  .tour__left
+                    img(src="images/basket-img-01.jpg", alt="")
+                  .tour__right
+                    .tour__block  
+                      .tour__type 4 местный тип А
+                      .tour__sanatorium Санаторий "Радон"
+                      .tour__human
+                        .tour__human-adult
+                        .tour__human-adult
+                        .tour__human-child
+                        .tour__human-plus
+                        .tour__human-adult 
+                    .tour__block     
+                      .tour__price
+                        .tour__info-price 210 руб. за 5 ночей
+                        .tour__info-tax + 3% курортный сбор 20.000
+                      .tour__action
+                        .tour__icons
+                          i.icon.icon_wi-fi
+                          i.icon.icon_air
+                          i.icon.icon_double-bed
+                          i.icon.icon_single-bed
+                          i.icon.icon_safety
+                          i.icon.icon_tv
+                          i.icon.icon_phone
+                          i.icon.icon_more
+                        .tour__dropdown
+                          - for (var i = 0; i < 3; i++)
+                            i.icon.icon_wi-fi
+                            i.icon.icon_air
+                            i.icon.icon_double-bed
+                            i.icon.icon_single-bed
+                            i.icon.icon_safety
+                            i.icon.icon_tv
+                            i.icon.icon_phone
+                    .tour__choose
+                      .btn.btn_green Выбрать этот вариант           
+            .search-result__simular
+              .btn.btn_grey
+                span Ещё варианты              
 
     section.search-result
       .container
         .search-result__wrap
           .search-result__title Санаторий “Случ”
-          .row
-            - var hotList = ['4 местный тип А','1 местный повышенной комфортности','2 местный тип А']
-            each hot in hotList
-              .column
-                .tour
-                  .tour__img
-                    img(src="images/tour-01.jpg", alt="")
-                  .tour__top
-                    .tour__type=hot
-                    .tour__sanatorium Санаторий "Случ"
-                  a(href="#similar").tour__more
-                    span Еще варианты                      
-                  .tour__bottom
-                    .tour__list
-                      ul
-                        -var listIcons = ['Болезни системы кровообращения', 'Болезни костно-мышечной системы и соединительной ткани', 'Болезни органов пищеварения', 'Болезни органов дыхания', 'Болезни нервной системы']
-                        each icon in listIcons
-                          li=icon
-
+          .search-result__desease
+            ul.list          
+              -var listIcons = ['Болезни системы кровообращения', 'Болезни костно-мышечной системы', 'Болезни органов пищеварения', 'Болезни органов дыхания', 'Болезни нервной системы' , 'Болезни органов пищеварения']
+              each icon in listIcons
+                li=icon            
+          .basket-list__wrap
+            .tour.clearfix
+              .tour__left
+                img(src="images/basket-img-01.jpg", alt="")
+                .tour__more
+                  span Еще варианты  
+              .tour__right
+                .tour__block  
+                  .tour__type 4 местный тип А
+                  .tour__sanatorium Санаторий "Радон"
+                  .tour__human
+                    .tour__human-adult
+                    .tour__human-adult
+                    .tour__human-child
+                    .tour__human-plus
+                    .tour__human-adult 
+                .tour__block     
+                  .tour__price
+                    .tour__info-price 210 руб. за 5 ночей
+                    .tour__info-tax + 3% курортный сбор 20.000
+                  .tour__action
                     .tour__icons
+                      i.icon.icon_wi-fi
+                      i.icon.icon_air
+                      i.icon.icon_double-bed
+                      i.icon.icon_single-bed
+                      i.icon.icon_safety
+                      i.icon.icon_tv
+                      i.icon.icon_phone
+                      i.icon.icon_more
+                    .tour__dropdown
+                      - for (var i = 0; i < 3; i++)
                         i.icon.icon_wi-fi
                         i.icon.icon_air
                         i.icon.icon_double-bed
@@ -107,15 +181,72 @@ block content
                         i.icon.icon_safety
                         i.icon.icon_tv
                         i.icon.icon_phone
-                        i.icon.icon_more                    
-                    .tour__info
-                      .tour__info-icon
-                      +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
+                .tour__tooltip
+                  .tour__info-icon
+                  +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
+                  .tour__text Cтоимость путевки формируется из стоимости брони места в санатории и курортного сбора. Сбор можно оплатить онлайн или наличными деньгами/банковской картой непосредственно перед заселением.   
+          .search-result__more
+            .search-result__title Еще варианты
+            .search-result__close закрыть
+            .basket-list__wrap
+              - for (var v = 0; v < 3; v++)
+                .tour.clearfix
+                  .tour__left
+                    img(src="images/basket-img-01.jpg", alt="")
+                  .tour__right
+                    .tour__block  
+                      .tour__type 4 местный тип А
+                      .tour__sanatorium Санаторий "Радон"
+                      .tour__human
+                        .tour__human-adult
+                        .tour__human-adult
+                        .tour__human-child
+                        .tour__human-plus
+                        .tour__human-adult 
+                    .tour__block     
+                      .tour__price
+                        .tour__info-price 210 руб. за 5 ночей
+                        .tour__info-tax + 3% курортный сбор 20.000
+                      .tour__action
+                        .tour__icons
+                          i.icon.icon_wi-fi
+                          i.icon.icon_air
+                          i.icon.icon_double-bed
+                          i.icon.icon_single-bed
+                          i.icon.icon_safety
+                          i.icon.icon_tv
+                          i.icon.icon_phone
+                          i.icon.icon_more
+                        .tour__dropdown
+                          - for (var i = 0; i < 3; i++)
+                            i.icon.icon_wi-fi
+                            i.icon.icon_air
+                            i.icon.icon_double-bed
+                            i.icon.icon_single-bed
+                            i.icon.icon_safety
+                            i.icon.icon_tv
+                            i.icon.icon_phone
+                    .tour__choose
+                      .btn.btn_green Выбрать этот вариант           
+            .search-result__simular
+              .btn.btn_grey
+                span Ещё варианты
 
-                      .tour__info-price 210 руб. за 5 ночей
-                      .tour__info-tax + 3% курортный сбор 20.000
-                    .tour__people
-                      span 3 взрослых + 1 ребёнок
+
+    section.basket-result
+      .container
+        .basket-result__wrap
+          .basket-result__img
+            img(src="images/basket-logo.png", alt="")
+          .basket-result__info
+            .basket-result__price Цена за путевки: 
+              span 210 руб.
+            .basket-result__tax Курортный сбор: 
+              span +30 руб.
+            .basket-result__sum Итого: 
+              span 230 руб.
+            .basket-result__btn 
+              a(href="").btn.btn_blue Оформить
 
     section.feedback
       .container
@@ -128,51 +259,6 @@ block content
               a(href="#order").btn.btn_invert.js-order Отправить заявку
 
   +footer('int')
-
-
-  #similar.popup.popup_similar
-    .container
-      .popup_similar__title Похожие номера:
-      .popup_similar__close
-        span Закрыть
-      .popup_similar__wrap
-        .row
-          - var hotList = ['4 местный тип А','1 местный повышенной комфортности','2 местный тип А']
-          each hot in hotList
-            .column
-              .tour
-                .tour__img
-                  img(src="images/tour-01.jpg", alt="")
-                .tour__top
-                  .tour__type=hot
-                  .tour__sanatorium Санаторий "Радон"                   
-                .tour__bottom
-                  .tour__list
-                    ul
-                      -var listIcons = ['Болезни системы кровообращения', 'Болезни костно-мышечной системы и соединительной ткани', 'Болезни органов пищеварения', 'Болезни органов дыхания', 'Болезни нервной системы']
-                      each icon in listIcons
-                        li=icon
-
-                  .tour__icons
-                      i.icon.icon_wi-fi
-                      i.icon.icon_air
-                      i.icon.icon_double-bed
-                      i.icon.icon_single-bed
-                      i.icon.icon_safety
-                      i.icon.icon_tv
-                      i.icon.icon_phone
-                      i.icon.icon_more                    
-                  .tour__info
-                    .tour__info-icon
-                    +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
-
-                    .tour__info-price 210 руб. за 5 ночей
-                    .tour__info-tax + 3% курортный сбор 20.000
-                  .tour__people
-                    span 3 взрослых + 1 ребёнок    
-      .popup_similar__more
-        a(href="").btn.btn_grey
-          span Ещё похожие номера
 
   #order.popup.popup_order
     .popup__title Отправить заявку

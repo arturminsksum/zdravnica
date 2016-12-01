@@ -98,7 +98,94 @@
     padding: 30px 0;
   }
 
+  &__desease {
+    .list {
+      font-size: 0;
+      padding-left: 0;
+      margin: 0 -1%;
+      display: flex;
+      flex-wrap: wrap;
+
+      li {
+        width: 100%;
+        position: relative;
+        margin: 0 1.1%;
+        margin-bottom: 10px;
+        .dibt;
+        width: 31%;
+        padding: 5px 20px;
+        background-color: #fff;
+        .ms-flex;
+
+        &:before {
+          content: '';
+          position: absolute;
+          .bg-svg(@list-item-green, 10px, 10px, 5px, 11px);
+        }
+
+      }
+
+    }
+
+  }
+
+  &__more {
+    position: relative;
+    background: #fff;
+    margin: 0 -20px;
+    padding: 0 20px;
+    display: none;
+  }
+
+  &__close {
+    position: absolute;
+    padding-left: 15px;
+    top: 30px;
+    right: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border-width: 1px;
+    border-color: rgb(219, 219, 219);
+    border-style: solid;
+    width: 98px;
+    height: 30px;
+    line-height: 28px;
+    cursor: pointer;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      .bg-svg(@close-red, 14px, 14px, 10px, 7px);
+    }
+
+  }
+
+  &__simular {
+    text-align: center;
+    padding-bottom: 30px;
+
+    .btn {
+      background-color: #fff;
+    }
+
+  }
+
   .tour {
+    &__choose {
+      text-align: center;
+
+      .btn {
+        text-transform: uppercase;
+          height: 32px;
+  line-height: 32px;
+      }
+
+    }
+
     &__top {
       padding-right: 130px;
     }
@@ -115,9 +202,69 @@
       font-size: 14px;
       color: rgb(255, 255, 255);
       font-weight: bold;
+      z-index: 1;
+      cursor: pointer;
 
       span {
         border-bottom: 1px dotted #fff;
+      }
+
+    }
+
+    &__block {
+      position: relative;
+    }
+
+    &__human {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      &-adult {
+        .bg-svg(@tour-man, 14px, 24px);
+        .dibt;
+      }
+
+      &-child {
+        .dibt;
+        .bg-svg(@tour-child, 14px, 24px);
+        background-position-y: 100%;
+      }
+
+      &-plus {
+        .dibt;
+        .bg-svg(@tour-plus, 24px, 24px);
+      }
+
+    }
+
+    &__price {
+      display: block;
+      margin-right: 310px;
+
+      @media (max-width:1199px) {
+        margin-right: 190px;
+      }
+
+    }
+
+    &__action {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      @media (max-width:1199px) {
+        width: 181px;
+      }
+
+    }
+
+    &__icons {
+      border: none;
+      padding-right: 21px;
+
+      .icon_more {
+        margin-right: 0;
       }
 
     }
@@ -292,6 +439,10 @@
         margin: 0 7px 20px 7px;
       }
 
+    }
+
+    .tour {
+      padding: 20px;
     }
 
   }
@@ -479,7 +630,7 @@
     }
 
     &__text {
-      margin-bottom: 50px;    
+      margin-bottom: 50px;
     }
 
     &__btn {
