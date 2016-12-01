@@ -620,12 +620,12 @@
 
 
 
-    $('.header-sign,.header-sign__mobile, .js-order').fancybox({
+    $('.header-sign,.header-sign__mobile, .js-order, .js-book').fancybox({
         padding: 0,
         closeBtn: false
     });
 
-    $('.popup__close').on('click', function() {
+    $('.popup__close,.js-close-popup').on('click', function() {
         $.fancybox.close();
     })
 
@@ -779,6 +779,7 @@
     $('.search-result__close').on('click', function() {
        $(this).parent().hide();
     })
+
 
 
 });

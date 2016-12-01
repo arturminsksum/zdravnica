@@ -4995,6 +4995,17 @@ section {
   display: none;
   background: #fff;
 }
+.popup__content {
+  padding: 20px;
+}
+.popup-book__btn {
+  margin-top: 20px;
+}
+.popup-book__btn .btn {
+  margin: 0 10px;
+  width: 220px;
+  margin-bottom: 20px;
+}
 .popup_login {
   width: 430px;
 }
@@ -5042,7 +5053,7 @@ section {
   border-bottom-color: #ff4141;
 }
 .popup__title {
-  padding-left: 30px;
+  padding: 0 30px;
   background: #83ba31;
   height: 50px;
   line-height: 50px;
@@ -6496,12 +6507,15 @@ section {
   .b-filter__right .btn {
     margin: 20px 0 10px;
   }
+  .b-filter__section {
+    margin-bottom: 40px;
+  }
   .b-filter__section_add {
     padding-top: 20px;
   }
   .b-filter__delete {
     bottom: inherit;
-    top: -30px;
+    top: -40px;
   }
   .b-filter__block {
     display: inline-block;

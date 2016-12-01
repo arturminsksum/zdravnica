@@ -2,8 +2,10 @@
 
 .header {
   padding-bottom: 90px;
+
   &_resort {
     padding-bottom: 60px;
+
     .header {
       &-bottom__wrap {
         height: 60px;
@@ -301,6 +303,24 @@
   display: none;
   background: #fff;
 
+  &__content {
+    padding: 20px;
+  }
+
+  &-book {
+    &__btn {
+      margin-top: 20px;
+      .btn {
+        margin: 0 10px;
+        width: 220px;
+        margin-bottom: 20px;
+       }
+    }
+
+
+
+  }
+
   &_login {
     width: 430px;
   }
@@ -310,10 +330,12 @@
     padding-bottom: 0;
     width: 600px;
   }
+
   &_order {
     .b-filter__row {
-        font-size: 0;
+      font-size: 0;
     }
+
   }
 
   &__close {
@@ -356,7 +378,7 @@
   }
 
   &__title {
-    padding-left: 30px;
+    padding: 0 30px;
     background: @bright-green;
     height: 50px;
     line-height: 50px;
@@ -446,10 +468,11 @@
 @media (max-width:1199px) {
   .header {
     padding-bottom: 70px;
+
     &_resort {
       padding-bottom: 60px;
-      .header {
 
+      .header {
         &-bottom__wrap {
         }
 
@@ -529,6 +552,7 @@
 @media (max-width:767px) {
   .header {
     padding-bottom: 50px;
+
     &_resort {
       .header {
         &-bottom__wrap {

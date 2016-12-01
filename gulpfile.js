@@ -21,7 +21,7 @@ gulp.paths = {
     scripts: 'dev/**/*.js',
     jade: 'dev/**/*.jade',
     style: ['dev/jade/**/*.less', 'dev/styles/**/*.less'],
-    html: 'dev/assets/checkout.html',
+    html: 'dev/assets/*.html',
     js: 'dev/assets/js/*.js',
     ccs: 'dev/assets/css/*.css'
 };
@@ -29,10 +29,10 @@ gulp.paths = {
 gulp.task('server', gulp.connect.server({
   root: ['dev/assets'],
   port: 9000,
-  open: {
-    file: 'checkout.html'
-    // browser: 'chrome'
-  },
+  // open: {
+  //   file: 'checkout.html'
+  //   browser: 'chrome'
+  // },
   livereload: true
 }));
 

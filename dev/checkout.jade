@@ -54,7 +54,7 @@ block content
                   .b-filter__row
                     .b-filter__block.b-filter__block_fifty
                       label.label(for="сountry0") Страна*
-                      select.select.req#сountry0
+                      select.select.req(id="сountry0")
                         option(selected) Беларусь
                         option Россия
 
@@ -87,8 +87,73 @@ block content
                     .b-filter__block.b-filter__block_fifty
                       label.label(for="personal0") Личный номер*
                       input.input.req#personal0(type='text', name='PROPERTY[][0]', placeholder='1EKK5458725154F', autocomplete="")
-
                   .b-filter__hr-last
+                .b-filter__section
+                  .b-filter__delete 
+                      span Удалить
+                  .b-filter__check
+                    label.checkbox  
+                      input(type="checkbox").checkbox__hidden
+                      span.checkbox__showed
+                      span.checkbox__title Оформление документов на данное лицо    
+
+                  .b-filter__row
+                    .b-filter__block
+                      label.label(for="lastName0") Фамилия*
+                      input#lastName1.input.req(type='text', name='PROPERTY[][1]', placeholder='Иванов',autocomplete='family-name')
+                    .b-filter__block
+                      label.label(for="firstName1") Имя*
+                      input#firstName1.input.req(type='text', name='PROPERTY[][1]', placeholder='Иван',autocomplete='given-name')
+                    .b-filter__block
+                      label.label(for="middleName") Отчество*
+                      input#middleName.input.req(type='text', name='PROPERTY[][1]', placeholder='Иванович',autocomplete='additional-name')              
+                  .b-filter__hr
+                  .b-filter__row
+                    .b-filter__block.b-filter__block_fifty
+                      label.label(for="phone1") Телефон*
+                      input#phone1.input.req(type='text', name='PROPERTY[][1]', placeholder='+375295751215',autocomplete='tel')                      
+                    .b-filter__block.b-filter__block_fifty
+                      label.label(for="email1") E-mail (логин)*
+                      input#email1.input.req.email(type='email', name='PROPERTY[][1]', placeholder='romateo@list.ru',autocomplete='email')
+
+                  .b-filter__row
+                    .b-filter__block.b-filter__block_fifty
+                      label.label(for="сountry1") Страна*
+                      select.select.req(id="сountry1")
+                        option(selected) Беларусь
+                        option Россия
+
+                    .b-filter__block.b-filter__block_fifty
+                      label.label(for="postal1") Индекс   
+                      input.input#postal1(type='text', name='PROPERTY[][1]', placeholder='231151', autocomplete="shipping postal-code")
+
+                  .b-filter__row
+                    .b-filter__block.b-filter__block_fifty
+                      label.label(for="address1") Адрес   
+                      input.input#address1(type='text', name='PROPERTY[][1]', placeholder='г. Минск, ул. Матусевича 21-121', autocomplete="shipping street-address")
+                    .b-filter__block.b-filter__block_fifty
+                      label.label(for="sex1") Пол
+                      select#sex1.select
+                        option(selected) Мужской
+                        option Женский
+                  .b-filter__name  Паспортные данные
+                  .b-filter__row
+                    .b-filter__block.b-filter__block_fifty
+                      .b-filter__series
+                        label.label(for="series1") Серия*   
+                        input.input.req#series1(type='text', name='PROPERTY[][1]', placeholder='МР', autocomplete="")
+                      .b-filter__number
+                        label.label(for="number1") Номер*   
+                        input.input.req#number1(type='text', name='PROPERTY[][1]', placeholder='1595973', autocomplete="")  
+                    .b-filter__block.b-filter__block_fifty
+                      label.label(for="get1") Кем/когда выдан*   
+                      input.input.req#get1(type='text', name='PROPERTY[][1]', placeholder='Фрунзенское РУВД г.Минска, 15.12.2116', autocomplete="")
+                  .b-filter__row
+                    .b-filter__block.b-filter__block_fifty
+                      label.label(for="personal1") Личный номер*
+                      input.input.req#personal1(type='text', name='PROPERTY[][1]', placeholder='1EKK5458725154F', autocomplete="")
+                  .b-filter__hr-last
+
               .b-filter__btn
                 input.btn.btn_green(type="submit", value="Далее")
 
