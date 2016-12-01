@@ -91,13 +91,40 @@
                 <input id="email_login" type="email" name="form[]" placeholder="romateo@list.ru" autocomplete="email" class="input req email"/>
               </div>
               <div class="form__block">
-                <label for="email_login" class="label">Пароль</label>
-                <input id="email_login" type="password" name="form[]" autocomplete="false" class="input req"/>
+                <label for="pass_login" class="label">Пароль</label>
+                <input id="pass_login" type="password" name="form[]" autocomplete="false" class="input req"/>
               </div>
-              <div class="form__btn"><a href="" class="btn btn_invert">Регистрация</a>
+              <div class="form__btn"><a href="#signup" class="btn btn_invert js-signup">Регистрация</a>
                 <input type="submit" value="Войти" class="btn btn_blue"/>
               </div>
               <div class="form__lost"> <a href="">Забыли пароль</a></div>
+            </form>
+          </div>
+        </div>
+        <div id="signup" class="popup popup_login">
+          <div class="popup__title">Регистрация</div>
+          <div class="popup__close"></div>
+          <div class="popup__form">       
+            <form action="" class="form"> 
+              <div class="form__block">
+                <label for="name_signup" class="label">Имя пользователя</label>
+                <input id="name_signup" type="text" name="form[]" placeholder="Михаил" autocomplete="name" class="input req"/>
+              </div>
+              <div class="form__block">
+                <label for="email_signup" class="label">E-mail</label>
+                <input id="email_signup" type="email" name="form[]" placeholder="romateo@list.ru" autocomplete="email" class="input req email"/>
+              </div>
+              <div class="form__block">
+                <label for="passOne_signup" class="label">Пароль</label>
+                <input id="passOne_signup" type="password" name="form[]" autocomplete="false" class="input req"/>
+              </div>
+              <div class="form__block">
+                <label for="passTwo_signup" class="label">Повторите пароль</label>
+                <input id="passTwo_signup" type="password" name="form[]" autocomplete="false" class="input req"/>
+              </div>
+              <div class="form__btn">
+                <input type="submit" value="Зарегистрироваться" class="btn btn_blue"/>
+              </div>
             </form>
           </div>
         </div>

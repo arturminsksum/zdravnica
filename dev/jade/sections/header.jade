@@ -66,10 +66,30 @@ mixin header(page,search)
             label.label(for="email_login") E-mail
             input#email_login.input.req.email(type='email', name='form[]', placeholder='romateo@list.ru',autocomplete='email')
           .form__block
-            label.label(for="email_login") Пароль
-            input#email_login.input.req(type='password', name='form[]',autocomplete='false')              
+            label.label(for="pass_login") Пароль
+            input#pass_login.input.req(type='password', name='form[]',autocomplete='false')              
           .form__btn
-            a(href="").btn.btn_invert Регистрация
+            a(href="#signup").btn.btn_invert.js-signup Регистрация
             input.btn.btn_blue(type='submit', value="Войти")
           .form__lost 
             a(href="") Забыли пароль
+
+    #signup.popup.popup_login
+      .popup__title Регистрация
+      .popup__close
+      .popup__form        
+        form(action="").form 
+          .form__block
+            label.label(for="name_signup") Имя пользователя
+            input#name_signup.input.req(type='text', name='form[]', placeholder='Михаил',autocomplete='name')                 
+          .form__block
+            label.label(for="email_signup") E-mail
+            input#email_signup.input.req.email(type='email', name='form[]', placeholder='romateo@list.ru',autocomplete='email')
+          .form__block
+            label.label(for="passOne_signup") Пароль
+            input#passOne_signup.input.req(type='password', name='form[]',autocomplete='false')
+          .form__block
+            label.label(for="passTwo_signup") Повторите пароль
+            input#passTwo_signup.input.req(type='password', name='form[]',autocomplete='false')
+          .form__btn
+            input.btn.btn_blue(type='submit', value="Зарегистрироваться")

@@ -620,7 +620,7 @@
 
 
 
-    $('.header-sign,.header-sign__mobile, .js-order, .js-book').fancybox({
+    $('.header-sign,.header-sign__mobile, .js-order, .js-book, .js-signup').fancybox({
         padding: 0,
         closeBtn: false
     });
