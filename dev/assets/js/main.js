@@ -160,13 +160,13 @@
 
 
         });
-        $('.menu__item').on('click', function(e) {
-            if ($(this).children('.sub-menu').length) {
+        $('.menu__link').on('click', function(e) {
+            if ($(this).next('.sub-menu').length) {
                 e.preventDefault();
-                $(this).toggleClass('active');
-                $(this).children('.sub-menu').slideToggle();
+                $(this).parent().toggleClass('active');
+                $(this).next('.sub-menu').slideToggle();
             } else {
-                $(this).addClass('active');
+                $(this).parent().addClass('active');
             }
 
         })
@@ -242,7 +242,7 @@
     };
 
 
-    $(document).click(function(e) {
+    $(document).on('click touchstart', function(e) {
 
         hideNotTarget( e, '.tour__icons .icon_more, .tour__dropdown, .tour__dropdown *', '.tour__dropdown');
 
