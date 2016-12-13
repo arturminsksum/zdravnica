@@ -29,10 +29,10 @@ gulp.paths = {
 gulp.task('server', gulp.connect.server({
   root: ['dev/assets'],
   port: 9000,
-  // open: {
-  //   file: 'checkout.html'
-  //   browser: 'chrome'
-  // },
+  open: {
+    file: 'index.html'
+    // browser: 'chrome'
+  },
   livereload: true
 }));
 
@@ -43,7 +43,7 @@ gulp.task('jade', function() {
             pretty: true
         }))
         .pipe(gulp.dest('dev/assets'))
-        // .pipe(gulp.connect.reload());
+        .pipe(gulp.connect.reload());
 });
 
 // gulp.task('svgstore', function () {
@@ -82,10 +82,10 @@ gulp.task('concat', function () {
 //     .pipe(gulp.connect.reload());
 // });
 
-gulp.task('html', function () {
-  gulp.src(gulp.paths.html)
-    .pipe(gulp.connect.reload());
-});
+// gulp.task('html', function () {
+//   gulp.src(gulp.paths.html)
+//     .pipe(gulp.connect.reload());
+// });
 
 gulp.task('js', function () {
   gulp.src(gulp.paths.js)
@@ -96,7 +96,7 @@ gulp.task('watch', function(){
     gulp.watch(gulp.paths.style, ['concat']);
     gulp.watch(gulp.paths.jade, ['jade']);
     gulp.watch(gulp.paths.css, ['css']);
-    gulp.watch(gulp.paths.html, ['html']);
+    // gulp.watch(gulp.paths.html, ['html']);
     gulp.watch(gulp.paths.js, ['js']);
 });
 
