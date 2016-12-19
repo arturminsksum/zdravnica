@@ -10054,6 +10054,14 @@ section {
   font-size: 20px;
   font-weight: bold;
 }
+.button__timer {
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 20px;
+  font-weight: bold;
+}
 .button__text {
   display: inline-block;
   vertical-align: middle;
@@ -10084,6 +10092,34 @@ section {
 }
 .button_origin .button__icon {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 21.145 25.495'%3E%3Cpath d='M14.144 24.995c-.275 0-.5-.224-.5-.5v-6c0-.276.225-.5.5-.5h6c.277 0 .5.224.5.5s-.223.5-.5.5h-5.5v5.5c0 .276-.222.5-.5.5z' /%3E%3Cpath d='M14.144 25.495H3.814c-.554 0-1-.447-1-1V3.967c0-.553.446-1 1-1h16.33c.554 0 1 .447 1 1v14.528c0 .266-.104.52-.292.707l-6 6c-.188.188-.442.293-.708.293zm-9.33-2h8.917l5.417-5.414V4.97H4.813v18.528z' /%3E%3Cpath d='M13.063 8.26H7.188c-.277 0-.5-.224-.5-.5s.223-.5.5-.5h5.875c.275 0 .5.224.5.5s-.225.5-.5.5zm3.875 2.417h-9.75c-.277 0-.5-.224-.5-.5s.223-.5.5-.5h9.75c.275 0 .5.224.5.5s-.225.5-.5.5zm0 2.417h-9.75c-.277 0-.5-.224-.5-.5s.223-.5.5-.5h9.75c.275 0 .5.224.5.5s-.225.5-.5.5zM11.27 15.51H7.187c-.277 0-.5-.223-.5-.5 0-.275.223-.5.5-.5h4.082c.275 0 .5.225.5.5 0 .277-.225.5-.5.5zM10.063 4.76H4.188c-.277 0-.5-.224-.5-.5s.223-.5.5-.5h5.875c.275 0 .5.224.5.5s-.225.5-.5.5z' /%3E%3Cpath d='M1 23.126c-.553 0-1-.447-1-1V2C0 .898.898 0 2 0h15.332c.553 0 1 .447 1 1 0 .553-.447 1-1 1H2v20.126c0 .553-.447 1-1 1z' /%3E%3C/svg%3E");
+}
+.fixpanel {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-250%) rotate(-90deg);
+      -ms-transform: translateY(-250%) rotate(-90deg);
+          transform: translateY(-250%) rotate(-90deg);
+  -webkit-transform-origin: right top 0;
+      -ms-transform-origin: right top 0;
+          transform-origin: right top 0;
+  right: 50px;
+  width: auto;
+  padding: 0 20px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  z-index: 1;
+  opacity: 0.7;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.fixpanel__timer {
+  display: inline-block;
+  vertical-align: middle;
+}
+.fixpanel__text {
+  text-transform: uppercase;
+  display: inline-block;
+  vertical-align: middle;
 }
 @media (max-width: 1199px) {
   .personal-side {

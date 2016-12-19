@@ -1,4 +1,5 @@
-;$(document).ready(function() {
+;
+$(document).ready(function() {
 
     if ($('.fancybox').length) {
         $('.fancybox').fancybox();
@@ -234,32 +235,32 @@
     });
 
 
-    function hideNotTarget ( event, targetElems, hideElems, removeClassElems ) {
+    function hideNotTarget(event, targetElems, hideElems, removeClassElems) {
         if (!$(event.target).is(targetElems)) {
             $(hideElems).hide();
-            removeClassElems ? $(removeClassElems).removeClass('active') : false;            
+            removeClassElems ? $(removeClassElems).removeClass('active') : false;
         };
     };
 
 
     $(document).on('click touchstart', function(e) {
 
-        hideNotTarget( e, '.tour__icons .icon_more, .tour__dropdown, .tour__dropdown *', '.tour__dropdown');
+        hideNotTarget(e, '.tour__icons .icon_more, .tour__dropdown, .tour__dropdown *', '.tour__dropdown');
 
         if (document.body.clientWidth < 1200) {
 
-            hideNotTarget( e, '.personal-side__btn, .personal-side__menu, .personal-side__menu *', '.personal-side__menu,.personal-side__overlay', '.personal-side__btn');
+            hideNotTarget(e, '.personal-side__btn, .personal-side__menu, .personal-side__menu *', '.personal-side__menu,.personal-side__overlay', '.personal-side__btn');
         }
 
         if (document.body.clientWidth < 768) {
 
-            hideNotTarget( e, '.toggle, .header-menu, .header-menu *', '.overlay_menu', '.header-menu,.header-menu__close');
+            hideNotTarget(e, '.toggle, .header-menu, .header-menu *', '.overlay_menu', '.header-menu,.header-menu__close');
 
-            hideNotTarget( e, '.header-search__mobile, .header-search, .header-search *', '.overlay_search, .header-search' );
+            hideNotTarget(e, '.header-search__mobile, .header-search, .header-search *', '.overlay_search, .header-search');
 
-            hideNotTarget( e, '.header-phones__mobile, .header-top__wrap, .header-top__wrap *', '.overlay_phones', '.header-top__wrap, .header-phones__close');
+            hideNotTarget(e, '.header-phones__mobile, .header-top__wrap, .header-top__wrap *', '.overlay_phones', '.header-top__wrap, .header-phones__close');
 
-            hideNotTarget( e, '.navigation__btn, .navigation__menu, .navigation__menu *', '.navigation__menu, .navigation__overlay', '.navigation__btn');
+            hideNotTarget(e, '.navigation__btn, .navigation__menu, .navigation__menu *', '.navigation__menu, .navigation__overlay', '.navigation__btn');
         }
 
     });
@@ -719,14 +720,42 @@
     })
 
     $('.tour__more').on('click', function() {
-       $(this).parents('.search-result__wrap').find('.search-result__more').slideDown();
+        $(this).parents('.search-result__wrap').find('.search-result__more').slideDown();
     })
 
     $('.search-result__close').on('click', function() {
-       $(this).parent().hide();
+        $(this).parent().hide();
     })
 
+    function toHHMMSS(sec) {
+        var sec_num = sec;
+        var hours = Math.floor(sec_num / 3600);
+        var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+        var seconds = sec_num - (hours * 3600) - (minutes * 60);
 
+        if (hours < 10) { hours = "0" + hours; }
+        if (minutes < 10) { minutes = "0" + minutes; }
+        if (seconds < 10) { seconds = "0" + seconds; }
+        return hours + ':' + minutes + ':' + seconds;
+    }
+
+
+    var timer = document.querySelectorAll('.timer');
+
+    function countDown() {
+        var count = 900;
+        var timerId = setInterval(function() {
+
+            for (var i = 0; i < timer.length; i++) {
+                timer[i].innerHTML = toHHMMSS(count);
+            }
+
+            if (count == 0) clearInterval(timerId);
+            count--;
+        }, 1000);
+    }
+
+    countDown();
 
 });
 

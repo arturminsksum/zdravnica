@@ -10,6 +10,9 @@ block content
 
     section.p-checkout
       .container
+        .button 
+          .button__text До окончания бронирования осталось: 
+            span.timer.button__timer 00:00:00
         .p-checkout__wrap
           .p-checkout__book
             .p-checkout__book-title Укажите информацию по вашей брони
@@ -160,3 +163,6 @@ block content
 
     +feedback()
   +footer('int')
+  a(href="").fixpanel.btn.btn_blue
+    .fixpanel__timer.timer 00:00:00
+    .fixpanel__text оформление заказа
