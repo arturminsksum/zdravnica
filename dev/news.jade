@@ -1,0 +1,61 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .container
+      +breadcrumb('Новости')
+      h1.page__title Новости
+
+    section.news-page
+      .container
+        .news-list
+          p#bx_3218110189_332.news-item
+            a.news-img(href='/news/?ELEMENT_ID=332')
+              img.preview_picture(border='0', src='images/news-01.jpg', width='270', height='170', alt='Лечение заболеваний желудочно-кишечного тракта!', title='Лечение заболеваний желудочно-кишечного тракта!')
+            span.news-date-time 06.11.2016
+            a.news-title(href='/news/?ELEMENT_ID=332')
+              b Лечение заболеваний желудочно-кишечного тракта!
+            br
+            | Рады Вам сообщить, что при приобретении путевок в санаторий «Поречье» продолжительностью от 12 дней со...Рады Вам сообщить, что при приобретении путевок в санаторий «Поречье» продолжительностью от 12 дней со...
+          div(style='clear:both')
+          p
+          p#bx_3218110189_331.news-item
+            a.news-img(href='/news/?ELEMENT_ID=331')
+              img.preview_picture(border='0', src='images/news-02.jpg', width='270', height='170', alt='Процедуры в подарок', title='Процедуры в подарок')
+            span.news-date-time 06.11.2016
+            a.news-title(href='/news/?ELEMENT_ID=331')
+              b Процедуры в подарок
+            br
+            | Только с 6 апреля 2016 года приобретая путевку  в филиал «Санаторий «Рассвет-Любань» ОАО...
+          div(style='clear:both')
+          p
+          p#bx_3218110189_333.news-item
+            a.news-img(href='/news/?ELEMENT_ID=333')
+              img.preview_picture(border='0', src='images/news-03.jpg', width='270', height='170', alt='Путёвки для детей в санаторий “Радон”', title='Путёвки для детей в санаторий “Радон”')
+            span.news-date-time 06.11.2016
+            a.news-title(href='/news/?ELEMENT_ID=333')
+              b Путёвки для детей в санаторий “Радон”
+            br
+            | Рады Вам сообщить, что при приобретении путевок в санаторий «Поречье» продолжительностью от 12 дней со...
+          div(style='clear:both')
+          p
+
+        nav.pagination-wrap
+          ul.pagination
+            li.page-item
+              a.page-link(href='#') 1
+            li.page-item.active
+              a.page-link(href='#') 2
+            li.page-item
+              a.page-link(href='#') 3
+            li.page-item
+              a.page-link(href='#') 4
+            li.page-item
+              a.page-link(href='#') 5
+
+
+
+    +feedback()
+  +footer('int')

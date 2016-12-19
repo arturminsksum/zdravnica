@@ -646,12 +646,12 @@
     pickmeupInit('#filterDate');
     pickmeupInit('#filterDate0');
 
-    $('.tooltip').prev().hover(function() {
-        $(this).next().show();
+    // $('.main-hot__wrap .tooltip').prev().hover(function() {
+    //     $(this).next().show();
 
-    }, function() {
-        $(this).next().hide();
-    });
+    // }, function() {
+    //     $(this).next().hide();
+    // });
 
 
     // meal page
@@ -690,60 +690,6 @@
 
     showSelectChild(0);
 
-
-
-
-    // function cloneFilteSection() {
-    //     var count = $('.b-filter__section').length;
-
-    //     var section='<div class="b-filter__section"> <div class="b-filter__row"> <div class="b-filter__block"> <label for="filterResort' + count + '" class="label">Выберите санаторий</label> <select id="filterResort' + count + '" name="PROPERTY[][' + count + ']" class="select"> <option selected>Все</option> <option>Родон</option> <option>Поречье</option> <option>Сосновый бор</option> <option>Рассвет-Любань</option> <option>Случь</option> <option>Солнышко</option> <option>Росинка</option> <option>Налибокская пуща</option> </select> </div><div class="b-filter__block"> <label for="filterDate' + count + '" class="label">Дата заезда* </label> <input id="filterDate' + count + '" type="text" name="PROPERTY[][' + count + ']" placeholder="" class="req input input_date"> </div><div class="b-filter__block"> <label for="filterDays' + count + '" class="label">Количество дней* </label> <input id="filterDays' + count + '" type="number" name="PROPERTY[][' + count + ']" placeholder="" min="' + count + '" max="365" maxlength="3" autocomplete="false" class="req input"> </div></div><div class="b-filter__hr"></div><div class="b-filter__row"> <div class="b-filter__block"> <label for="filterComfort' + count + '" class="label">Степень комфортности</label> <select id="filterComfort' + count + '" name="PROPERTY[][' + count + ']" class="select"> <option selected>люкс</option> <option>полу-люкс</option> <option>обычный</option> </select> </div></div><div class="b-filter__hr"></div><div class="b-filter__row"> <div class="b-filter__block"> <label for="filterPlaces' + count + '" class="label">Размещение в номере*</label> <select id="filterPlaces' + count + '" name="PROPERTY[][' + count + ']" class="req select"> <option selected>' + count + '</option> <option>2</option> <option>3</option> <option>4</option> </select> <label class="checkbox"> <input type="checkbox" class="checkbox__hidden"><span class="checkbox__showed"></span><span class="checkbox__title">Только одноместные номера </span> </label> </div><div class="b-filter__block"> <label for="filterChild' + count + '" class="label">Количество детей</label> <select id="filterChild' + count + '" name="PROPERTY[][' + count + ']" class="select select_child"> <option selected>нет</option> <option>1</option> <option>2</option> <option>3</option> <option>4</option> </select> </div><div class="b-filter__block b-filter__block_age"> <label class="label">Возраст детей на момент отъезда</label> <div class="b-filter__group"> <select name="PROPERTY[AGE' + count + '][' + count + ']" class="req select"> <option selected>1</option> <option>2</option> <option>3</option> <option>4</option> </select> <select name="PROPERTY[AGE2][' + count + ']" class="req select"> <option selected>1</option> <option>2</option> <option>3</option> <option>4</option> </select> <select name="PROPERTY[AGE3][' + count + ']" class="req select"> <option selected>1</option> <option>2</option> <option>3</option> <option>4</option> </select> <select name="PROPERTY[AGE4][' + count + ']" class="req select"> <option selected>1</option> <option>2</option> <option>3</option> <option>4</option> </select> </div></div></div><div class="b-filter__hr-last"></div></div></div>'
-
-    //     $('.b-filter__inner').append(section);
-    //     $('.select').easyDropDown();
-    //     pickmeupInit('#filterDate' + count);
-    //     $('.b-filter__block_age').eq(count).hide();
-    //     showSelectChild(count);
-    // }
-
-
-    // $('.b-filter__add').on('click', function() {
-    //     cloneFilteSection()
-    // })
-
-    // $('.tour__more').fancybox({
-    //     padding: 0,
-    //     margin: [20, 0, 20, 0],
-    //     closeBtn: false,
-    //     beforeShow: function() {
-    //         // console.log(this);
-    //         if (document.body.clientWidth < 1200) {
-    //             $('.popup_similar__wrap .row').slick({
-    //                 dots: true,
-    //                 arrows: false,
-    //                 slidesToShow: 2,
-    //                 // autoplay: true,
-    //                 // autoplaySpeed: 3000,
-    //                 responsive: [{
-    //                     breakpoint: 768,
-    //                     settings: {
-    //                         slidesToShow: 1,
-    //                     }
-    //                 }, ]
-
-
-    //             });
-    //         }
-    //     },
-    //     afterClose: function() {
-    //         if (document.body.clientWidth < 1200) {
-    //             $('.popup_similar__wrap .row').slick('unslick');
-    //         }
-    //     }
-    // });
-
-    // $('.popup_similar__close').on('click', function() {
-    //     $.fancybox.close();
-    // })
 
     $('.p-payment__more-btn').on('click', function() {
         var parent = $(this).parent();

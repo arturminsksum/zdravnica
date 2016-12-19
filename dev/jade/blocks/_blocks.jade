@@ -91,9 +91,7 @@ mixin main-hot(o)
                         i.icon.icon_tv
                         i.icon.icon_phone                                          
                   .tour__info
-                    .tour__info-icon
-                    +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
-
+                    a.tour__info-icon.fancybox(href="#tooltip")
                     .tour__info-price 210 руб. за 5 ночей
                     .tour__info-tax + 3% курортный сбор 20.000
                   .tour__action
@@ -114,3 +112,9 @@ mixin tooltip(text)
   .tooltip
     .tooltip__arrow
     .tooltip__inner=text
+
+mixin popup_tooltip()
+  #tooltip.popup.popup_tooltip
+    .b-text.clearfix
+      p Cтоимость путевки формируется из стоимости брони места в санатории и курортного сбора.
+      p Сбор можно оплатить онлайн или наличными деньгами/банковской картой непосредственно перед заселением.

@@ -1,0 +1,38 @@
+extends template
+block content
+
+  +header()
+
+  main
+
+    section.search-page
+      .container
+        .search-mobile
+          .search-mobile__block
+            form.search-mobile__form(action="")
+              input.search-mobile__input(type="text", placeholder="Введите название санатория, заболевания, услуги...")
+              input.search-mobile__submit(type='submit', name='', value='')
+
+        .search-page__list
+          - for (var i = 0; i < 10; i++) 
+            .search-page__item
+              a(href="").search-page__title Путёвки для детей в санаторий “Радон”
+              .search-page__text Рады Вам сообщить, что при приобретении путевок в санаторий «Поречье» продолжительностью от 12 дней при приобретении путевок в санаторий «Поречье» продолжительностью от 12 дней со...
+              .search-page__more Подробнее
+
+        nav.pagination-wrap
+          ul.pagination
+            li.page-item
+              a.page-link(href='#') 1
+            li.page-item.active
+              a.page-link(href='#') 2
+            li.page-item
+              a.page-link(href='#') 3
+            li.page-item
+              a.page-link(href='#') 4
+            li.page-item
+              a.page-link(href='#') 5
+
+
+  +feedback()
+  +footer('int')              

@@ -18,7 +18,7 @@
         <div class="overlay overlay_phones"></div>
         <div class="header-phones__close show-mobile"></div>
         <div class="header-menu__close show-mobile"> </div>
-        <header class="header">
+        <header class="header header_resort">
           <div class="header-top">
             <div class="container">
               <div class="header-top__wrap">           
@@ -51,8 +51,7 @@
           <div class="header-bottom">
             <div class="container">
               <div class="header-bottom__wrap">
-                <div class="toggle"><span class="toggle__first"></span><span class="toggle__second"></span><span class="toggle__third"> </span></div>
-                <div class="header-search__mobile show-mobile"></div><a href="" class="header-logo"><img src="images/header-logo.png" alt="белагроздравница"/></a>
+                <div class="toggle"><span class="toggle__first"></span><span class="toggle__second"></span><span class="toggle__third"> </span></div><a href="" class="header-logo"><img src="images/header-logo.png" alt="белагроздравница"/></a>
                 <div class="header-phones__mobile show-mobile"></div><a href="#login" class="header-sign__mobile show-mobile"><i></i></a>
                 <div class="header-menu">
                   <div class="menu__title show-mobile"><span>Меню</span></div>
@@ -80,15 +79,6 @@
                   <div class="header__hot"><a href="" class="btn btn_blue btn_hot">Горячие путёвки</a></div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="header-search">
-            <div class="header-search__block">
-              <form action="" class="header-search__form">
-                <input type="text" placeholder="Введите название санатория, заболевания, услуги..." class="header-search__input"/>
-                <input type="submit" name="" value="" class="header-search__submit"/>
-              </form>
-              <div class="header-search__close"></div>
             </div>
           </div>
         </header>
@@ -141,53 +131,109 @@
           </div>
         </div>
         <main>
-          <div class="banner banner_resort">
-            <div style="background-image: url(images/resort-banner.jpg)" class="banner__img"></div>
-            <div class="banner__title">Навигация по верстке</div>
+          <div class="container">
+            <div class="breadcrumb">
+              <ol>
+                <li><a href="#">Главная</a></li>
+                <li class="active">Контакты</li>
+              </ol>
+            </div>
+            <h1 class="page__title">Контакты</h1>
           </div>
-          <section>
-            <div class="container">     
-              <div class="text__block clearfix">
-                <ul>
-                  <li><a href="main.html" target="_blank">ссылка</a> - Главная</li>
-                  <li><a href="resort.html" target="_blank">ссылка</a> - Санаторий      </li>
-                  <li><a href="med.html" target="_blank">ссылка</a> - Медицинский профиль   </li>
-                  <li><a href="rooms.html" target="_blank">ссылка</a> - Номера и цены   </li>
-                  <li><a href="apartment.html" target="_blank">ссылка</a> - Номер</li>
-                  <li><a href="leisure.html" target="_blank">ссылка</a> - Досуг</li>
-                  <li><a href="media.html" target="_blank">ссылка</a> - Медиа              </li>
-                  <li><a href="structure.html" target="_blank">ссылка</a> - Инфраструктура              </li>
-                  <li><a href="contacts.html" target="_blank">ссылка</a> - Контакты санатория    </li>
-                  <li><a href="hot.html" target="_blank">ссылка</a> - горячие туры     </li>
-                  <li><a href="meal.html" target="_blank">ссылка</a> - Диетическое питание  </li>
-                  <li><a href="selection.html" target="_blank">ссылка</a> - Подбор путевки  </li>
-                  <li><a href="search.html" target="_blank">ссылка</a> - Результат поиска  </li>
-                  <li><a href="nosearch.html" target="_blank">ссылка</a> - Не найдено ни одной путевки</li>
-                  <li><a href="error.html" target="_blank">ссылка</a> - 404</li>
-                  <li><a href="basket.html" target="_blank">ссылка</a> - Корзина</li>
-                  <li><a href="checkout.html" target="_blank">ссылка</a> - Оформление заказа</li>
-                  <li><a href="payment.html" target="_blank">ссылка</a> - Способ оплаты</li>
-                  <li><a href="book.html" target="_blank">ссылка</a> - Благодарим Вас за бронирование!</li>
-                  <li><a href="orders.html" target="_blank">ссылка</a> - Мои заказы</li>
-                  <li><a href="data.html" target="_blank">ссылка</a> - Личные Данные              </li>
-                  <li><a href="finished.html" target="_blank">ссылка</a> - Завершенные заказы           </li>
-                  <li><a href="subscribe.html" target="_blank">ссылка</a> - Подписка на Рассылку </li>
-                  <li><a href="news.html" target="_blank">ссылка</a> - Новости </li>
-                  <li><a href="new.html" target="_blank">ссылка</a> - Новость</li>
-                  <li><a href="contact-all.html" target="_blank">ссылка</a> - Контакты</li>
-                  <li><a href="search-all.html" target="_blank">ссылка</a> - Поиск</li>
-                </ul>
+          <section class="contacts-page">
+            <div class="container">
+              <div class="contacts__title">руководство санатория:</div>
+              <div class="contacts-info__wrap">
+                <div class="row">
+                  <div class="six columns contacts-info__col">
+                    <div class="item">
+                      <div class="item__img"><img src="images/contacts-face-01.jpg" alt=""></div>
+                      <div class="item__post">Директор</div>
+                      <div class="item__name">Марачковский Михаил Владимирович</div>
+                      <div class="item__phone"> <a href="tel:+375 (17) 956-67-44">+375 (17) 956-67-44</a></div>
+                      <div class="item__phone"><a href="tel:+375 (29) 392-93-49">+375 (29) 392-93-49</a></div>
+                      <div class="item__phone"><a href="tel:+375 (17) 957-01-34">+375 (17) 957-01-34 (факс) </a></div>
+                    </div>
+                  </div>
+                  <div class="six columns contacts-info__col">
+                    <div class="item">
+                      <div class="item__img"><img src="images/contacts-face-02.jpg" alt=""></div>
+                      <div class="item__post">Секретарь приемной руководителя</div>
+                      <div class="item__name">Шапель Ирина Владимировна</div>
+                      <div class="item__phone"> <a href="tel:+375 (17) 957-01-34">+375 (17) 957-01-34 (тел/факс)</a></div>
+                      <div class="item__phone"><a href="tel:+375 (44) 588-06-26">+375 (44) 588-06-26</a></div>
+                    </div>
+                  </div>
+                  <div class="six columns contacts-info__col">
+                    <div class="item">
+                      <div class="item__img"><img src="images/contacts-face-03.jpg" alt=""></div>
+                      <div class="item__post">Заместитель директора <br>(по медицинской работе и питанию)</div>
+                      <div class="item__name">Попов Владимир Григорьевич</div>
+                      <div class="item__phone"> <a href="tel:+375 (17) 957-04-16">+375 (17) 957-04-16</a></div>
+                    </div>
+                  </div>
+                  <div class="six columns contacts-info__col">
+                    <div class="item">
+                      <div class="item__img"><img src="images/contacts-face-04.jpg" alt=""></div>
+                      <div class="item__post">Главный экономист</div>
+                      <div class="item__name">Сильчук Наталья Александровна</div>
+                      <div class="item__phone"> <a href="tel:+375 (17) 957-01-52">+375 (17) 957-01-52</a></div>
+                    </div>
+                  </div>
+                  <div class="six columns contacts-info__col">
+                    <div class="item">
+                      <div class="item__img"><img src="images/contacts-face-05.jpg" alt=""></div>
+                      <div class="item__post">Заведующая отделом <br>(культурно-массовой  и воспитательной работы)</div>
+                      <div class="item__name">Соловей Валентина Петровна</div>
+                      <div class="item__phone"> <a href="tel:+375 (29) 645-02-36">+375 (29) 645-02-36</a></div>
+                    </div>
+                  </div>
+                  <div class="six columns contacts-info__col">
+                    <div class="item">
+                      <div class="item__img"><img src="images/contacts-face-06.jpg" alt=""></div>
+                      <div class="item__post">Главный бухгалтер</div>
+                      <div class="item__name">Ханина Лариса Владимировна</div>
+                      <div class="item__phone"> <a href="tel:+375 (17) 957-01-50">+375 (17) 957-01-50</a></div>
+                      <div class="item__phone"><a href="tel:+375 (44) 784-38-63">+375 (44) 784-38-63</a></div>
+                    </div>
+                  </div>
+                  <div class="six columns contacts-info__col">
+                    <div class="item">
+                      <div class="item__img"><img src="images/contacts-face-07.jpg" alt=""></div>
+                      <div class="item__post">Заведующий пищеблоком</div>
+                      <div class="item__name">Замараева Лидия Григорьевна</div>
+                      <div class="item__phone"> <a href="tel:+375 (17) 957-01-49">+375 (17) 957-01-49</a></div>
+                      <div class="item__phone"><a href="tel:+375 (29) 393-39-52">+375 (29) 393-39-52</a></div>
+                    </div>
+                  </div>
+                  <div class="six columns contacts-info__col">
+                    <div class="item">
+                      <div class="item__img"><img src="images/contacts-face-08.jpg" alt=""></div>
+                      <div class="item__post">Главная медсестра</div>
+                      <div class="item__name">Прокопеня Тамара Александровна</div>
+                      <div class="item__phone"> <a href="tel:+375 (17) 957-01-48">+375 (17) 957-01-48</a></div>
+                      <div class="item__phone"><a href="tel:+375 (44) 588-06-29">+375 (44) 588-06-29</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="resort-road">
+            <div class="container">
+              <div class="resort-road__wrap">
+                <div id="map" class="resort-road__map"></div>
+              </div>
+            </div>
+          </section>
+          <section class="feedback">
+            <div class="container">
+              <div class="feedback__wrap"><a href="" class="feedback__link"><span>Обратная связь</span></a>
+                <div class="feedback__btn"><a href="" class="btn btn_invert">Забронировать</a></div>
               </div>
             </div>
           </section>
         </main>
-        <section class="feedback">
-          <div class="container">
-            <div class="feedback__wrap"><a href="" class="feedback__link"><span>Обратная связь</span></a>
-              <div class="feedback__btn"><a href="" class="btn btn_invert">Забронировать</a></div>
-            </div>
-          </div>
-        </section>
         <footer class="footer footer_int">
           <div class="container">
             <div class="footer__wrap">

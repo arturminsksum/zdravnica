@@ -51,7 +51,7 @@ block content
                   span Еще варианты  
               .tour__right
                 .tour__block  
-                  .tour__type 4 местный тип А
+                  .tour__type 2 местный 2-х комнатный номер повыш. комфортности
                   .tour__sanatorium Санаторий "Радон"
                   .tour__human
                     .tour__human-adult
@@ -61,6 +61,7 @@ block content
                     .tour__human-adult 
                 .tour__block     
                   .tour__price
+                    a.tour__info-icon.fancybox(href="#tooltip")
                     .tour__info-price 210 руб. за 5 ночей
                     .tour__info-tax + 3% курортный сбор 20.000
                   .tour__action
@@ -83,8 +84,6 @@ block content
                         i.icon.icon_tv
                         i.icon.icon_phone
                 .tour__tooltip
-                  .tour__info-icon
-                  +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
                   .tour__text Cтоимость путевки формируется из стоимости брони места в санатории и курортного сбора. Сбор можно оплатить онлайн или наличными деньгами/банковской картой непосредственно перед заселением.   
           .search-result__more
             .search-result__title Еще варианты
@@ -106,6 +105,7 @@ block content
                         .tour__human-adult 
                     .tour__block     
                       .tour__price
+                        a.tour__info-icon.fancybox(href="#tooltip")
                         .tour__info-price 210 руб. за 5 ночей
                         .tour__info-tax + 3% курортный сбор 20.000
                       .tour__action
@@ -132,6 +132,24 @@ block content
             .search-result__simular
               .btn.btn_grey
                 span Ещё варианты              
+
+    section.basket-result
+      .container
+        .basket-result__wrap
+          .basket-result__img
+            img(src="images/basket-logo.png", alt="")
+          .basket-result__info
+            .basket-result__price Цена за путевки: 
+              span 210 руб.
+            .basket-result__tax Курортный сбор: 
+              span +30 руб.
+            .basket-result__sum Итого: 
+              span 230 руб.
+            .basket-result__btn 
+              a(href="").btn.btn_blue Оформить
+
+
+
 
     section.search-result
       .container
@@ -160,6 +178,7 @@ block content
                     .tour__human-adult 
                 .tour__block     
                   .tour__price
+                    a.tour__info-icon.fancybox(href="#tooltip")
                     .tour__info-price 210 руб. за 5 ночей
                     .tour__info-tax + 3% курортный сбор 20.000
                   .tour__action
@@ -182,8 +201,6 @@ block content
                         i.icon.icon_tv
                         i.icon.icon_phone
                 .tour__tooltip
-                  .tour__info-icon
-                  +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
                   .tour__text Cтоимость путевки формируется из стоимости брони места в санатории и курортного сбора. Сбор можно оплатить онлайн или наличными деньгами/банковской картой непосредственно перед заселением.   
           .search-result__more
             .search-result__title Еще варианты
@@ -205,6 +222,7 @@ block content
                         .tour__human-adult 
                     .tour__block     
                       .tour__price
+                        a.tour__info-icon.fancybox(href="#tooltip")
                         .tour__info-price 210 руб. за 5 ночей
                         .tour__info-tax + 3% курортный сбор 20.000
                       .tour__action
@@ -231,7 +249,6 @@ block content
             .search-result__simular
               .btn.btn_grey
                 span Ещё варианты
-
 
     section.basket-result
       .container
@@ -320,3 +337,6 @@ block content
         .b-filter__hr
         .popup_order__btn
           input.btn.btn_green(type='submit', value="Отправить")
+
+
+  +popup_tooltip()

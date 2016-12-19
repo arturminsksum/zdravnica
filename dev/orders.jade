@@ -59,13 +59,12 @@ block content
                     .tour__sanatorium Санаторий "Радон"
                     .tour__block     
                       .tour__price
+                        a.tour__info-icon.fancybox(href="#tooltip")
                         .tour__info-price 210 руб. за 5 ночей
                         .tour__info-tax + 3% курортный сбор 20.000
                       .tour__action
                         .tour__counter-text 1 путёвка
                     .tour__tooltip
-                      .tour__info-icon
-                      +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
                       .tour__text Cтоимость путевки формируется из стоимости брони места в санатории и курортного сбора. Сбор можно оплатить онлайн или наличными деньгами/банковской картой непосредственно перед заселением.   
 
               .tour__item.tour__item_wait
@@ -101,13 +100,12 @@ block content
                     .tour__sanatorium Санаторий "Радон"
                     .tour__block     
                       .tour__price
+                        a.tour__info-icon.fancybox(href="#tooltip")
                         .tour__info-price 210 руб. за 5 ночей
                         .tour__info-tax + 3% курортный сбор 20.000
                       .tour__action
                         .tour__counter-text 1 путёвка
                     .tour__tooltip
-                      .tour__info-icon
-                      +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
                       .tour__text Cтоимость путевки формируется из стоимости брони места в санатории и курортного сбора. Сбор можно оплатить онлайн или наличными деньгами/банковской картой непосредственно перед заселением.   
 
             .personal-orders__title Мои заЯвки
@@ -149,3 +147,4 @@ block content
 
     +feedback()
   +footer('int')
+  +popup_tooltip()  

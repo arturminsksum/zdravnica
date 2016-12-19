@@ -1,0 +1,23 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .container
+      +breadcrumb('Лечение заболеваний желудочно-кишечного тракта!')
+      h1.page__title Лечение заболеваний желудочно-кишечного тракта!
+
+    section.news-page
+      .container
+        .news-detail
+          span.news-date-time 06.11.2016
+          .b-text
+            img(src='images/news-01.jpg', width='270', height='170', alt='Лечение заболеваний желудочно-кишечного тракта!', title='Лечение заболеваний желудочно-кишечного тракта!')
+            p Рады Вам сообщить, что при приобретении путевок в санаторий «Поречье» продолжительностью от 12 дней со...   
+
+        p
+          a.news-return(href='/news/') Возврат к списку
+
+    +feedback()
+  +footer('int')

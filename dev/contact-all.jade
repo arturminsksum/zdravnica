@@ -1,0 +1,108 @@
+extends template
+block content
+
+  +header("resort","no")
+
+  main
+    .container
+      +breadcrumb('Контакты')
+      h1.page__title Контакты
+       
+    section.contacts-page
+      .container
+        .contacts__title руководство санатория:
+        .contacts-info__wrap
+          .row
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-01.jpg", alt="")
+                .item__post Директор
+                .item__name Марачковский Михаил Владимирович
+                .item__phone 
+                  a(href="tel:+375 (17) 956-67-44") +375 (17) 956-67-44
+                .item__phone
+                  a(href="tel:+375 (29) 392-93-49") +375 (29) 392-93-49
+                .item__phone
+                  a(href="tel:+375 (17) 957-01-34") +375 (17) 957-01-34 (факс) 
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-02.jpg", alt="")
+                .item__post Секретарь приемной руководителя
+                .item__name Шапель Ирина Владимировна
+                .item__phone 
+                  a(href="tel:+375 (17) 957-01-34") +375 (17) 957-01-34 (тел/факс)
+                .item__phone
+                  a(href="tel:+375 (44) 588-06-26") +375 (44) 588-06-26
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-03.jpg", alt="")
+                .item__post Заместитель директора <br>(по медицинской работе и питанию)
+                .item__name Попов Владимир Григорьевич
+                .item__phone 
+                  a(href="tel:+375 (17) 957-04-16") +375 (17) 957-04-16
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-04.jpg", alt="")
+                .item__post Главный экономист
+                .item__name Сильчук Наталья Александровна
+                .item__phone 
+                  a(href="tel:+375 (17) 957-01-52") +375 (17) 957-01-52
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-05.jpg", alt="")
+                .item__post Заведующая отделом <br>(культурно-массовой  и воспитательной работы)
+                .item__name Соловей Валентина Петровна
+                .item__phone 
+                  a(href="tel:+375 (29) 645-02-36") +375 (29) 645-02-36
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-06.jpg", alt="")
+                .item__post Главный бухгалтер
+                .item__name Ханина Лариса Владимировна
+                .item__phone 
+                  a(href="tel:+375 (17) 957-01-50") +375 (17) 957-01-50
+                .item__phone
+                  a(href="tel:+375 (44) 784-38-63") +375 (44) 784-38-63
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-07.jpg", alt="")
+                .item__post Заведующий пищеблоком
+                .item__name Замараева Лидия Григорьевна
+                .item__phone 
+                  a(href="tel:+375 (17) 957-01-49") +375 (17) 957-01-49
+                .item__phone
+                  a(href="tel:+375 (29) 393-39-52") +375 (29) 393-39-52
+
+            .six.columns.contacts-info__col
+              .item
+                .item__img
+                  img(src="images/contacts-face-08.jpg", alt="")
+                .item__post Главная медсестра
+                .item__name Прокопеня Тамара Александровна
+                .item__phone 
+                  a(href="tel:+375 (17) 957-01-48") +375 (17) 957-01-48
+                .item__phone
+                  a(href="tel:+375 (44) 588-06-29") +375 (44) 588-06-29
+
+
+    section.resort-road
+      .container
+        .resort-road__wrap
+          #map.resort-road__map
+
+
+    +feedback()
+  +footer('int')
