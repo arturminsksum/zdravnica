@@ -96,36 +96,51 @@
                 <label for="pass_login" class="label">Пароль</label>
                 <input id="pass_login" type="password" name="form[]" autocomplete="false" class="input req"/>
               </div>
-              <div class="form__btn"><a href="#signup" class="btn btn_invert js-signup">Регистрация</a>
+              <div class="form__btn"><a href="" class="btn btn_invert">Регистрация</a>
                 <input type="submit" value="Войти" class="btn btn_blue"/>
               </div>
               <div class="form__lost"> <a href="">Забыли пароль</a></div>
             </form>
           </div>
         </div>
-        <div id="signup" class="popup popup_login">
-          <div class="popup__title">Регистрация</div>
+        <div id="feedback" class="popup popup_feedback">
+          <div class="popup__title">Обратная связь</div>
           <div class="popup__close"></div>
           <div class="popup__form">       
             <form action="" class="form"> 
               <div class="form__block">
-                <label for="name_signup" class="label">Имя пользователя</label>
-                <input id="name_signup" type="text" name="form[]" placeholder="Михаил" autocomplete="name" class="input req"/>
+                <label for="name_feedback" class="label">Имя</label>
+                <input id="name_feedback" type="text" name="PROPERTY[][]" placeholder="Михаил" autocomplete="name" class="input"/>
               </div>
               <div class="form__block">
-                <label for="email_signup" class="label">E-mail</label>
-                <input id="email_signup" type="email" name="form[]" placeholder="romateo@list.ru" autocomplete="email" class="input req email"/>
+                <label for="phone_feedback" class="label">Телефон</label>
+                <input id="phone_feedback" type="text" name="PROPERTY[][]" placeholder="+375295751215" autocomplete="tel" class="input"/>
               </div>
               <div class="form__block">
-                <label for="passOne_signup" class="label">Пароль</label>
-                <input id="passOne_signup" type="password" name="form[]" autocomplete="false" class="input req"/>
+                <label for="email_feedback" class="label">E-mail*</label>
+                <input id="email_feedback" type="email" name="PROPERTY[][]" placeholder="romateo@list.ru" autocomplete="email" class="input req email"/>
               </div>
               <div class="form__block">
-                <label for="passTwo_signup" class="label">Повторите пароль</label>
-                <input id="passTwo_signup" type="password" name="form[]" autocomplete="false" class="input req"/>
+                <label for="depart_feedback" class="label">Подразделение*</label>
+                <select id="depart_feedback" class="select req">
+                  <option selected="selected">Руководство ОАО Белагроздравница</option>
+                  <option>Отдел маркетинга</option>
+                  <option>Санаторий Радон</option>
+                  <option>Санаторий Поречье</option>
+                  <option>Санаторий Сосновый бор</option>
+                  <option>Санаторий Рассвет-Любань</option>
+                  <option>Санаторий Случь</option>
+                  <option>Санаторий Солнышко</option>
+                  <option>Санаторий Росинка</option>
+                  <option>Санаторий Налибокская пуща</option>
+                </select>
+              </div>
+              <div class="form__block">
+                <label for="text_feedback" class="label">Комментарий*</label>
+                <textarea id="text_feedback" name="PROPERTY[][]" rows="3" placeholder="Напишите свой комментарий" class="input req"></textarea>
               </div>
               <div class="form__btn">
-                <input type="submit" value="Зарегистрироваться" class="btn btn_blue"/>
+                <input type="submit" value="Отправить" class="btn btn_blue"/>
               </div>
             </form>
           </div>
@@ -280,7 +295,7 @@
           </section>
           <section class="feedback">
             <div class="container">
-              <div class="feedback__wrap"><a href="" class="feedback__link"><span>Обратная связь</span></a>
+              <div class="feedback__wrap"><a href="#feedback" class="feedback__link js-feedback"><span>Обратная связь</span></a>
                 <div class="feedback__btn"><a href="" class="btn btn_invert">Забронировать</a></div>
               </div>
             </div>

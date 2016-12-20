@@ -71,27 +71,35 @@ mixin header(page,search)
             label.label(for="pass_login") Пароль
             input#pass_login.input.req(type='password', name='form[]',autocomplete='false')              
           .form__btn
-            a(href="#signup").btn.btn_invert.js-signup Регистрация
+            a(href="").btn.btn_invert Регистрация
             input.btn.btn_blue(type='submit', value="Войти")
           .form__lost 
             a(href="") Забыли пароль
 
-    #signup.popup.popup_login
-      .popup__title Регистрация
+    #feedback.popup.popup_feedback
+      .popup__title Обратная связь
       .popup__close
       .popup__form        
         form(action="").form 
           .form__block
-            label.label(for="name_signup") Имя пользователя
-            input#name_signup.input.req(type='text', name='form[]', placeholder='Михаил',autocomplete='name')                 
+            label.label(for="name_feedback") Имя
+            input#name_feedback.input(type='text', name='PROPERTY[][]', placeholder='Михаил',autocomplete='name')   
           .form__block
-            label.label(for="email_signup") E-mail
-            input#email_signup.input.req.email(type='email', name='form[]', placeholder='romateo@list.ru',autocomplete='email')
+            label.label(for="phone_feedback") Телефон
+            input#phone_feedback.input(type='text', name='PROPERTY[][]', placeholder='+375295751215',autocomplete='tel') 
           .form__block
-            label.label(for="passOne_signup") Пароль
-            input#passOne_signup.input.req(type='password', name='form[]',autocomplete='false')
+            label.label(for="email_feedback") E-mail*
+            input#email_feedback.input.req.email(type='email', name='PROPERTY[][]', placeholder='romateo@list.ru',autocomplete='email')
           .form__block
-            label.label(for="passTwo_signup") Повторите пароль
-            input#passTwo_signup.input.req(type='password', name='form[]',autocomplete='false')
+            label.label(for="depart_feedback") Подразделение*
+            select#depart_feedback.select.req
+              option(selected) Руководство ОАО Белагроздравница
+              - var listMenu = ['Отдел маркетинга','Санаторий Радон','Санаторий Поречье','Санаторий Сосновый бор','Санаторий Рассвет-Любань','Санаторий Случь','Санаторий Солнышко','Санаторий Росинка','Санаторий Налибокская пуща']
+              each item in listMenu
+                option=item
+          .form__block
+            label.label(for="text_feedback") Комментарий*
+            textarea#text_feedback.input.req(name='PROPERTY[][]', rows='3', placeholder='Напишите свой комментарий')
+        
           .form__btn
-            input.btn.btn_blue(type='submit', value="Зарегистрироваться")
+            input.btn.btn_blue(type='submit', value="Отправить")

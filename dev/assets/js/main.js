@@ -100,7 +100,7 @@ $(document).ready(function() {
                 var markerResort = new google.maps.Marker({
                     position: { lat: 52.9591349, lng: 27.5368237 },
                     map: mapResort,
-                    icon: 'images/marker-resort-blue.png',
+                    icon: 'images/marker-green.png',
                     title: 'Случь',
                 });
 
@@ -621,7 +621,7 @@ $(document).ready(function() {
 
 
 
-    $('.header-sign,.header-sign__mobile, .js-order, .js-book, .js-signup').fancybox({
+    $('.header-sign,.header-sign__mobile, .js-order, .js-book, .js-feedback').fancybox({
         padding: 0,
         closeBtn: false
     });
@@ -740,17 +740,25 @@ $(document).ready(function() {
     }
 
 
-    var timer = document.querySelectorAll('.timer');
+
 
     function countDown() {
+        var timer = document.querySelectorAll('.timer');
+        var timerText = document.querySelectorAll('.timer-text');
         var count = 900;
+
         var timerId = setInterval(function() {
 
             for (var i = 0; i < timer.length; i++) {
                 timer[i].innerHTML = toHHMMSS(count);
             }
 
-            if (count == 0) clearInterval(timerId);
+            if (count == 0) {
+                clearInterval(timerId);
+                for (var i = 0; i < timerText.length; i++) {
+                    timerText[i].innerHTML = 'Ваша бронь аннулирована';
+                }                
+            }
             count--;
         }, 1000);
     }
