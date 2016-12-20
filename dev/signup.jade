@@ -5,19 +5,18 @@ block content
 
   main
     .container
-      +breadcrumb('Оформление заказа')
-      h1.page__title Оформление заказа
+      +breadcrumb('Регистрация')
+      h1.page__title Регистрация
 
     section.p-checkout
       .container
-        .button 
-          .button__text.timer-text До окончания бронирования осталось: 
-            span.timer.button__timer 00:00
+
         .p-checkout__wrap
           .p-checkout__book
-            .p-checkout__book-title Укажите информацию по вашей брони
-            .p-checkout__book-text Наш менеджер свяжется с вами для уточнения информации и подтвердит бронь на выбранные даты.
-
+            .p-checkout__book-title Укажите свои личные данные для регистрации
+            .p-checkout__book-text Они необходимы для бронирования номеров.
+            .p-checkout__book-btn
+              .b-tabs__btn.active Новый клиент
 
           form.b-filter(action="")
             .b-filter__wrap      
@@ -29,11 +28,7 @@ block content
                       
               .b-filter__inner
                 .b-filter__section
-                  .b-filter__check
-                    label.checkbox  
-                      input(type="checkbox").checkbox__hidden
-                      span.checkbox__showed
-                      span.checkbox__title Оформление документов на данное лицо    
+ 
 
                   .b-filter__row
                     .b-filter__block
@@ -94,11 +89,7 @@ block content
                 .b-filter__section
                   .b-filter__delete 
                       span Удалить
-                  .b-filter__check
-                    label.checkbox  
-                      input(type="checkbox").checkbox__hidden
-                      span.checkbox__showed
-                      span.checkbox__title Оформление документов на данное лицо    
+ 
 
                   .b-filter__row
                     .b-filter__block
@@ -165,6 +156,5 @@ block content
   +footer('int')
   a(href="").fixpanel.btn.btn_blue
     .fixpanel__text.timer-text 
-      span.fixpanel__timer.timer 00:00
-      |  
-      span.fixpanel__txt оформление заказа
+      span.fixpanel__timer.timer 00:00:00
+      span  оформление заказа

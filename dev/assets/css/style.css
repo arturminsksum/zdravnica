@@ -5030,6 +5030,7 @@ section {
   width: 220px;
   margin-bottom: 20px;
 }
+.popup_login,
 .popup_feedback {
   width: 430px;
 }
@@ -5448,6 +5449,7 @@ section {
   .popup {
     display: none;
   }
+  .popup_login,
   .popup_feedback {
     width: 280px;
   }
@@ -9646,6 +9648,9 @@ section {
   margin-bottom: 10px;
   line-height: 1;
 }
+.p-checkout__book-btn {
+  margin-top: 20px;
+}
 .p-checkout .b-filter__hr {
   margin: 0 0 30px 0;
 }
@@ -10122,6 +10127,9 @@ section {
 }
 .fixpanel__text {
   text-transform: uppercase;
+}
+.fixpanel__txt {
+  border-bottom: 1px solid #fff;
 }
 @media (max-width: 1199px) {
   .personal-side {

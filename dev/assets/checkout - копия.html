@@ -18,7 +18,7 @@
         <div class="overlay overlay_phones"></div>
         <div class="header-phones__close show-mobile"></div>
         <div class="header-menu__close show-mobile"> </div>
-        <header class="header">
+        <header class="header header_resort">
           <div class="header-top">
             <div class="container">
               <div class="header-top__wrap">           
@@ -51,8 +51,7 @@
           <div class="header-bottom">
             <div class="container">
               <div class="header-bottom__wrap">
-                <div class="toggle"><span class="toggle__first"></span><span class="toggle__second"></span><span class="toggle__third"> </span></div>
-                <div class="header-search__mobile show-mobile"></div><a href="" class="header-logo"><img src="images/header-logo.png" alt="белагроздравница"/></a>
+                <div class="toggle"><span class="toggle__first"></span><span class="toggle__second"></span><span class="toggle__third"> </span></div><a href="" class="header-logo"><img src="images/header-logo.png" alt="белагроздравница"/></a>
                 <div class="header-phones__mobile show-mobile"></div><a href="#login" class="header-sign__mobile show-mobile"><i></i></a>
                 <div class="header-menu">
                   <div class="menu__title show-mobile"><span>Меню</span></div>
@@ -80,15 +79,6 @@
                   <div class="header__hot"><a href="" class="btn btn_blue btn_hot">Горячие путёвки</a></div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="header-search">
-            <div class="header-search__block">
-              <form action="" class="header-search__form">
-                <input type="text" placeholder="Введите название санатория, заболевания, услуги..." class="header-search__input"/>
-                <input type="submit" name="" value="" class="header-search__submit"/>
-              </form>
-              <div class="header-search__close"></div>
             </div>
           </div>
         </header>
@@ -156,54 +146,216 @@
           </div>
         </div>
         <main>
-          <div class="banner banner_resort">
-            <div style="background-image: url(images/resort-banner.jpg)" class="banner__img"></div>
-            <div class="banner__title">Навигация по верстке</div>
+          <div class="container">
+            <div class="breadcrumb">
+              <ol>
+                <li><a href="#">Главная</a></li>
+                <li class="active">Оформление заказа</li>
+              </ol>
+            </div>
+            <h1 class="page__title">Оформление заказа</h1>
           </div>
-          <section>
-            <div class="container">     
-              <div class="text__block clearfix">
-                <ul>
-                  <li><a href="main.html" target="_blank">ссылка</a> - Главная</li>
-                  <li><a href="resort.html" target="_blank">ссылка</a> - Санаторий      </li>
-                  <li><a href="med.html" target="_blank">ссылка</a> - Медицинский профиль   </li>
-                  <li><a href="rooms.html" target="_blank">ссылка</a> - Номера и цены   </li>
-                  <li><a href="apartment.html" target="_blank">ссылка</a> - Номер</li>
-                  <li><a href="leisure.html" target="_blank">ссылка</a> - Досуг</li>
-                  <li><a href="media.html" target="_blank">ссылка</a> - Медиа              </li>
-                  <li><a href="structure.html" target="_blank">ссылка</a> - Инфраструктура              </li>
-                  <li><a href="contacts.html" target="_blank">ссылка</a> - Контакты санатория    </li>
-                  <li><a href="hot.html" target="_blank">ссылка</a> - горячие туры     </li>
-                  <li><a href="meal.html" target="_blank">ссылка</a> - Диетическое питание  </li>
-                  <li><a href="selection.html" target="_blank">ссылка</a> - Подбор путевки  </li>
-                  <li><a href="search.html" target="_blank">ссылка</a> - Результат поиска  </li>
-                  <li><a href="nosearch.html" target="_blank">ссылка</a> - Не найдено ни одной путевки</li>
-                  <li><a href="error.html" target="_blank">ссылка</a> - 404</li>
-                  <li><a href="basket.html" target="_blank">ссылка</a> - Корзина</li>
-                  <li><a href="checkout.html" target="_blank">ссылка</a> - Оформление заказа</li>
-                  <li><a href="payment.html" target="_blank">ссылка</a> - Способ оплаты</li>
-                  <li><a href="book.html" target="_blank">ссылка</a> - Благодарим Вас за бронирование!</li>
-                  <li><a href="orders.html" target="_blank">ссылка</a> - Мои заказы</li>
-                  <li><a href="data.html" target="_blank">ссылка</a> - Личные Данные              </li>
-                  <li><a href="finished.html" target="_blank">ссылка</a> - Завершенные заказы           </li>
-                  <li><a href="subscribe.html" target="_blank">ссылка</a> - Подписка на Рассылку </li>
-                  <li><a href="news.html" target="_blank">ссылка</a> - Новости </li>
-                  <li><a href="new.html" target="_blank">ссылка</a> - Новость</li>
-                  <li><a href="contact-all.html" target="_blank">ссылка</a> - Контакты</li>
-                  <li><a href="search-all.html" target="_blank">ссылка</a> - Поиск</li>
-                  <li><a href="signup.html" target="_blank">ссылка</a> - Регистрация</li>
-                </ul>
+          <section class="p-checkout">
+            <div class="container">
+              <div class="button"> 
+                <div class="button__text timer-text">До окончания бронирования осталось: <span class="timer button__timer">00:00:00</span></div>
+              </div>
+              <div class="p-checkout__wrap">
+                <div class="p-checkout__book">
+                  <div class="p-checkout__book-title">Укажите информацию по вашей брони</div>
+                  <div class="p-checkout__book-text">Наш менеджер свяжется с вами для уточнения информации и подтвердит бронь на выбранные даты.</div>
+                </div>
+                <form action="" class="b-filter">
+                  <div class="b-filter__wrap">     
+                    <div class="b-filter__top">
+                      <div class="b-filter__name"> Личные данные</div>
+                      <div class="b-filter__add"><i class="b-filter__add-icon"></i>
+                        <div class="b-filter__add-text">Добавить человека</div>
+                      </div>
+                    </div>
+                    <div class="b-filter__inner">
+                      <div class="b-filter__section">
+                        <div class="b-filter__check">
+                          <label class="checkbox"> 
+                            <input type="checkbox" class="checkbox__hidden"><span class="checkbox__showed"></span><span class="checkbox__title">Оформление документов на данное лицо    </span>
+                          </label>
+                        </div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block">
+                            <label for="lastName0" class="label">Фамилия*</label>
+                            <input id="lastName0" type="text" name="PROPERTY[][0]" placeholder="Иванов" autocomplete="family-name" class="input req">
+                          </div>
+                          <div class="b-filter__block">
+                            <label for="firstName0" class="label">Имя*</label>
+                            <input id="firstName0" type="text" name="PROPERTY[][0]" placeholder="Иван" autocomplete="given-name" class="input req">
+                          </div>
+                          <div class="b-filter__block">
+                            <label for="middleName" class="label">Отчество*</label>
+                            <input id="middleName" type="text" name="PROPERTY[][0]" placeholder="Иванович" autocomplete="additional-name" class="input req">
+                          </div>
+                        </div>
+                        <div class="b-filter__hr"></div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="phone0" class="label">Телефон*</label>
+                            <input id="phone0" type="text" name="PROPERTY[][0]" placeholder="+375295750215" autocomplete="tel" class="input req">
+                          </div>
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="email0" class="label">E-mail (логин)*</label>
+                            <input id="email0" type="email" name="PROPERTY[][0]" placeholder="romateo@list.ru" autocomplete="email" class="input req email">
+                          </div>
+                        </div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="сountry0" class="label">Страна*</label>
+                            <select id="сountry0" class="select req">
+                              <option selected>Беларусь</option>
+                              <option>Россия</option>
+                            </select>
+                          </div>
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="postal0" class="label">Индекс   </label>
+                            <input id="postal0" type="text" name="PROPERTY[][0]" placeholder="230150" autocomplete="shipping postal-code" class="input">
+                          </div>
+                        </div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="address0" class="label">Адрес   </label>
+                            <input id="address0" type="text" name="PROPERTY[][0]" placeholder="г. Минск, ул. Матусевича 20-120" autocomplete="shipping street-address" class="input">
+                          </div>
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="sex0" class="label">Пол</label>
+                            <select id="sex0" class="select">
+                              <option selected>Мужской</option>
+                              <option>Женский</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="b-filter__name"> Паспортные данные</div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <div class="b-filter__series">
+                              <label for="series0" class="label">Серия*   </label>
+                              <input id="series0" type="text" name="PROPERTY[][0]" placeholder="МР" autocomplete="" class="input req">
+                            </div>
+                            <div class="b-filter__number">
+                              <label for="number0" class="label">Номер*   </label>
+                              <input id="number0" type="text" name="PROPERTY[][0]" placeholder="1595973" autocomplete="" class="input req">
+                            </div>
+                          </div>
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="get0" class="label">Кем/когда выдан*   </label>
+                            <input id="get0" type="text" name="PROPERTY[][0]" placeholder="Фрунзенское РУВД г.Минска, 05.12.2006" autocomplete="" class="input req">
+                          </div>
+                        </div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="personal0" class="label">Личный номер*</label>
+                            <input id="personal0" type="text" name="PROPERTY[][0]" placeholder="1EKK5458725154F" autocomplete="" class="input req">
+                          </div>
+                        </div>
+                        <div class="b-filter__hr-last"></div>
+                      </div>
+                      <div class="b-filter__section">
+                        <div class="b-filter__delete"> <span>Удалить</span></div>
+                        <div class="b-filter__check">
+                          <label class="checkbox"> 
+                            <input type="checkbox" class="checkbox__hidden"><span class="checkbox__showed"></span><span class="checkbox__title">Оформление документов на данное лицо    </span>
+                          </label>
+                        </div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block">
+                            <label for="lastName0" class="label">Фамилия*</label>
+                            <input id="lastName1" type="text" name="PROPERTY[][1]" placeholder="Иванов" autocomplete="family-name" class="input req">
+                          </div>
+                          <div class="b-filter__block">
+                            <label for="firstName1" class="label">Имя*</label>
+                            <input id="firstName1" type="text" name="PROPERTY[][1]" placeholder="Иван" autocomplete="given-name" class="input req">
+                          </div>
+                          <div class="b-filter__block">
+                            <label for="middleName" class="label">Отчество*</label>
+                            <input id="middleName" type="text" name="PROPERTY[][1]" placeholder="Иванович" autocomplete="additional-name" class="input req">
+                          </div>
+                        </div>
+                        <div class="b-filter__hr"></div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="phone1" class="label">Телефон*</label>
+                            <input id="phone1" type="text" name="PROPERTY[][1]" placeholder="+375295751215" autocomplete="tel" class="input req">
+                          </div>
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="email1" class="label">E-mail (логин)*</label>
+                            <input id="email1" type="email" name="PROPERTY[][1]" placeholder="romateo@list.ru" autocomplete="email" class="input req email">
+                          </div>
+                        </div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="сountry1" class="label">Страна*</label>
+                            <select id="сountry1" class="select req">
+                              <option selected>Беларусь</option>
+                              <option>Россия</option>
+                            </select>
+                          </div>
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="postal1" class="label">Индекс   </label>
+                            <input id="postal1" type="text" name="PROPERTY[][1]" placeholder="231151" autocomplete="shipping postal-code" class="input">
+                          </div>
+                        </div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="address1" class="label">Адрес   </label>
+                            <input id="address1" type="text" name="PROPERTY[][1]" placeholder="г. Минск, ул. Матусевича 21-121" autocomplete="shipping street-address" class="input">
+                          </div>
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="sex1" class="label">Пол</label>
+                            <select id="sex1" class="select">
+                              <option selected>Мужской</option>
+                              <option>Женский</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="b-filter__name"> Паспортные данные</div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <div class="b-filter__series">
+                              <label for="series1" class="label">Серия*   </label>
+                              <input id="series1" type="text" name="PROPERTY[][1]" placeholder="МР" autocomplete="" class="input req">
+                            </div>
+                            <div class="b-filter__number">
+                              <label for="number1" class="label">Номер*   </label>
+                              <input id="number1" type="text" name="PROPERTY[][1]" placeholder="1595973" autocomplete="" class="input req">
+                            </div>
+                          </div>
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="get1" class="label">Кем/когда выдан*   </label>
+                            <input id="get1" type="text" name="PROPERTY[][1]" placeholder="Фрунзенское РУВД г.Минска, 15.12.2116" autocomplete="" class="input req">
+                          </div>
+                        </div>
+                        <div class="b-filter__row">
+                          <div class="b-filter__block b-filter__block_fifty">
+                            <label for="personal1" class="label">Личный номер*</label>
+                            <input id="personal1" type="text" name="PROPERTY[][1]" placeholder="1EKK5458725154F" autocomplete="" class="input req">
+                          </div>
+                        </div>
+                        <div class="b-filter__hr-last"></div>
+                      </div>
+                    </div>
+                    <div class="b-filter__btn">
+                      <input type="submit" value="Далее" class="btn btn_green">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          <section class="feedback">
+            <div class="container">
+              <div class="feedback__wrap"><a href="#feedback" class="feedback__link js-feedback"><span>Обратная связь</span></a>
+                <div class="feedback__btn"><a href="" class="btn btn_invert">Забронировать</a></div>
               </div>
             </div>
           </section>
         </main>
-        <section class="feedback">
-          <div class="container">
-            <div class="feedback__wrap"><a href="#feedback" class="feedback__link js-feedback"><span>Обратная связь</span></a>
-              <div class="feedback__btn"><a href="" class="btn btn_invert">Забронировать</a></div>
-            </div>
-          </div>
-        </section>
         <footer class="footer footer_int">
           <div class="container">
             <div class="footer__wrap">
@@ -265,7 +417,8 @@
               <div class="footer__dev"><a href="" class="footer__dev-text">Создание сайта</a><a href="" class="footer__dev-logo"><img src="images/imedia.png" alt="imediasolutions"/></a></div>
             </div>
           </div>
-        </footer>
+        </footer><a href="" class="fixpanel btn btn_blue">
+          <div class="fixpanel__text timer-text"> <span class="fixpanel__timer timer">00:00:00</span><span> оформление заказа</span></div></a>
         <script src="js/vendor/jquery-1.10.2.min.js"></script>
         <script src="js/vendor/wow.min.js"></script>
         <script src="js/vendor/jquery.fancybox.pack.js"></script>
