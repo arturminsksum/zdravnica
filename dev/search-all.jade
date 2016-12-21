@@ -12,14 +12,19 @@ block content
             form.search-mobile__form(action="")
               input.search-mobile__input(type="text", placeholder="Введите название санатория, заболевания, услуги...")
               input.search-mobile__submit(type='submit', name='', value='')
-
-        .search-page__list
+        .page__title Результаты поиска по запросу "Cанаторий Радон"
+        ul.search-page__list
           - for (var i = 0; i < 10; i++) 
-            .search-page__item
+            li.search-page__item
               a(href="").search-page__title Путёвки для детей в санаторий “Радон”
               .search-page__text Рады Вам сообщить, что при приобретении путевок в санаторий «Поречье» продолжительностью от 12 дней при приобретении путевок в санаторий «Поречье» продолжительностью от 12 дней со...
-              .search-page__more Подробнее
-
+              .breadcrumb
+                ol
+                  li
+                    a(href='#') Главная
+                  li
+                    a(href='#') Радон
+                    
         nav.pagination-wrap
           ul.pagination
             li.page-item

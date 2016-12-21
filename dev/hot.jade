@@ -40,59 +40,63 @@ block content
 
     section.hot-list
       .container
-        .main-hot__wrap
-          .row
-            - var hotList = ['4 местный тип А','1 местный повышенной комфортности','2 местный тип А']
-            each hot in hotList
-              .column
-                .tour
-                  .tour__img
-                    img(src="images/tour-01.jpg", alt="")
-                  .tour__top
-                    .tour__type=hot
-                    .tour__sanatorium Санаторий "Радон"
-                  .tour__bottom
-                    .tour__list
-                      ul
-                        -var listIcons = ['Болезни системы кровообращения', 'Болезни костно-мышечной системы и соединительной ткани', 'Болезни органов пищеварения', 'Болезни органов дыхания', 'Болезни нервной системы']
-                        each icon in listIcons
-                          li=icon
+        .basket-list__wrap
 
-                    .tour__icons-wrap
-                      .tour__icons
-                          i.icon.icon_wi-fi
-                          i.icon.icon_air
-                          i.icon.icon_double-bed
-                          i.icon.icon_single-bed
-                          i.icon.icon_safety
-                          i.icon.icon_tv
-                          i.icon.icon_phone
-                          i.icon.icon_more  
-                      .tour__dropdown
-                        - for (var i = 0; i < 3; i++)
-                          i.icon.icon_wi-fi
-                          i.icon.icon_air
-                          i.icon.icon_double-bed
-                          i.icon.icon_single-bed
-                          i.icon.icon_safety
-                          i.icon.icon_tv
-                          i.icon.icon_phone   
-                    .tour__info
-                      .tour__info-icon
-                      +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')
+          - for (var j = 0; j < 3; j++)
+            .tour.tour_hot.clearfix
+              .tour__hot
+              .tour__btn
+                a(href="#book").btn.btn_green.js-book Забронировать
+              .tour__left
+                img(src="images/basket-img-01.jpg", alt="")
+              .tour__right 
+                .tour__type 4 местный тип А
+                .tour__sanatorium Санаторий "Радон"
+                .tour__block     
+                  .tour__price
+                    a.tour__info-icon.fancybox(href="#tooltip")
+                    +tooltip('210 руб. за 5 ночей + 3% курортный сбор 20.000')                
+                    .tour__info-price 210 руб. за 5 ночей
+                    .tour__info-tax + 3% курортный сбор 20.000
+                  .tour__action
+                    .tour__icons
+                      i.icon.icon_wi-fi
+                      i.icon.icon_air
+                      i.icon.icon_double-bed
+                      i.icon.icon_single-bed
+                      i.icon.icon_safety
+                      i.icon.icon_tv
+                      i.icon.icon_phone
+                      i.icon.icon_more
+                    .tour__dropdown
+                      - for (var i = 0; i < 3; i++)
+                        i.icon.icon_wi-fi
+                        i.icon.icon_air
+                        i.icon.icon_double-bed
+                        i.icon.icon_single-bed
+                        i.icon.icon_safety
+                        i.icon.icon_tv
+                        i.icon.icon_phone
 
-                      .tour__info-price 210 руб. за 5 ночей
-                      .tour__info-tax + 3% курортный сбор 20.000
-                    .tour__action
-                      .tour__counter
-                        
-                        
-                        .tour__counter-minus &#10134;
-                        .tour__counter-num 1
-                        .tour__counter-plus &#10133;
-                      .tour__btn
-                        a(href="").btn.btn_green Забронировать
+                .tour__list
+                  ul
+                    -var listIcons = ['Болезни системы кровообращения', 'Болезни костно-мышечной системы и соединительной ткани', 'Болезни органов пищеварения', 'Болезни органов дыхания', 'Болезни нервной системы']
+                    each icon in listIcons
+                      li=icon   
 
-
+        nav.pagination-wrap
+          ul.pagination
+            li.page-item
+              a.page-link(href='#') 1
+            li.page-item.active
+              a.page-link(href='#') 2
+            li.page-item
+              a.page-link(href='#') 3
+            li.page-item
+              a.page-link(href='#') 4
+            li.page-item
+              a.page-link(href='#') 5
+              
     +feedback()
   +footer('int')
+  +popup_tooltip()  

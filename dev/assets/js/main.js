@@ -111,9 +111,9 @@ $(document).ready(function() {
         }
 
         var clients = [
-            ['Cronulla Beach', 51.926826, 25.589426, 3],
-            ['Manly Beach', 54.955705, 22.122132, 2],
-            ['Maroubra Beach', 53.72711, 35.59833, 1]
+            ['Родон', 51.926826, 25.589426, 3, '<div class="b-text">Телефон: +375 (17) 956-67-44</div>'],
+            ['Случь', 54.955705, 22.122132, 2, '<div class="b-text">Телефон: +375 (17) 956-67-44</div>'],
+            ['Поречье', 53.72711, 35.59833, 1, '<div class="b-text">Телефон: +375 (17) 956-67-44</div>']
         ];
 
         function setClients(map) {
@@ -129,8 +129,21 @@ $(document).ready(function() {
                     map: map,
                     icon: image,
                     title: client[0],
-                    // zIndex: client[3]
+                    zIndex: client[3]
                 });
+
+                var infowindow = new google.maps.InfoWindow({
+                    content: client[4]
+                });
+
+                marker.addListener('click', function() {
+                    // map.setZoom(12);
+                    map.setCenter(marker.position);
+                    infowindow.open(map, marker);
+                });
+
+
+
             };
 
             for (var i = 0; i < clients.length; i++) {

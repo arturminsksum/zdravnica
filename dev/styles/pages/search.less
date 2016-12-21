@@ -109,13 +109,14 @@
         margin: 0 10px;
         margin-bottom: 10px;
         .dibt;
-        padding: 5px 20px;
-        background-color: #fff;
+        // padding: 5px 20px;
+        padding: 0px 20px;
+        // background-color: #fff;
 
         &:before {
           content: '';
           position: absolute;
-          .bg-svg(@list-item-green, 10px, 10px, 5px, 11px);
+          .bg-svg(@list-item-green, 10px, 10px, 5px, 6px);
         }
 
       }
@@ -414,8 +415,24 @@
 
 .search-page {
   padding-top: 130px;
-  &__list {
 
+  .page__title {
+    margin-bottom: 3rem;
+  }
+  .breadcrumb {
+    padding-top: 0;
+
+    ol > li > a {
+      font-size: 13px;
+      color: #000;
+      text-decoration: underline;
+    }
+
+
+  }
+
+  &__list {
+    list-style-type: decimal;
   }
   &__item {
     margin-bottom: 30px;

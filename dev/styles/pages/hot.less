@@ -64,7 +64,6 @@
 
   }
 
-
   &:hover {
     box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
   }
@@ -179,7 +178,7 @@
 
   &__action {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   &__counter {
@@ -243,16 +242,79 @@
     z-index: 1;
     background-color: #fff;
     .b-sh-wh;
+
     .icon {
       margin: 5px;
     }
-  }
 
+  }
 
 }
 
 .hot-list {
-  padding: 0;
+  .tour {
+    &__btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+    }
+
+    &__sanatorium,
+    &__type {
+      margin-right: 170px;
+    }
+
+    &__block {
+      position: relative;
+    }
+
+    &__price {
+      display: block;
+      margin-right: 310px;
+    }
+
+    &__action {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &__icons {
+      border: none;
+      padding-right: 21px;
+    }
+    &__list {
+      font-size: 0;
+      padding-left: 0;
+      margin: 0 -10px;
+
+    li {
+      position: relative;
+      margin: 0 10px;
+      margin-bottom: 10px;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 10px 0 20px;
+      background-color: #fff;
+
+        &:before {
+          content: '';
+          position: absolute;
+          .bg-svg(@list-item-green, 10px, 10px, 0, 6px);
+        }
+
+      
+    }
+
+
+
+    }
+
+
+
+
+  }
+
 }
 
 @media (max-width:1199px) {
@@ -300,6 +362,42 @@
     text-align: left;
   }
 
+  .hot-list {
+    padding: 0;
+
+    .tour {
+      padding: 20px;
+
+      &__btn {
+        right: 20px;
+      }
+
+      &__sanatorium,
+      &__type {
+        margin-right: 150px;
+      }
+
+      &__block {
+      }
+
+      &__price {
+        display: block;
+        margin-right: 190px;
+      }
+
+      &__action {
+        width: 181px;
+      }
+
+      &__icons {
+        border: none;
+        padding-right: 21px;
+      }
+
+    }
+
+  }
+
 }
 
 @media (max-width:767px) {
@@ -321,6 +419,49 @@
     &__btn {
       width: 100%;
       text-align: center;
+    }
+
+  }
+
+  .hot-list {
+    padding: 0;
+
+    .tour {
+      padding-top: 70px;
+
+      &__btn {
+        width: auto;
+      }
+
+      &__sanatorium,
+      &__type {
+        margin-right: 0;
+      }
+
+      &__block {
+        margin-bottom: 0;
+      }
+
+      &__price {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+
+      &__action {
+        position: relative;
+        width: inherit;
+      }
+
+      &__icons {
+        margin-bottom: 0;
+
+        .icon {
+          margin-right: 15px;
+        }
+
+      }
+
     }
 
   }
