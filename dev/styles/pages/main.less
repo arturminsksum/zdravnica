@@ -136,35 +136,34 @@
   }
 
   &__delete {
-      position: absolute;
-      bottom: 0;
-      right: 10px;
-      padding: 10px 20px;
-      cursor: pointer;
-        z-index: 1;
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1;
 
-      span {
-        .dibm;
-        font-size: 14px;
-        text-transform: uppercase;
-        font-weight: 900;
-        margin-right: 5px;
-      }
+    span {
+      .dibm;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 900;
+      margin-right: 5px;
+    }
 
-      &:after {
-        content: '';
-        .dibm;
-        width: 14px;
-        height: 14px;
-        margin-top: 2px;
-        background-image: @close-red;
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        background-size: contain;
-      } 
+    &:after {
+      content: '';
+      .dibm;
+      width: 14px;
+      height: 14px;
+      margin-top: 2px;
+      background-image: @close-red;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+    }
+
   }
-
-
 
   &__block {
     .dibt;
@@ -507,7 +506,7 @@
   background-repeat: no-repeat;
   width: 21px;
   height: 21px;
-    margin-right: 19px;
+  margin-right: 19px;
 
   &_wi-fi {
     background-position: -3px 0;
@@ -537,6 +536,10 @@
     background-position: -252px 0;
   }
 
+  &_hairdryer {
+    background-position: -294px 0;
+  }
+
   &_more {
     position: absolute;
     top: 0;
@@ -546,28 +549,80 @@
     cursor: pointer;
   }
 
+  &_shower {
+    background-position: -351px 0;
+  }
+
   &_fringe {
-    background-position: -350px 0;
+    background-position: -412px 0;
   }
 
-  &_bath {
-    background-position: -711px 0;
+  &_table {
+    background-position: -440px 0;
   }
 
-  &_balcony {
-    background-position: -927px 0;
+  &_chair {
+    background-position: -470px 0;
+  }
+
+  &_dish {
+    background-position: -500px 0;
+  }
+
+  &_lock {
+    background-position: -560px 0;
   }
 
   &_closet {
     background-position: -617px 0;
   }
 
-  &_bidet {
-    background-position: -775px 0;
+  &_sofa {
+    background-position: -645px 0;
   }
 
-  &_sink {
-    background-position: -742px 0;
+  &_chair-bed {
+    background-position: -679px 0;
+  }
+
+  &_bath {
+    background-position: -711px 0;
+  }
+
+  &_robe {
+    background-position: -809px 0;
+  }
+
+  &_slippers {
+    background-position: -837px 0;
+  }
+
+  &_toiletries {
+    background-position: -867px 0;
+  }
+
+  &_balcony {
+    background-position: -927px 0;
+  }
+
+  &_kettle {
+    background-position: -1035px 0;
+  }
+
+  &_iron {
+    background-position: -1011px 0;
+  }
+
+  &_board {
+    background-position: -1062px 0;
+  }
+
+  &_free {
+    background-position: -985px 0;
+  }
+
+  &_disabled {
+    background-position: -1091px 0;
   }
 
 }
@@ -725,6 +780,7 @@
   .gm-bundled-control {
     bottom: 617px !important;
   }
+
 }
 
 @media (max-width:1199px) {
@@ -895,7 +951,6 @@
 
     }
 
-
     &__title {
       position: relative;
       font-size: 16px;
@@ -947,16 +1002,17 @@
 
     &__section {
       margin-bottom: 40px;
+
       &_add {
         padding-top: 20px;
       }
+
     }
+
     &__delete {
       bottom: inherit;
       top: -40px;
     }
-
-
 
     &__block {
       .dibt;
@@ -1059,10 +1115,9 @@
   .main-map {
     height: 320px;
 
-  .gm-bundled-control {
-    bottom: 107px !important;
-  }
-
+    .gm-bundled-control {
+      bottom: 107px !important;
+    }
 
   }
 

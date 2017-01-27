@@ -1,6 +1,11 @@
 ;
 $(document).ready(function() {
 
+    $('.search-param__change .btn').on('click', function() {
+        $('.loader').show();
+    });
+
+
     if ($('.fancybox').length) {
         $('.fancybox').fancybox();
     }

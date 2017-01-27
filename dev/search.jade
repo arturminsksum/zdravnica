@@ -2,7 +2,7 @@ extends template
 block content
 
   +header("resort","no")
-
+  
   main
     .container
       +breadcrumb('Результат поиска')
@@ -132,6 +132,8 @@ block content
             .search-result__simular
               .btn.btn_grey
                 span Ещё варианты              
+        .search-result__all
+          .btn.btn_blue Просмотреть другие номера
 
     section.basket-result
       .container
@@ -340,3 +342,6 @@ block content
 
 
   +popup_tooltip()
+  .loader
+    .loading
+      div

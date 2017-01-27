@@ -21,7 +21,7 @@ gulp.paths = {
     scripts: 'dev/**/*.js',
     jade: 'dev/**/*.jade',
     style: ['dev/jade/**/*.less', 'dev/styles/**/*.less'],
-    html: 'dev/assets/*.html',
+    html: 'dev/assets/main.html',
     js: 'dev/assets/js/*.js',
     ccs: 'dev/assets/css/*.css'
 };
@@ -30,7 +30,7 @@ gulp.task('server', gulp.connect.server({
   root: ['dev/assets'],
   port: 9000,
   open: {
-    file: 'index.html'
+    file: 'main.html'
     // browser: 'chrome'
   },
   livereload: true
@@ -43,7 +43,7 @@ gulp.task('jade', function() {
             pretty: true
         }))
         .pipe(gulp.dest('dev/assets'))
-        .pipe(gulp.connect.reload());
+        // .pipe(gulp.connect.reload());
 });
 
 // gulp.task('svgstore', function () {
@@ -82,10 +82,10 @@ gulp.task('concat', function () {
 //     .pipe(gulp.connect.reload());
 // });
 
-// gulp.task('html', function () {
-//   gulp.src(gulp.paths.html)
-//     .pipe(gulp.connect.reload());
-// });
+gulp.task('html', function () {
+  gulp.src(gulp.paths.html)
+    .pipe(gulp.connect.reload());
+});
 
 gulp.task('js', function () {
   gulp.src(gulp.paths.js)

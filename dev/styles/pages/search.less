@@ -133,6 +133,20 @@
     display: none;
   }
 
+  &__all {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    .btn {
+      width: 738px;
+      padding: 0 20px;
+      text-transform: uppercase;
+      @media(max-width: 767px) {
+        width: 100%;
+      }
+    }
+  }
+
   &__close {
     position: absolute;
     padding-left: 15px;
@@ -786,4 +800,34 @@
 }
 
 
+}
+
+.loader {
+  display: none;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+}
+
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 8060;
+}
+
+.loading div {
+  width: 44px;
+  height: 44px;
+  background: url('../images/fancybox_loading.gif') center center no-repeat;
 }

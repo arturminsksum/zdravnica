@@ -819,6 +819,13 @@ section {
     text-align: center;
   }
 }
+@media (max-width: 767px) {
+  .resort-room__list .slick-dots {
+    left: 0;
+    padding: 0;
+    margin: 0 -10px;
+  }
+}
 /* Arrows */
 .slick-prev,
 .slick-next {
@@ -5517,6 +5524,10 @@ section {
   position: relative;
 }
 .footer__wrap .column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -5548,6 +5559,9 @@ section {
 }
 .footer__wrap .row {
   height: 410px;
+}
+.footer__logo {
+  width: 100%;
 }
 .footer__logo img {
   display: inline-block;
@@ -5731,6 +5745,7 @@ section {
     text-align: center;
   }
   .footer__list {
+    width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
   .footer__list .footer__title:after {
@@ -6254,6 +6269,9 @@ section {
 .icon_phone {
   background-position: -252px 0;
 }
+.icon_hairdryer {
+  background-position: -294px 0;
+}
 .icon_more {
   position: absolute;
   top: 0;
@@ -6262,23 +6280,62 @@ section {
   background-position: -956px 0;
   cursor: pointer;
 }
+.icon_shower {
+  background-position: -351px 0;
+}
 .icon_fringe {
-  background-position: -350px 0;
+  background-position: -412px 0;
 }
-.icon_bath {
-  background-position: -711px 0;
+.icon_table {
+  background-position: -440px 0;
 }
-.icon_balcony {
-  background-position: -927px 0;
+.icon_chair {
+  background-position: -470px 0;
+}
+.icon_dish {
+  background-position: -500px 0;
+}
+.icon_lock {
+  background-position: -560px 0;
 }
 .icon_closet {
   background-position: -617px 0;
 }
-.icon_bidet {
-  background-position: -775px 0;
+.icon_sofa {
+  background-position: -645px 0;
 }
-.icon_sink {
-  background-position: -742px 0;
+.icon_chair-bed {
+  background-position: -679px 0;
+}
+.icon_bath {
+  background-position: -711px 0;
+}
+.icon_robe {
+  background-position: -809px 0;
+}
+.icon_slippers {
+  background-position: -837px 0;
+}
+.icon_toiletries {
+  background-position: -867px 0;
+}
+.icon_balcony {
+  background-position: -927px 0;
+}
+.icon_kettle {
+  background-position: -1035px 0;
+}
+.icon_iron {
+  background-position: -1011px 0;
+}
+.icon_board {
+  background-position: -1062px 0;
+}
+.icon_free {
+  background-position: -985px 0;
+}
+.icon_disabled {
+  background-position: -1091px 0;
 }
 .main-resort {
   background-image: url(../images/main-resort-bg.jpg);
@@ -7069,9 +7126,7 @@ section {
     padding: 20px 15px 0 15px;
   }
   .resort-about__list .item {
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    display: block;
     margin-bottom: 15px;
   }
   .resort-about__list .item__title {
@@ -7112,7 +7167,7 @@ section {
     height: auto;
   }
   .resort-room__info {
-    padding: 30px 15px 70px;
+    padding: 30px 15px 100px;
   }
   .resort-room__type {
     font-size: 24px;
@@ -8882,6 +8937,21 @@ section {
   padding: 0 20px;
   display: none;
 }
+.search-result__all {
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.search-result__all .btn {
+  width: 738px;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .search-result__all .btn {
+    width: 100%;
+  }
+}
 .search-result__close {
   position: absolute;
   padding-left: 15px;
@@ -9370,6 +9440,33 @@ section {
     cursor: pointer;
   }
 }
+.loader {
+  display: none;
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9;
+}
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -22px;
+  margin-left: -22px;
+  background-position: 0 -108px;
+  opacity: 0.8;
+  cursor: pointer;
+  z-index: 8060;
+}
+.loading div {
+  width: 44px;
+  height: 44px;
+  background: url('../images/fancybox_loading.gif') center center no-repeat;
+}
 .main-hot__wrap {
   margin-bottom: 50px;
 }
@@ -9733,7 +9830,7 @@ section {
     padding-top: 70px;
   }
   .hot-list .tour__btn {
-    width: auto;
+    right: 0;
   }
   .hot-list .tour__sanatorium,
   .hot-list .tour__type {
